@@ -1,0 +1,104 @@
+/* Reset ================================================================================= */
+
+*			  { margin: 0; padding:0; }
+img           { border:0; vertical-align:top; }
+a             { color: #28adf2; text-decoration: none; }
+a:hover       { text-decoration: none; }
+:focus        { outline: 0; }
+
+button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
+button.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
+
+
+/* General Layout ================================================================================= */
+body { 
+	background: #fff url(../images/bg_wrapper.png) repeat 0 0; 
+	font: 13px/1.4 Arial, sans-serif; 
+	color: #323436; 
+	text-align: center;
+	height: 100%;
+}
+.wrapper {
+	text-align: left;
+}
+.page {
+	width: 980px;
+	padding: 54px 14px 0px 14px;
+	margin: 0 auto;
+}
+.page .info {
+	float: left;
+	width: 448px;
+	padding: 0 0 0 28px;
+}
+.page .info .title {
+	font-family: 'robotothin', Arial;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 1;
+	margin: 90px 0;
+}
+.page .info .subscribe {}
+.page .info .subscribe h2 {
+	font-size: 22px;
+	line-height: 1;
+	font-family: 'robotolight', Arial;
+	font-weight: normal;
+	padding: 0 0 12px 5px;
+}
+.page .info .subscribe .input-box {
+	border: 1px solid #d6d6d6;
+	height: 34px;
+	line-height: 34px;
+	padding: 7px 7px 7px 14px;
+	border-radius: 6px;
+	background: #fff;
+}
+.page .info .subscribe .input-box .input-text {
+	border: none;
+	padding: 0;
+	height: 30px;
+	color: #999;
+	font-family: 'robotolight', Arial;
+	font-size: 22px;
+	width: 238px;
+}
+.page .info .subscribe .input-box .button {
+	overflow: visible; 
+	width: auto; 
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	cursor:pointer;
+	float: right;
+}
+.page .info .subscribe .input-box .button span {
+	display: block;
+	padding: 0 10px;
+	background: transparent url(../images/bg_btn.png) repeat-x 0 0;
+	height: 34px;
+	line-height: 32px;
+	color: #fff;
+	font-size: 13px;
+	font-weight: bold;
+	border-radius: 3px;
+}
+.page .info #subscribe-result {
+	margin: 10px 0 0 18px;
+}
+.page .img {
+	float: right;
+	width: 476px;
+	height: 700px;
+	background: transparent url(../images/bg_phone.png) no-repeat 0 0;
+}
+
+/* Clears */
+input-box:after,
+.clear:after
+{ 
+	display: block; 
+	content: ""; 
+	clear: both;
+}
