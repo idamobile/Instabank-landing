@@ -1,5 +1,6 @@
 *.ipr
 *.iml
 *.iws
+*.ids
 /tmp
 /precompiled
