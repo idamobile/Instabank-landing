@@ -5,6 +5,7 @@ import play.db.jpa.Model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "subscribers")
@@ -40,6 +41,15 @@ public class Subscriber extends Model {
         Subscriber subscriber = new Subscriber(email, remoteAddress);
         subscriber.save();
         return subscriber;
+    }
+
+    public static List<Subscriber> findByStatus(Status status) {
+        return Subscriber.find("byStatus", Subscriber.Status.NOT_CONFIRMED).fetch();
+    }
+
+    public void updateStatus(Status newStatus) {
+        status = newStatus;
+        save();
     }
 
 }

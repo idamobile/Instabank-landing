@@ -4,7 +4,7 @@ import models.Subscriber;
 import play.Logger;
 import play.i18n.Messages;
 import play.mvc.Controller;
-import service.MailSenderService;
+import service.Mails;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,7 +37,8 @@ public class Application extends Controller {
         } else {
             try {
                 Subscriber subscriber = Subscriber.create(email.toLowerCase(), request.remoteAddress);
-                MailSenderService.sendGreetingMessage(subscriber);
+                Mails.welcomeNew(subscriber.email);
+                subscriber.updateStatus(Subscriber.Status.GREETING_SENT);
             } catch (Exception ex) {
                 errorMessage = Messages.get("email.persisting_error") + ex.getMessage();
                 Logger.error("Unable to persist email", ex);

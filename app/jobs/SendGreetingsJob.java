@@ -4,7 +4,7 @@ import models.Subscriber;
 import play.Logger;
 import play.jobs.Job;
 import play.jobs.OnApplicationStart;
-import service.MailSenderService;
+import service.Mails;
 
 import java.util.List;
 
@@ -17,10 +17,11 @@ public class SendGreetingsJob extends Job {
 
     @Override
     public void doJob() throws Exception {
-        List<Subscriber> subscribers = Subscriber.find("byStatus", Subscriber.Status.NOT_CONFIRMED).fetch();
+        List<Subscriber> subscribers = Subscriber.findByStatus(Subscriber.Status.NOT_CONFIRMED);
         Logger.info("Sending greetings to %d users", subscribers.size());
         for (Subscriber subscriber: subscribers) {
-            MailSenderService.sendGreetingMessage(subscriber);
+            Mails.welcomeExisting(subscriber.email);
+            subscriber.updateStatus(Subscriber.Status.GREETING_SENT);
         }
     }
 }
