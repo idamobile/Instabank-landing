@@ -1,12 +1,14 @@
 package controllers;
 
-import play.*;
+import models.Subscriber;
+import play.Logger;
 import play.i18n.Messages;
-import play.mvc.*;
+import play.mvc.Controller;
+import service.MailSenderService;
 
-import java.util.*;
-
-import models.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 public class Application extends Controller {
 
@@ -34,7 +36,8 @@ public class Application extends Controller {
             errorMessage = Messages.get("email.already_exists");
         } else {
             try {
-                Subscriber.create(email.toLowerCase(), request.remoteAddress);
+                Subscriber subscriber = Subscriber.create(email.toLowerCase(), request.remoteAddress);
+                MailSenderService.sendGreetingMessage(subscriber);
             } catch (Exception ex) {
                 errorMessage = Messages.get("email.persisting_error") + ex.getMessage();
                 Logger.error("Unable to persist email", ex);

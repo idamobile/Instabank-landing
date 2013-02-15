@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name = "subscribers")
 public class Subscriber extends Model {
     public enum Status {
-        NOT_CONFIRMED, CONFIRMED
+        NOT_CONFIRMED, CONFIRMED, GREETING_SENT
     }
 
     @Column(name = "email", unique = true, nullable = false)
