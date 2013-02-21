@@ -22,6 +22,17 @@ public class Application extends Controller {
         render(code);
     }
 
+    public static void unsubscribe(String email) {
+        Subscriber s = Subscriber.find("byEmail", email).first();
+        if (s != null) {
+            s.status = Subscriber.Status.UNSUBSCRIBED;
+            s.save();
+            Logger.info("User %s was unsubscribed", email);
+        }
+
+        index();
+    }
+
     public static void subscribe(String email, String code) {
         if (!session.contains(SESSION_KEY_CODE) ||
                 !session.get(SESSION_KEY_CODE).equals(code)) {
