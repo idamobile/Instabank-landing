@@ -42,6 +42,7 @@ public class Application extends Controller {
     public static void subscribe(String email, String code) {
         if (!session.contains(SESSION_KEY_CODE) ||
                 !session.get(SESSION_KEY_CODE).equals(code)) {
+            Logger.warn("Code in session: %s; code in request: %s", session.get(SESSION_KEY_CODE), code);
             error("Abnormal request");
         }
 
