@@ -4,6 +4,7 @@
 
 # Home page
 GET     /                                       Application.index
+GET     /v2                                     Application.indexNew
 GET     /subscribe                              Application.subscribe
 GET     /unsubscribe                            Application.unsubscribe
 
