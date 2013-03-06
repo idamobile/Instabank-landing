@@ -38,7 +38,7 @@
 			
 			// if input is empty, display message
 			if('' == email){
-				showMessage('invalid', 'Please enter email address');
+				showMessage('invalid', 'Пожалуйста, введите адрес электронной почты');
 				return;
 			}
 			
@@ -52,7 +52,7 @@
 	  			dataType: 'json',
 	  			success: function(d){
 	  				if('null' == d){
-						showMessage('error', 'Unknown error!');
+						showMessage('error', 'Что-то пошло не так.');
 		  				
 	  				}else{
 		  				if(d.result){
@@ -63,7 +63,7 @@
 	  				}
 	  			},
 	  			error: function(d){
-					showMessage('error', 'Unknown error!');
+					showMessage('error', 'Что-то пошло не так.');
 	  			}
 			});
 			
