@@ -3,8 +3,8 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.index
-GET     /v2                                     Application.indexNew
+GET     /                                       Application.indexNew
+GET     /old                                    Application.index
 GET     /subscribe                              Application.subscribe
 GET     /unsubscribe                            Application.unsubscribe
 
