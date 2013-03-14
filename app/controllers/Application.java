@@ -43,7 +43,7 @@ public class Application extends Controller {
         if (!session.contains(SESSION_KEY_CODE) ||
                 !session.get(SESSION_KEY_CODE).equals(code)) {
             Logger.warn("Code in session: %s; code in request: %s", session.get(SESSION_KEY_CODE), code);
-            error("Abnormal request");
+            forbidden("Session code is incorrect");
         }
 
         Map<String, String> response = new HashMap<String, String>();
