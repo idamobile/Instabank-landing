@@ -1,0 +1,7 @@
+subscribing=Subscribing...
+email.invalid=Entered email doesn't seem to be a valid email address
+email.already_exists=This email has been registered already
+email.persisting_error=Unable to persist email
+email.saved=You have been registered successfully. Thank you for your interest!
+email.subject.new=Instabank - Your request received
+email.subject.existing=Instabank - Your request

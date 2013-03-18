@@ -1,0 +1,7 @@
+*.ipr
+*.iml
+*.iws
+*.ids
+/logs
+/tmp
+/precompiled

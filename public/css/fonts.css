@@ -1,0 +1,72 @@
+
+@font-face {
+    font-family: 'PFDinDisplayProRegular';
+    src: url('fonts/pfdindisplaypro-regular-webfont.eot');
+    src: url('fonts/pfdindisplaypro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pfdindisplaypro-regular-webfont.woff') format('woff'),
+         url('fonts/pfdindisplaypro-regular-webfont.ttf') format('truetype'),
+         url('fonts/pfdindisplaypro-regular-webfont.svg#pf_dindisplay_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PFDinDisplayProBold';
+    src: url('fonts/pfdindisplaypro-bold-webfont.eot');
+    src: url('fonts/pfdindisplaypro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pfdindisplaypro-bold-webfont.woff') format('woff'),
+         url('fonts/pfdindisplaypro-bold-webfont.ttf') format('truetype'),
+         url('fonts/pfdindisplaypro-bold-webfont.svg#pf_dindisplay_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PFDinDisplayProLight';
+    src: url('fonts/pfdindisplaypro-light-webfont.eot');
+    src: url('fonts/pfdindisplaypro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pfdindisplaypro-light-webfont.woff') format('woff'),
+         url('fonts/pfdindisplaypro-light-webfont.ttf') format('truetype'),
+         url('fonts/pfdindisplaypro-light-webfont.svg#pf_dindisplay_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face {
+    font-family: 'PFDinDisplayProThin';
+    src: url('fonts/pfdindisplaypro-thin-webfont.eot');
+    src: url('fonts/pfdindisplaypro-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pfdindisplaypro-thin-webfont.woff') format('woff'),
+         url('fonts/pfdindisplaypro-thin-webfont.ttf') format('truetype'),
+         url('fonts/pfdindisplaypro-thin-webfont.svg#pf_dindisplay_prothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face {
+    font-family: 'PFDinDisplayProMedium';
+    src: url('fonts/pfdindisplaypro-medium-webfont.eot');
+    src: url('fonts/pfdindisplaypro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pfdindisplaypro-medium-webfont.woff') format('woff'),
+         url('fonts/pfdindisplaypro-medium-webfont.ttf') format('truetype'),
+         url('fonts/pfdindisplaypro-medium-webfont.svg#pf_dindisplay_promedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PFDinDisplayProLightItalic';
+    src: url('fonts/pfdindisplaypro-lightitalic-webfont.eot');
+    src: url('fonts/pfdindisplaypro-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pfdindisplaypro-lightitalic-webfont.woff') format('woff'),
+         url('fonts/pfdindisplaypro-lightitalic-webfont.ttf') format('truetype'),
+         url('fonts/pfdindisplaypro-lightitalic-webfont.svg#pf_dindisplay_prolight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
