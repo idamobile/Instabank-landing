@@ -16,12 +16,6 @@ public class Application extends Controller {
 
     private static final String SESSION_KEY_CODE = "code";
 
-    public static void indexNew() {
-        String code = UUID.randomUUID().toString();
-        session.put(SESSION_KEY_CODE, code);
-        render(code);
-    }
-
     public static void index() {
         String code = UUID.randomUUID().toString();
         session.put(SESSION_KEY_CODE, code);

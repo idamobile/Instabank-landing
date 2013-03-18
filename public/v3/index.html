@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Instabank Demo</title>
+	<meta name="description" content="description" />
+	<meta name="keywords" content="keywords" />
+	
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta name="viewport" content="width=960"/>
+	<meta name="robots" content="noindex, nofollow">
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+
+	<!-- JS -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	
+</head>
+<body class="home">
+
+<!-- FB -->
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="wrapper">
+	<div class="header-container">
+	    <div class="header content">
+			<a class="logo" href="http://dev.magforge.net/instabank/">
+				<img src="css/images/logo.png" alt="Instabank Logo" width="" height="" />
+			</a>
+			<div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-action="like"></div>
+	    </div>
+	</div>
+	<div class="main-container">	
+	    <div class="main content">
+	    
+	    	<!-- Leader -->
+			<div class="leader">
+				<img src="css/images/logo_leader.png" class="logo" alt="Instabank Logo"/>
+				<p class="callout"><span>Банк,</span> каким он должен быть сегодня.</p>
+				<!--p class="legend">Вы пользуетесь банком почти каждый день, он заслуживает быть прекрасным. Мы создаем банк для тех, кто привык к восхитительной простоте iPhone и удобству Facebook.</p-->
+				<div class="phone"></div>
+				<div class="subscribe-container">
+				    <div class="subscribe">
+				    	<p class="hint"><span>Оставте заявку,</span> чтобы попасть в число первых пользователей.</p>
+				    	<form action="#" method="post" id="subscribe">
+				    		<div class="input-box">
+				    			<input type="text" class="input-text" value="" name="email" placeholder="Ваш e-mail" />
+				    			<button type="submit" class="button">
+				    				<span><span>Отправить</span></span>
+				    			</button>
+				    		</div>
+				    	</form>
+				    	<div id="subscribe-result"></div>
+				    </div>
+				</div>
+			</div>
+			
+			<!-- Newsletter -->
+			<div class="newsletter">
+				<p>Вы пользуетесь банком почти каждый день - он<br/>заслуживает быть прекрасным.</p>
+			</div>
+			
+			<!-- Reports -->
+			<div class="report">
+				<p class="callout"><span>Выписка</span> еще никогда не была такой понятной.</p>
+				<div class="feature">
+					<p class="title">Понятная история операций</p>
+					<p class="descr">Читайте в выписке «Ресторан Жан-Жак» вместо «3023/305/POS GG». Делайте заметки на чеках и прикрепляйте фото на память.</p>
+				</div>
+				<div class="feature">
+					<p class="title">Удобный отчеты и поиск</p>
+					<p class="descr">Instabank автоматически сортирует ваши траты по категориям и показывает куда уходят деньги с помощью простых диаграмм. Ищите операции по простым запросам, таким как «Кафе» или «Кузнецов».</p>
+				</div>
+				<div class="feature">
+					<p class="title">Уведомления об операциях</p>
+					<p class="descr">Используйте карту Instbank для всех ваших покупок. Мгновенно получайте уведомления и записи об операциях в приложении.</p>
+				</div>
+				<div class="phone"></div>
+			</div>
+			
+			<!-- Social -->
+			<div class="social">
+				<p class="callout">Социальный. Мобильный. Банк.</p>
+				<div class="feature">
+					<p class="title">Переводы друзьям</p>
+					<p class="descr">Отправляйте деньги друзьям так же просто как СМС даже если у них нет Instabank. Без комиссии.</p>
+				</div>
+				<div class="feature">
+					<p class="title">Денежные запросы</p>
+					<p class="descr">Скидывайтесь на подарки друзьям и другие общие покупки. Возвращайте долги за кафе без головной боли с функцией "разделить траты".</p>
+				</div>
+				<div class="feature">
+					<p class="title">Переводы людям рядом</p>
+					<p class="descr">Платите в такси, в любимом кафе и просто новым знакомым.</p>
+				</div>
+			</div>
+			
+			<!-- Security -->
+			<div class="security">
+				<p class="callout">Пару слов о<br/><span>безопастности</span></p>
+				<div class="feature">
+					<p class="title">PIN код</p>
+					<p class="descr">Приложение защищено PIN кодом, как пластиковые карты. Просто и надежно.</p>
+				</div>
+				<div class="feature">
+					<p class="title">Персональный гарант</p>
+					<p class="descr">Вы действительно верите что в мире с социальными сетями девичья фамилия матери является секретом? Мы разработали революционную систему защиты, которая с участием ваших друзей подтверждает, что вы это на самом деле вы.</p>
+				</div>
+				<div class="feature">
+					<p class="title">Шифрованное</p>
+					<p class="descr">Банк бы не был банком, если каждый байт информации не был бы защищен сертифицированными алгоритмами.</p>
+				</div>
+				<div class="phone"></div>
+			</div>
+			
+			<!-- ATM's -->
+			<div class="atms">
+		    	<p class="callout"><span>Ах да!</span> У Инстабанка широкая сеть бесплатных банкоматов и бесплатное обслуживание карты.</p>
+		    	<div class="cards"></div>
+			</div>
+	    </div>
+	</div>
+	
+	<div class="footer-container">	
+	    <div class="footer content">
+	    	<p class="callout">Следите за нами!</p>
+			<a href="javascript:void(0);" class="fb">Facebook</a>
+			<a href="javascript:void(0);" class="yt">YouTube</a>
+			<a href="javascript:void(0);" class="tw">Twitter</a>
+			<a href="javascript:void(0);" class="ig">Instagram</a>
+	    </div>
+	</div>
+</div>
+</body>
+</html>

@@ -24,7 +24,7 @@ html, body {
 	height: 100%;
 }
 .wrapper {
-	/*background: transparent url(images/bg/full.jpg) no-repeat 50% 0;*/
+	/*background: transparent url(images/bg/original.jpg) no-repeat 50% 0;*/
 }
 
 /* Basic Layout */
@@ -56,7 +56,7 @@ html, body {
 
 .leader {
 	height: 548px;
-	background: transparent url(images/bg/leader.jpg) no-repeat 0 0;
+	background: transparent url(images/bg/leader.png) no-repeat 0 0;
 	position: relative;
 }
 .leader .logo {
@@ -65,6 +65,7 @@ html, body {
 	left: 71px;
 }
 .leader .callout {
+    color: #FFFFFF;
     font-family: 'PFDinDisplayProThin',Arial;
     font-size: 50px;
     left: 75px;
@@ -76,117 +77,15 @@ html, body {
 .leader .callout span {
 	font-family: 'PFDinDisplayProMedium', Arial;
 }
-
-.leader .phone {
-	height: 622px;
-	width: 560px;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	background: transparent url(images/bg/leader_phone.png) no-repeat -101px 0;
-}
-
-.leader .subscribe-container {
-	position: absolute;
-	top: 424px;
-	left: 70px;
-}
-.leader .subscribe-container .hint span {
-	font-family: 'PFDinDisplayProMedium', Arial;
-}
-.leader .subscribe {
-	position: relative;
-	background: #fff;
-	border: 1px solid #adadad;
-	border-radius: 5px;
-	padding: 5px;
-	box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
-}
-.leader .subscribe .hint {
-    font-family: 'PFDinDisplayProLight', Arial;
-	font-size: 16px;
-    width: 300px;
-    line-height: 20px;
-	position: absolute;
-	top: -53px;
-	left: 0;
-}
-.leader .subscribe .input-text {
-	padding: 8px 10px;
-	height: 42px;
-	width: 220px;
-	font-family: 'PFDinDisplayProRegular', Arial;
-	font-size: 20px;
-	color: #232323;
-	border: none;
-}
-.leader .subscribe .button span {
-	line-height: 42px;
-	height: 42px;
-}
-.leader .subscribe .button span span {
-	background: #3d5882;
-	padding: 0 12px;
-	border-radius: 5px;
-	border: none;
-	box-shadow: none;
-}
-.leader .subscribe #subscribe-result {
-	width: 316px;
-	position: absolute;
-	bottom: -26px;
-	left: 14px;
-	font-size: 14px;
-}
-
-.leader .subscribe-container.fixed {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	display: none;
-}
-.leader .subscribe-container.fixed .subscribe {
-	width: 980px;
-	margin: 0 auto;
-	border-radius: none;
-	background: #f5f5f5;
-	box-shadow: 0 0 5px rgba(0,0,0,0.1);
-	border-width: 0px 0px 1px 0px;
-	border-radius: 0;
-	padding: 10px 20px;
-}
-.leader .subscribe-container.fixed .subscribe:after {
-	display: block;
-	content: '';
-	clear: both;
-}
-.leader .subscribe-container.fixed .hint {
-	position: static;
-	float: left;
-	width: auto;
+.leader .legend {
+    color: #FFFFFF;
+    font-family: 'PFDinDisplayProRegular',Arial;
     font-size: 16px;
-    line-height: 42px;
+    left: 75px;
+    position: absolute;
+    top: 346px;
+    width: 350px;
 }
-.leader .subscribe-container.fixed .input-box {
-	float: right;
-}
-.leader .subscribe-container.fixed .input-text {
-	border: 1px solid #adadad;
-	border-radius: 5px;
-	padding: 5px 10px;
-	box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
-	width: 300px;
-	margin: 0 10px 0 0;
-}
-.leader .subscribe-container.fixed .subscribe #subscribe-result {
-    float: right;
-    padding: 7px 0 0;
-    position: static;
-    width: 414px;
-}
-
 .newsletter {
 	height: 313px;
 	border-bottom: 1px solid #d4d4d4;
@@ -194,13 +93,8 @@ html, body {
 	text-align: center;
 	position: relative;
     color: #232323;
-    padding: 60px 0 0;
-    font-size: 40px;
-    font-family: 'PFDinDisplayProThin', Arial;
-    line-height: 1.23;
+    padding: 46px 0 0;
 }
-
-/*
 .newsletter .callout {
     font-family: 'PFDinDisplayProLight',Arial;
     font-size: 30px;
@@ -233,7 +127,6 @@ html, body {
 	margin: 10px 0 0 13px;
 	font-size: 14px;
 }
-*/
 .report {
 	height: 833px;
 	position: relative;
@@ -274,7 +167,7 @@ html, body {
 }
 .social {
 	height: 695px;
-	background: transparent url(images/bg/social.jpg) no-repeat 0 0;
+	background: transparent url(images/bg/social.png) no-repeat 0 0;
 	color: #fff;
 	padding: 75px 0 0 60px;
 }
@@ -355,7 +248,7 @@ html, body {
 	height: 426px;
 	background: transparent url(images/bg/atms.png) no-repeat 0 0;
 	position: absolute;
-	bottom: -173px;
+	bottom: -193px;
 	left: 99px;
 }
 

@@ -13,11 +13,12 @@
     /**
      * Window onLoad Initializations
     */
-	$(window).load(function(){
-		
-	});
-	
-	
+    $(window).load(function(){
+        $(window).scroll(function(){
+            stickyNewsletter();
+        });
+    });
+
     /**
      * Initialize Newsletter Ajax Signup Functionality
     */
@@ -103,6 +104,43 @@
 			//setTimeout(function(){showMessage('hide')}, 6000);
 		}
 	}
-	
+
+    function stickyNewsletter()
+    {
+        if(isMobile()){
+            return;
+        }
+        // declare vars
+        var sbscrCont = $('.subscribe-container'),
+            offsetTop = 570
+        isFixed = sbscrCont.hasClass('fixed');
+        windowTop = $(document).scrollTop();
+
+        // fix the position
+        if(windowTop > offsetTop && !isFixed){
+            sbscrCont
+                .hide(0)
+                .addClass('fixed')
+                .slideDown(250);
+
+            // make element static
+        }else if(windowTop < offsetTop && isFixed){
+            sbscrCont
+                .slideUp(100, function(){
+                    sbscrCont
+                        .removeClass('fixed')
+                        .fadeIn(250);
+                });
+        }
+    }
+
+
+    function isMobile(){
+        return (
+            (navigator.userAgent.toLowerCase().indexOf("ipad") > -1) ||
+                (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) ||
+                (navigator.userAgent.toLowerCase().indexOf("ipod") > -1)
+            );
+    }
 
 }(jQuery))
