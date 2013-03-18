@@ -87,10 +87,12 @@ html, body {
 }
 
 .leader .subscribe-container {
-	position: absolute;
-	top: 424px;
-	left: 70px;
+    position: absolute;
+    top: 424px;
+    left: 70px;
+    overflow: visible!important;
 }
+
 .leader .subscribe-container .hint span {
 	font-family: 'PFDinDisplayProMedium', Arial;
 }
@@ -132,11 +134,11 @@ html, body {
 	box-shadow: none;
 }
 .leader .subscribe #subscribe-result {
-	width: 316px;
-	position: absolute;
-	bottom: -26px;
-	left: 14px;
-	font-size: 14px;
+    font-size: 14px;
+    left: 14px;
+    position: absolute;
+    top: 61px;
+    width: 316px;
 }
 
 .leader .subscribe-container.fixed {
