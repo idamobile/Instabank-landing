@@ -56,8 +56,9 @@
 						showMessage('error', 'Что-то пошло не так.');
 		  				
 	  				}else{
-		  				if(d.result){
+		  				if(d.result == "true"){
 		  					showMessage('success', d.msg);
+                            _gaq.push(['_trackPageview', '/subscribe']);
 		  				}else{
 		  					showMessage('invalid', d.msg);
 		  				}
