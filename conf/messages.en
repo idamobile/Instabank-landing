@@ -1,7 +1,54 @@
-subscribing=Subscribing...
+subscribing=Sending request...
 email.invalid=Entered email doesn't seem to be a valid email address
-email.already_exists=This email has been registered already
+email.already_exists=This e-mail address has already been registered
 email.persisting_error=Unable to persist email
-email.saved=You have been registered successfully. Thank you for your interest!
+email.saved=Your application has been recorded, thank you!
 email.subject.new=Instabank - Your request received
 email.subject.existing=Instabank - Your request
+
+# Main page messages
+leader.title=<span>Banking,</span> reimagined
+leader.subscribe.title=<span>Sign up</span> to receive an invitation.
+leader.subscribe.send=Submit
+leader.email.hint=Your e-mail address
+
+newsletter.main=A bank for those who appreciate the beauty of iPhone<br/> and the convenience of Facebook
+
+# Reports section messages
+reports.title=<span>Your bank statement</span> reimagined.
+reports.bullet_one.title=Transaction notifications
+reports.bullet_one.description=Use Instabank to buy stuff or pay for services. You will receive instant notifications and see descriptive event summaries in your activity stream.
+
+reports.bullet_two.title=Activity stream
+reports.bullet_two.description=Enjoy clear transaction descriptions. You can enhance purchase information with a location via Foursquare,<br/>a photo of the item, and your comments.
+
+reports.bullet_three.title=Rich reports and transaction search
+reports.bullet_three.description=Instabank automatically sorts your expenses into categories and uses charts to show you where your money went. You can also find past activities by using queries, such as "ticket" or "Starbucks".
+
+# Social section messages
+social.title=Simple money exchanges between friends
+social.bullet_one.titile=Sending money to friends
+social.bullet_one.description=Sending money to friends is as easy as sending<br/> a text - even if they're not with Instabank. No fees, no hassle.
+
+social.bullet_two.title=Requesting money
+social.bullet_two.description=Use the "request money" and "split bill" features<br/> to send your friends actionable reminders to cover their share of a purchase you made.
+
+social.bullet_three.title=Pay locally, wirelessly
+social.bullet_three.description=Send money to new friends and pay nearby businesses straight from your smartphone.
+
+# Security section messages
+security.title=<span>Security</span>
+security.bullet_one.title=PIN code
+security.bullet_one.description=To make sure your money is safe, Instabank requires a PIN code to launch the app on your smartphone. Combined with your smartphone lock combination, this provides you with extra protection.
+
+security.bullet_two.title=Social guarantor
+security.bullet_two.description=Common security questions aren't very reliable<br/>in the age of social networks. We have developed an innovative security system, where your identity<br/> is verified by your selected trusted friends.
+
+security.bullet_three.title=Encryption
+security.bullet_three.description=Each data byte is securely protected by certified algorithms, which guarantee your personal data's safety.
+
+# ATMS section messages
+atm.title=Instabank also utilizes a broad network of ATMs for free withdrawals and deposits.
+
+# Footer title
+footer.title=Follow us on social media

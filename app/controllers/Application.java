@@ -1,7 +1,9 @@
 package controllers;
 
 import models.Subscriber;
+import org.apache.commons.lang.StringUtils;
 import play.Logger;
+import play.i18n.Lang;
 import play.i18n.Messages;
 import play.mvc.Controller;
 import service.Mails;
@@ -16,7 +18,10 @@ public class Application extends Controller {
 
     private static final String SESSION_KEY_CODE = "code";
 
-    public static void index() {
+    public static void index(String locale) {
+        if (!StringUtils.isEmpty(locale)) {
+            Lang.set(locale);
+        }
         String code = UUID.randomUUID().toString();
         session.put(SESSION_KEY_CODE, code);
         render(code);
@@ -30,7 +35,7 @@ public class Application extends Controller {
             Logger.info("User %s was unsubscribed", email);
         }
 
-        index();
+        index(Lang.get());
     }
 
     public static void subscribe(String email, String code) {

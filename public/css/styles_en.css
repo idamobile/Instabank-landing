@@ -56,7 +56,7 @@ html, body {
 
 .leader {
 	height: 548px;
-	background: transparent url(images/bg/leader.jpg) no-repeat 0 0;
+	background: transparent url(images/bg_en/leader.jpg) no-repeat 0 0;
 	position: relative;
 }
 .leader .logo {
@@ -83,7 +83,7 @@ html, body {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	background: transparent url(images/bg/leader_phone.png) no-repeat -101px 0;
+	background: transparent url(images/bg_en/leader_phone.png) no-repeat -101px 0;
 }
 
 .leader .subscribe-container {
@@ -246,7 +246,7 @@ html, body {
 	width: 476px;
 	height: 813px;
 	position: absolute;
-	background: transparent url(images/bg/report.png) no-repeat 0 0;
+	background: transparent url(images/bg_en/report.png) no-repeat 0 0;
 	left: 28px;
 	bottom: 85px;
 }
@@ -276,7 +276,7 @@ html, body {
 }
 .social {
 	height: 695px;
-	background: transparent url(images/bg/social.jpg) no-repeat 0 0;
+	background: transparent url(images/bg_en/social.jpg) no-repeat 0 0;
 	color: #fff;
 	padding: 75px 0 0 60px;
 }
@@ -309,7 +309,7 @@ html, body {
 	width: 476px;
 	height: 823px;
 	position: absolute;
-	background: transparent url(images/bg/security.png) no-repeat 0 0;
+	background: transparent url(images/bg_en/security.png) no-repeat 0 0;
 	right: 38px;
 	bottom: 90px;
 }
@@ -355,7 +355,7 @@ html, body {
 .atms .cards {
 	width: 802px;
 	height: 426px;
-	background: transparent url(images/bg/atms.png) no-repeat 0 0;
+	background: transparent url(images/bg_en/atms.png) no-repeat 0 0;
 	position: absolute;
 	bottom: -173px;
 	left: 99px;

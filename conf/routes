@@ -3,7 +3,8 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.index
+GET     /{<[a-zA-Z_]*>locale}                   Application.index
+
 GET     /subscribe                              Application.subscribe
 GET     /unsubscribe                            Application.unsubscribe
 

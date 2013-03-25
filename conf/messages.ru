@@ -5,3 +5,50 @@ email.persisting_error=Невозможно сохранить адрес
 email.saved=Ваш адрес был успешно сохранен, спасибо за проявленный интерес!
 email.subject.new=Instabank - Ваша заявка получена
 email.subject.existing=Instabank - Ваша заявка
+
+# Main page messages
+leader.title=<span>Банк,</span> каким он должен быть сегодня.
+leader.subscribe.title=<span>Оставьте заявку,</span> чтобы попасть в число первых пользователей.
+leader.subscribe.send=Отправить
+leader.email.hint=Ваш e-mail
+
+newsletter.main=Мы создали банк для тех, кто ценит красоту iPhone<br/> и удобство Facebook.
+
+# Reports section messages
+reports.title=<span>Выписка</span> еще никогда не была такой понятной
+reports.bullet_one.title=Уведомления об операциях
+reports.bullet_one.description=Используйте Instabank для покупок или оплаты услуг. Мгновенно получайте уведомления<br/> и наглядные записи о совершенных действиях<br/> в ленте событий.
+
+reports.bullet_two.title=История операций
+reports.bullet_two.description=Читайте в выписке понятные названия операций. Привязывайте совершенные покупки к своему местоположению с помощью Foursquare.<br/> Добавляйте к покупкам комментарии и прикрепляйте фотографии на память.
+
+reports.bullet_three.title=Удобные отчёты и поиск
+reports.bullet_three.description=Instabank автоматически сортирует ваши траты<br/>по категориям и показывает, куда уходят деньги,<br/>с помощью простых диаграмм.<br/> Находите совершенные действия при помощи запросов, таких как “Театр” или “Starbucks”.
+
+# Social section messages
+social.title=Простые расчеты с друзьями
+social.bullet_one.titile=Переводы друзьям
+social.bullet_one.description=Отправить деньги друзьям так же просто как СМС, даже если у них нет Instabank. Без комиссии.
+
+social.bullet_two.title=Денежные запросы
+social.bullet_two.description=Собирайте деньги на общий подарок другу<br/>или напомнайте друзьям, что Вы оплатили общий счёт в кафе, с помощью функции "Разделить траты".
+
+social.bullet_three.title=Переводы тем, кто рядом
+social.bullet_three.description=Отправляйте деньги новым друзьям<br/> или знакомым, физически находящимся поблизости, с помощью функции<br/> “Переводы от ближайших людей”.
+
+# Security section messages
+security.title=Несколько слов о<br/><span>безопасности</span>
+security.bullet_one.title=PIN-код
+security.bullet_one.description=Мобильное приложение Instabank в вашем смартфоне защищено PIN-кодом, как банковские карты. Удобно и надёжно.
+
+security.bullet_two.title=Социальный гарант
+security.bullet_two.description=В эпоху социальных сетей девичья фамилия матери - совсем не секрет. Мы разработали революционную систему защиты, в которой вашу личность подтверждают ваши друзья.
+
+security.bullet_three.title=Шифрование
+security.bullet_three.description=Каждый байт информации надёжно защищён сертифицированными алгоритмами, гарантирующими полную сохранность персональных данных.
+
+# ATMS section messages
+atm.title=<span>Ах да!</span> У Instabank широкая сеть бесплатных банкоматов. Снимайте деньги и пополняйте счет без комиссии.
+
+# Footer title
+footer.title=Следите за нами!

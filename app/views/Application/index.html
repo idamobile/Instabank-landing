@@ -9,7 +9,7 @@
     <meta property="og:description" content="Instabank. Re-imagine banking." />
     <meta property="og:type" content="company" />
     <meta property="og:url" content="https://www.facebook.com/Instabank" />
-    <meta property="og:image" content="@@{'/public/images/instabank.png'}" />
+    <meta property="og:image" content="@{'/public/images/instabank.png'}" />
     <meta property="og:site_name" content="Instabank" />
     <meta property="fb:app_id" content="177882139014522" />
     <meta property="fb:admins" content="657129580,100001896453784,100003275223153,100000375640805" />
@@ -24,8 +24,11 @@
     <!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="@{'/public/css/reset.css'}" media="all" />
     <link rel="stylesheet" type="text/css" href="@{'/public/css/fonts.css'}" media="all" />
-	<link rel="stylesheet" type="text/css" href="@{'/public/css/styles.css'}" media="all" />
-
+    #{if play.i18n.Lang.get() == 'en'}
+    <link rel="stylesheet" type="text/css" href="@{'/public/css/styles_en.css'}" media="all" />
+    #{/if} #{else}
+    <link rel="stylesheet" type="text/css" href="@{'/public/css/styles_ru.css'}" media="all" />
+    #{/else}
 	<!-- JS -->
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	<script type="text/javascript" src="@{'/public/javascripts/scripts.js'}"></script>
@@ -59,7 +62,11 @@
         var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
         if (d.getElementById(id)) {return;}
         js = d.createElement('script'); js.id = id; js.async = true;
+        #{if play.i18n.Lang.get() == 'en'}
+        js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+        #{/if} #{else}
         js.src = "//connect.facebook.net/ru_RU/all" + (debug ? "/debug" : "") + ".js";
+        #{/else}
         ref.parentNode.insertBefore(js, ref);
     }(document, /*debug*/ false));
 </script>
@@ -105,17 +112,17 @@
             <!-- Leader -->
             <div class="leader">
                 <img src="@{'/public/css/images/logo_leader.png'}" class="logo" alt="Instabank Logo"/>
-                <p class="callout"><span>Банк,</span> каким он должен быть сегодня.</p>
+                <p class="callout">&{'leader.title'}</p>
                 <div class="phone"></div>
                 <div class="subscribe-container">
                     <div class="subscribe">
-                        <p class="hint"><span>Оставьте заявку,</span> чтобы попасть в число первых пользователей.</p>
+                        <p class="hint">&{'leader.subscribe.title'}</p>
                         <form action="@{Application.subscribe}" method="post" id="subscribe">
                             <div class="input-box">
-                                <input type="text" class="input-text" value="" name="email" placeholder="Ваш e-mail" />
+                                <input type="text" class="input-text" value="" name="email" placeholder="&{'leader.email.hint'}" />
                                 <input type="hidden" value="" name="code"/>
                                 <button type="submit" class="button">
-                                    <span><span>Отправить</span></span>
+                                    <span><span>&{'leader.subscribe.send'}</span></span>
                                 </button>
                             </div>
                         </form>
@@ -127,109 +134,66 @@
             <!-- Newsletter -->
             <div class="newsletter">
                 <p>
-                    Мы создали банк для тех, кто ценит красоту iPhone<br/> и удобство Facebook.
+                    &{'newsletter.main'}
                 </p>
             </div>
 
 			<!-- Reports -->
 			<div class="report">
-				<p class="callout"><span>Выписка</span> еще никогда не была такой понятной</p>
+				<p class="callout">&{'reports.title'}</p>
 				<div class="feature">
-					<p class="title">Уведомления об операциях</p>
-					<p class="descr">
-                        Используйте Instabank для покупок или оплаты услуг.
-                        Мгновенно получайте уведомления<br/> и наглядные
-                        записи о совершенных действиях<br/> в ленте событий.
-                    </p>
+					<p class="title">&{'reports.bullet_one.title'}</p>
+					<p class="descr">&{'reports.bullet_one.description'}</p>
 				</div>
 				<div class="feature">
-					<p class="title">История операций</p>
-					<p class="descr">
-                        Читайте в выписке понятные названия операций.
-                        Привязывайте совершенные покупки к своему
-                        местоположению с помощью Foursquare.<br/> Добавляйте
-                        к покупкам комментарии и прикрепляйте фотографии
-                        на память.
-                    </p>
+					<p class="title">&{'reports.bullet_two.title'}</p>
+					<p class="descr">&{'reports.bullet_two.description'}</p>
 				</div>
 				<div class="feature">
-					<p class="title">Удобные отчёты и поиск</p>
-					<p class="descr">
-                        Instabank автоматически сортирует ваши траты<br/>
-                        по категориям и показывает, куда уходят деньги,<br/>
-                        с помощью простых диаграмм.<br/> Находите совершенные
-                        действия при помощи запросов, таких как “Театр” или
-                        “Starbucks”.
-                    </p>
+					<p class="title">&{'reports.bullet_three.title'}</p>
+					<p class="descr">&{'reports.bullet_three.description'}</p>
 				</div>
 				<div class="phone"></div>
 			</div>
 			
 			<!-- Social -->
 			<div class="social">
-				<p class="callout">Простые расчеты с друзьями</p>
+				<p class="callout">&{'social.title'}</p>
 				<div class="feature">
-					<p class="title">Переводы друзьям</p>
-					<p class="descr">
-                        Отправить деньги друзьям так же просто
-                        как СМС, даже если у них нет Instabank.
-                        Без комиссии.
-					</p>
+					<p class="title">&{'social.bullet_one.titile'}</p>
+					<p class="descr">&{'social.bullet_one.description'}</p>
 				</div>
 				<div class="feature">
-					<p class="title">Денежные запросы</p>
-					<p class="descr">
-                        Собирайте деньги на общий подарок другу<br/>
-                        или напомнайте друзьям, что Вы оплатили
-                        общий счёт в кафе, с помощью функции
-                        "Разделить траты".
-					</p>
+					<p class="title">&{'social.bullet_two.title'}</p>
+					<p class="descr">&{'social.bullet_two.description'}</p>
 				</div>
 				<div class="feature">
-					<p class="title">Переводы тем, кто рядом</p>
-					<p class="descr">
-                        Отправляйте деньги новым друзьям<br/> или знакомым,
-                        физически находящимся поблизости, с помощью
-                        функции<br/> “Переводы от ближайших людей”.
-					</p>
+					<p class="title">&{'social.bullet_three.title'}</p>
+					<p class="descr">&{'social.bullet_three.description'}</p>
 				</div>
 			</div>
 			
 			<!-- Security -->
 			<div class="security">
-				<p class="callout">Несколько слов о<br/><span>безопасности</span></p>
+				<p class="callout">&{'security.title'}</p>
 				<div class="feature">
-					<p class="title">PIN-код</p>
-					<p class="descr">
-                        Мобильное приложение Instabank в вашем
-                        смартфоне защищено PIN-кодом, как банковские
-                        карты. Удобно и надёжно.
-					</p>
+					<p class="title">&{'security.bullet_one.title'}</p>
+					<p class="descr">&{'security.bullet_one.description'}</p>
 				</div>
 				<div class="feature">
-					<p class="title">Социальный гарант</p>
-					<p class="descr">
-                        В эпоху социальных сетей девичья фамилия
-                        матери - совсем не секрет. Мы разработали
-                        революционную систему защиты, в которой
-                        вашу личность подтверждают ваши друзья.
-					</p>
+					<p class="title">&{'security.bullet_two.title'}</p>
+					<p class="descr">&{'security.bullet_two.description'}</p>
 				</div>
 				<div class="feature">
-					<p class="title">Шифрование</p>
-					<p class="descr">
-                        Каждый байт информации надёжно
-                        защищён сертифицированными алгоритмами,
-                        гарантирующими полную сохранность
-                        персональных данных.
-					</p>
+					<p class="title">&{'security.bullet_three.title'}</p>
+					<p class="descr">&{'security.bullet_three.description'}</p>
 				</div>
 				<div class="phone"></div>
 			</div>
 			
 			<!-- ATM's -->
 			<div class="atms">
-		    	<p class="callout"><span>Ах да!</span> У Instabank широкая сеть бесплатных банкоматов. Снимайте деньги и пополняйте счет без комиссии.</p>
+		    	<p class="callout">&{'atm.title'}</p>
 		    	<div class="cards"></div>
 			</div>
 	    </div>
@@ -237,7 +201,7 @@
 	
 	<div class="footer-container">	
 	    <div class="footer content">
-	    	<p class="callout">Следите за нами!</p>
+	    	<p class="callout">&{'footer.title'}</p>
 			<a href="https://www.facebook.com/Instabank" class="fb">Facebook</a>
 			<!-- <a href="javascript:void(0);" class="yt">YouTube</a> -->
 			<a href="https://twitter.com/instabankru" class="tw">Twitter</a>
