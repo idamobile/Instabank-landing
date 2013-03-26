@@ -17,11 +17,16 @@ public class Application extends Controller {
     private static final String EMAIL_REGEX = "\\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}\\b";
 
     private static final String SESSION_KEY_CODE = "code";
+    private static final String SESSION_KEY_LOCALE = "locale";
+
 
     public static void index(String locale) {
-        if (!StringUtils.isEmpty(locale)) {
-            Lang.set(locale);
+        if (StringUtils.isEmpty(locale)) {
+            locale = Lang.getLocale().getLanguage();
         }
+        Lang.set(locale);
+        session.put(SESSION_KEY_LOCALE, locale);
+
         String code = UUID.randomUUID().toString();
         session.put(SESSION_KEY_CODE, code);
         render(code);
@@ -43,6 +48,10 @@ public class Application extends Controller {
                 !session.get(SESSION_KEY_CODE).equals(code)) {
             Logger.warn("Code in session: %s; code in request: %s", session.get(SESSION_KEY_CODE), code);
             forbidden("Session code is incorrect");
+        }
+
+        if (session.contains(SESSION_KEY_LOCALE)) {
+            Lang.set(session.get(SESSION_KEY_LOCALE));
         }
 
         Map<String, String> response = new HashMap<String, String>();

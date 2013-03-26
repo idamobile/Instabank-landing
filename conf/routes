@@ -5,14 +5,20 @@
 # Home page
 GET     /subscribe                              Application.subscribe
 GET     /unsubscribe                            Application.unsubscribe
-GET     /{<[a-zA-Z_]*>locale}                   Application.index
-
+GET     /{<(en|ru)>locale}                      Application.index
+GET     /                                       Application.index
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
+
+# Import Secure routes
+*      /AdEnb8Aa                                module:secure
+
+# Import CRUD routes
+*      /AdEnb8Aa                                module:crud
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
