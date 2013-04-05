@@ -122,6 +122,7 @@
                         showMessage('error', 'Подписка не удалась :(', vars);
 
                     }else{
+                        vars.form_result = d.result;
                         if(d.result){
                             showMessage('success', d.msg, vars);
                         }else{
@@ -179,6 +180,10 @@
                 msgCont.html(msg);
                 vars.formContainer.slideUp(200).animate({opacity: 0}, 200);
                 vars.responseCont.slideDown(200).animate({opacity: 1}, 200);
+                if (vars.form_result == 'true') {
+                    $('#form_name').val('');
+                    $('#form_email').val('');
+                }
             }, 2000);
 		}
 	}

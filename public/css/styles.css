@@ -90,16 +90,19 @@ html, body {
 	top: 63px;
 	left: 67px;
 }
+
 .leader .callout {
+    color: #FFFFFF;
     font-family: 'PFDinDisplayProThin',Arial;
     font-size: 50px;
     left: 72px;
+    line-height: 1;
     position: absolute;
+    text-shadow: 0 1px 3px #000000;
     top: 183px;
     width: 350px;
-    line-height: 1;
-    color: #fff;
 }
+
 .leader .callout span {
 	font-family: 'PFDinDisplayProMedium', Arial;
 }

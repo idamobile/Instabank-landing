@@ -8,7 +8,7 @@ email.subject.new=Instabank - Ваша заявка получена
 email.subject.existing=Instabank - Ваша заявка
 
 # Main page messages
-leader.title=<span>Банк,</span> каким он должен быть сегодня.
+leader.title=<span>Банк,</span> каким он должен быть сегодня
 leader.subscribe.title=Получите приглашение
 leader.subscribe.description=Сейчас стать клиентом Instabank можно только по<br/> приглашению. <span>Оставьте заявку, чтобы попасть в число<br/> первых пользователей</span>
 leader.subscribe.send=Отправить
@@ -22,7 +22,7 @@ reports.title=<span>Выписка</span> еще никогда не была т
 reports.bullet_one.title=Уведомления об операциях
 reports.bullet_one.description=Используйте Instabank для покупок или оплаты услуг. Мгновенно получайте уведомления<br/> и наглядные записи о совершенных действиях<br/> в ленте событий.
 
-reports.bullet_two.title=История операций
+reports.bullet_two.title=Лента событий
 reports.bullet_two.description=Читайте в выписке понятные названия операций. Привязывайте совершенные покупки к своему местоположению с помощью Foursquare.<br/> Добавляйте к покупкам комментарии и прикрепляйте фотографии на память.
 
 reports.bullet_three.title=Удобные отчёты и поиск
@@ -31,10 +31,10 @@ reports.bullet_three.description=Instabank автоматически сорти
 # Social section messages
 social.title=Простые расчеты с друзьями
 social.bullet_one.titile=Переводы друзьям
-social.bullet_one.description=Отправить деньги друзьям так же просто как СМС, даже если у них нет Instabank. Без комиссии.
+social.bullet_one.description=Отправить деньги друзьям так же просто как СМС,<br/>даже если у них нет Instabank. Без комиссии.
 
 social.bullet_two.title=Денежные запросы
-social.bullet_two.description=Собирайте деньги на общий подарок другу<br/>или напомнайте друзьям, что Вы оплатили общий счёт в кафе, с помощью функции "Разделить траты".
+social.bullet_two.description=Собирайте деньги на общий подарок другу<br/>или напоминайте друзьям, что вы оплатили общий счёт в кафе,<br/> с помощью функции "Разделить траты".
 
 social.bullet_three.title=Переводы тем, кто рядом
 social.bullet_three.description=Отправляйте деньги новым друзьям<br/> или знакомым, физически находящимся поблизости, с помощью функции<br/> “Переводы от ближайших людей”.
@@ -45,7 +45,7 @@ security.bullet_one.title=PIN-код
 security.bullet_one.description=Мобильное приложение Instabank в вашем смартфоне защищено<br/> PIN-кодом, как банковские карты. Удобно и надёжно.
 
 security.bullet_two.title=Социальный гарант
-security.bullet_two.description=В эпоху социальных сетей девичья фамилия матери -<br/> совсем не секрет. Мы разработали революционную систему защиты<br/>, в которой вашу личность подтверждают ваши друзья.
+security.bullet_two.description=В эпоху социальных сетей девичья фамилия матери -<br/> совсем не секрет. Мы разработали революционную систему защиты,<br/> в которой вашу личность подтверждают ваши друзья.
 
 security.bullet_three.title=Шифрование
 security.bullet_three.description=Каждый байт информации надёжно защищён сертифицированными<br/> алгоритмами, гарантирующими полную сохранность персональных<br/> данных.
