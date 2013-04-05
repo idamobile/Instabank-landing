@@ -10,7 +10,7 @@ email.subject.existing=Instabank - Ваша заявка
 # Main page messages
 leader.title=<span>Банк,</span> каким он должен быть сегодня
 leader.subscribe.title=Получите приглашение
-leader.subscribe.description=Сейчас стать клиентом Instabank можно только по<br/> приглашению. <span>Оставьте заявку, чтобы попасть в число<br/> первых пользователей</span>
+leader.subscribe.description=Сейчас стать клиентом Instabank можно только по<br/> приглашению. <span>Оставьте заявку, чтобы попасть в число<br/> первых пользователей.</span>
 leader.subscribe.send=Отправить
 leader.email.hint=Ваш e-mail
 
