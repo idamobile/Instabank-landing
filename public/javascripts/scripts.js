@@ -7,17 +7,34 @@
 	
 		// inin newsletter form ajax
 		initNewsletterAjax();
+        initSubscribe();
+
+		$('#invite').click(function(){
+			slideTo($('.footer'));
+		});
 	});
-	
+
 
     /**
      * Window onLoad Initializations
     */
-    $(window).load(function(){
-        $(window).scroll(function(){
-            stickyNewsletter();
-        });
-    });
+	$(window).load(function(){
+
+		/*
+		$(window).scroll(function(){
+			stickyNewsletter();
+		});
+		*/
+	});
+
+
+	function slideTo(elem)
+	{
+		$('html, body').animate({
+			scrollTop: elem.offset().top
+		}, 1300, 'easeInOutCubic', function(){});
+	}
+
 
     /**
      * Initialize Newsletter Ajax Signup Functionality
@@ -73,6 +90,58 @@
 	}
 	
 	
+    function initSubscribe()
+    {
+        var vars = {};
+        vars.form = $('#signup-form');
+        vars.actionUrl = vars.form.attr('action');
+        vars.responseCont = $('.result');
+        vars.formContainer = $('.form-container');
+        vars.button = vars.form.find('.button');
+        vars.buttonInner = vars.button.find('span span');
+        vars.overlay = $('.overlay');
+
+
+        vars.form.submit(function(e){
+
+            e.preventDefault();
+
+            vars.overlay.show(0);
+            vars.button.prop('disabled', true);
+            vars.buttonInner.find('span').hide(0);
+            vars.buttonInner.find('.loader').show(0);
+
+            /**/
+                // submit the form using Ajax
+            $.ajax({
+                url: vars.actionUrl,
+                data: vars.form.serialize(),
+                dataType: 'json',
+                success: function(d){
+                    if('null' == d){
+                        showMessage('error', 'Подписка не удалась :(', vars);
+
+                    }else{
+                        if(d.result){
+                            showMessage('success', d.msg, vars);
+                        }else{
+                            showMessage('invalid', d.msg, vars);
+                        }
+                    }
+                },
+                error: function(d){
+                    showMessage('error', 'Подписка не удалась :(', vars);
+                }
+            });
+
+        });
+
+        vars.responseCont.find('button').click(function(){
+			showMessage('hide', '', vars);
+        });
+    }
+
+
 	/**
 	 * Check if given string is an Email
 	*/
@@ -85,24 +154,32 @@
 	/**
 	 * Display Newsletter Input Message with Given Class and Text String
 	*/
-	function showMessage(className, msg)
+    function showMessage(className, msg, vars)
 	{	
-		// set vars
-		var msgCont = $('#subscribe-result');
+        var msgCont = vars.responseCont.find('.msg');
 		
+        if(className == 'invalid'){
+            vars.responseCont.find('.button').show(0);
+        }
+
 		// if action is to hide message
 		if(className == 'hide'){
-			msgCont.animate({opacity: 0}, 150, function(){msgCont.html('')});
+            vars.overlay.hide();
+            vars.button.removeProp('disabled');
+            vars.buttonInner.find('.loader').hide(0);
+            vars.buttonInner.find('span').show(0);
+            vars.responseCont.slideUp(200).animate({opacity: 0}, 200, function(){ msgCont.html('') });
+            vars.formContainer.slideDown(200).animate({opacity: 1}, 200);
 				
 		// otherwise display appropriate message
 		}else{
-			msgCont.animate({opacity: 0}, 150, function(){
-				msgCont.removeClass();
-				msgCont.addClass(className).html(msg).animate({opacity: 1}, 150);
-			});
-			
-			// hide message automatically after X seconds
-			//setTimeout(function(){showMessage('hide')}, 6000);
+            setTimeout(function(){
+                vars.overlay.hide();
+                vars.button.removeProp('disabled');
+                msgCont.html(msg);
+                vars.formContainer.slideUp(200).animate({opacity: 0}, 200);
+                vars.responseCont.slideDown(200).animate({opacity: 1}, 200);
+            }, 2000);
 		}
 	}
 

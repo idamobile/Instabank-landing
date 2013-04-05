@@ -21,9 +21,11 @@ public class Application extends Controller {
 
 
     public static void index(String locale) {
-        if (StringUtils.isEmpty(locale)) {
-            locale = Lang.getLocale().getLanguage();
-        }
+//        if (StringUtils.isEmpty(locale)) {
+//            locale = Lang.getLocale().getLanguage();
+//        }
+//        Lang.set(locale);
+        locale = "ru";
         Lang.set(locale);
         session.put(SESSION_KEY_LOCALE, locale);
 
@@ -43,7 +45,7 @@ public class Application extends Controller {
         index(Lang.get());
     }
 
-    public static void subscribe(String email, String code) {
+    public static void subscribe(String name, String email, String code) {
         if (!session.contains(SESSION_KEY_CODE) ||
                 !session.get(SESSION_KEY_CODE).equals(code)) {
             Logger.warn("Code in session: %s; code in request: %s", session.get(SESSION_KEY_CODE), code);
@@ -56,13 +58,15 @@ public class Application extends Controller {
 
         Map<String, String> response = new HashMap<String, String>();
         String errorMessage = null;
-        if (!email.matches(EMAIL_REGEX)) {
+        if (StringUtils.isEmpty(name)) {
+            errorMessage = Messages.get("name.empty");
+        } else if (!email.matches(EMAIL_REGEX)) {
             errorMessage = Messages.get("email.invalid");
         } else if (Subscriber.find("byEmail", email).fetch().size() > 0) {
             errorMessage = Messages.get("email.already_exists");
         } else {
             try {
-                Subscriber subscriber = Subscriber.create(email.toLowerCase(), request.remoteAddress);
+                Subscriber subscriber = Subscriber.create(name, email.toLowerCase(), request.remoteAddress);
                 Mails.welcomeNew(subscriber.email);
                 subscriber.updateStatus(Subscriber.Status.GREETING_SENT);
             } catch (Exception ex) {
@@ -78,6 +82,10 @@ public class Application extends Controller {
             response.put("msg", errorMessage);
         }
         renderJSON(response);
+    }
+
+    public static void offer() {
+        render();
     }
 
 }

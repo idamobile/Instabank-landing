@@ -14,6 +14,9 @@ public class Subscriber extends Model {
         NOT_CONFIRMED, CONFIRMED, GREETING_SENT, UNSUBSCRIBED
     }
 
+    @Column(name = "name", nullable = true)
+    public String name;
+
     @Column(name = "email", unique = true, nullable = false)
     public String email;
 
@@ -31,14 +34,15 @@ public class Subscriber extends Model {
 
     }
 
-    public Subscriber(String email, String remoteAddress) {
+    public Subscriber(String name, String email, String remoteAddress) {
+        this.name = name;
         this.email = email;
         this.remoteAddress = remoteAddress;
         subscriptionDate = new Date();
     }
 
-    public static Subscriber create(String email, String remoteAddress) {
-        Subscriber subscriber = new Subscriber(email, remoteAddress);
+    public static Subscriber create(String name, String email, String remoteAddress) {
+        Subscriber subscriber = new Subscriber(name, email, remoteAddress);
         subscriber.save();
         return subscriber;
     }
