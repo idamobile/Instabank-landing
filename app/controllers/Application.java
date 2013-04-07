@@ -8,6 +8,7 @@ import play.i18n.Messages;
 import play.mvc.Controller;
 import service.Mails;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -85,7 +86,11 @@ public class Application extends Controller {
     }
 
     public static void offer() {
-        render();
+        File file = new File("public/html/offer.html");
+        Logger.info("Serving offer from path: "+file.getAbsolutePath());
+
+        response.contentType = "text/html";
+        renderBinary(file);
     }
 
 }
