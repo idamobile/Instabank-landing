@@ -3,6 +3,7 @@ package controllers;
 import models.Subscriber;
 import org.apache.commons.lang.StringUtils;
 import play.Logger;
+import play.Play;
 import play.i18n.Lang;
 import play.i18n.Messages;
 import play.mvc.Controller;
@@ -22,11 +23,10 @@ public class Application extends Controller {
 
 
     public static void index(String locale) {
-//        if (StringUtils.isEmpty(locale)) {
+        if (StringUtils.isEmpty(locale)) {
 //            locale = Lang.getLocale().getLanguage();
-//        }
-//        Lang.set(locale);
-        locale = "ru";
+            locale = "ru";
+        }
         Lang.set(locale);
         session.put(SESSION_KEY_LOCALE, locale);
 
@@ -91,6 +91,10 @@ public class Application extends Controller {
 
         response.contentType = "text/html";
         renderBinary(file);
+    }
+
+    public static void install() {
+        redirect(Play.configuration.getProperty("instabank.appstore.url"), true);
     }
 
 }

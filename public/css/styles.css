@@ -408,6 +408,7 @@ html, body {
     line-height: 1.2;
     margin: 0 0 38px;
     padding: 12px 0 10px 101px;
+    min-height: 117px;
 }
 .security .callout span {
 	font-family: 'PFDinDisplayProMedium', Arial;

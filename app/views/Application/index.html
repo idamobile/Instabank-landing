@@ -101,10 +101,15 @@
 <div class="wrapper">
 	<div class="header-container">
 	    <div class="header content">
-			<a class="logo" href="http://instabank.ru">
+            *{<div style="float: right; margin-right: 20px; z-index: 2000; position: relative; white-space: nowrap;">}*
+                *{<a href="/en" class="logo">en</a> | <a href="/ru" class="logo">ru</a>}*
+            *{</div>}*
+
+            <a class="logo" href="http://instabank.ru">
 				<img src="@{'/public/css/images/logo.png'}" alt="Instabank Logo" width="" height="" />
 			</a>
-	    </div>
+
+        </div>
 	</div>
 	<div class="main-container">	
 	    <div class="main content">
@@ -117,7 +122,7 @@
                 <div class="subscribe-container">
                     <div class="btn-container">
                         <button class="button btn-blue-big" id="invite">
-                            <span><span>Получить приглашение</span></span>
+                            <span><span>&{'leader.subscribe.request_invite'}</span></span>
                         </button>
                     </div>
                 </div>
@@ -146,7 +151,7 @@
 					<p class="descr">&{'reports.bullet_two.description'}</p>
 				</div>
 				<div class="feature">
-					<p class="title"><span class="soon">скоро</span>&{'reports.bullet_three.title'}</p>
+					<p class="title"><span class="soon">&{'reports.soon'}</span>&{'reports.bullet_three.title'}</p>
 					<p class="descr">&{'reports.bullet_three.description'}</p>
 				</div>
 				<div class="phone"></div>
@@ -156,15 +161,15 @@
 			<div class="social">
 				<p class="callout">&{'social.title'}</p>
 				<div class="feature">
-					<p class="title"><span class="soon">скоро</span>&{'social.bullet_one.titile'}</p>
+					<p class="title"><span class="soon">&{'reports.soon'}</span>&{'social.bullet_one.titile'}</p>
 					<p class="descr">&{'social.bullet_one.description'}</p>
 				</div>
 				<div class="feature">
-					<p class="title"><span class="soon">скоро</span>&{'social.bullet_two.title'}</p>
+					<p class="title"><span class="soon">&{'reports.soon'}</span>&{'social.bullet_two.title'}</p>
 					<p class="descr">&{'social.bullet_two.description'}</p>
 				</div>
 				<div class="feature">
-					<p class="title"><span class="soon">скоро</span>&{'social.bullet_three.title'}</p>
+					<p class="title"><span class="soon">&{'reports.soon'}</span>&{'social.bullet_three.title'}</p>
 					<p class="descr">&{'social.bullet_three.description'}</p>
 				</div>
 			</div>
@@ -191,18 +196,11 @@
 				<div class="phone"></div>
 			</div>
 			
-			<!-- ATM's -->
-            <!--
-			<div class="atms">
-		    	<p class="callout">&{'atm.title'}</p>
-		    	<div class="cards"></div>
-			</div>
-			-->
 			<div class="tarif">
-				<p class="callout">О наших <span>тарифах</span></p>
-				<p class="feature transfer">Переводите деньги<br/><span>друзьям из Facebook<br/>бесплатно.</span></p>
-				<p class="feature interest">Пользуйтесь картой<br/>Instabank и получайте до<br/><span>10% годовых на сумму<br/>остатка.*</span></p>
-				<p class="feature network"><span>Снимайте деньги и<br/>пополняйте счет без<br/>комиссии</span> в широкой сети<br/>банкоматов Мастер-Банк<br/>и ВПБ.</p>
+				<p class="callout">&{'tariffs.title'}</p>
+				<p class="feature transfer">&{'tariff.feature.transfer'}</p>
+				<p class="feature interest">&{'tariff.feature.interest'}</p>
+				<p class="feature network">&{'tariff.feature.network'}</p>
 	    </div>
 	</div>
 	
@@ -214,7 +212,7 @@
                 <div class="form-container">
                     <form action="@{Application.subscribe}" method="post" id="signup-form" name="signup">
                         <div class="input-container">
-                            <input type="text" class="input-text" value="" name="name" id="form_name" placeholder="Ваше Имя" />
+                            <input type="text" class="input-text" value="" name="name" id="form_name" placeholder="&{'leader.name.hint'}" />
                         </div>
                         <div class="input-container">
                             <input type="text" class="input-text" value="" name="email" id="form_email" placeholder="&{'leader.email.hint'}" />
@@ -229,9 +227,9 @@
                     </form>
                 </div>
 	    		<div class="result">
-	    			<p class="msg">Чудно!<br/>Мы известим Вас<br/> когда сервис запустится</p>
+	    			<p class="msg">&{'subscribe.form.success'}</p>
 					<button type="button" class="button">
-					    <span><span>Вернуться к форме</span></span>
+					    <span><span>&{'subscribe.form.back_to_form'}</span></span>
 					</button>
 	    		</div>
 	    		<div class="lines">
@@ -239,7 +237,7 @@
 	    		</div>
 	    		<div class="overlay"></div>
 	    	</div>
-	    	<p class="callout">Следите за нами!</p>
+	    	<p class="callout">&{'footer.title'}</p>
 			<a href="https://www.facebook.com/Instabank" class="fb">Facebook</a>
 			<!-- <a href="javascript:void(0);" class="yt">YouTube</a> -->
 			<a href="https://twitter.com/instabankru" class="tw">Twitter</a>

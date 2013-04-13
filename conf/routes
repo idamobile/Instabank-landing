@@ -8,6 +8,7 @@ GET     /unsubscribe                            Application.unsubscribe
 GET     /{<(en|ru)>locale}                      Application.index
 GET     /                                       Application.index
 GET     /offer                                  Application.offer
+GET     /install                                Application.install
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

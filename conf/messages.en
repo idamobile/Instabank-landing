@@ -9,14 +9,20 @@ email.subject.existing=Instabank - Your request
 
 # Main page messages
 leader.title=<span>Banking,</span> reimagined
-leader.subscribe.title=<span>Sign up</span> to receive an invitation.
+leader.subscribe.request_invite=Request an invite
+leader.subscribe.title=Sign up
+leader.subscribe.description=For now you can become a client of Instabank only by invitation.<br/>Leave a request to be among our first users.
 leader.subscribe.send=Submit
+leader.name.hint=Your name
 leader.email.hint=Your e-mail address
+subscribe.form.back_to_form=Back to sign up form
+subscribe.form.success=Thanks for signing up! We will keep you posted on our progress.
 
-newsletter.title=?? ??????????? ?????? ????? ?????? ????,<br/>??????? ?? ?????? ???? ??????? ? ????????.
+newsletter.title=You use bank almost every day<br/>that's why it should be beautiful and intelligible.
 newsletter.main=A bank for those who appreciate the beauty of iPhone<br/> and the convenience of Facebook
 
 # Reports section messages
+reports.soon=soon
 reports.title=<span>Your bank statement</span> reimagined.
 reports.bullet_one.title=Transaction notifications
 reports.bullet_one.description=Use Instabank to buy stuff or pay for services. You will receive instant notifications and see descriptive event summaries in your activity stream.
@@ -33,24 +39,33 @@ social.bullet_one.titile=Sending money to friends
 social.bullet_one.description=Sending money to friends is as easy as sending<br/> a text - even if they're not with Instabank. No fees, no hassle.
 
 social.bullet_two.title=Requesting money
-social.bullet_two.description=Use the "request money" and "split bill" features<br/> to send your friends actionable reminders to cover their share of a purchase you made.
+social.bullet_two.description=Use the "request money" and "split bill" features<br/> to send your friends actionable reminders to cover their share<br/> of a purchase you made.
 
 social.bullet_three.title=Pay locally, wirelessly
-social.bullet_three.description=Send money to new friends and pay nearby businesses straight from your smartphone.
+social.bullet_three.description=Send money to new friends and pay nearby businesses<br/> straight from your smartphone.
 
 # Security section messages
 security.title=<span>Security</span>
 security.bullet_one.title=PIN code
-security.bullet_one.description=To make sure your money is safe, Instabank requires a PIN code to launch the app on your smartphone. Combined with your smartphone lock combination, this provides you with extra protection.
+security.bullet_one.description=To make sure your money is safe, Instabank requires a PIN code<br/> to launch the app on your smartphone.<br/>Combined with your smartphone lock combination,<br/>this provides you with extra protection.
 
 security.bullet_two.title=Social guarantor
-security.bullet_two.description=Common security questions aren't very reliable<br/>in the age of social networks. We have developed an innovative security system, where your identity<br/> is verified by your selected trusted friends.
+security.bullet_two.description=Common security questions aren't very reliable in the age of social networks.<br/>We have developed an innovative security system, where your identity<br/> is verified by your selected trusted friends.
 
 security.bullet_three.title=Encryption
-security.bullet_three.description=Each data byte is securely protected by certified algorithms, which guarantee your personal data's safety.
+security.bullet_three.description=Each data byte is securely protected by certified algorithms,<br/>which guarantee your personal data's safety.
+
+security.bullet_four.title=Deposit insurance
+security.bullet_four.description=All deposits and accounts are protected<br/> by an obligatory deposit insurance system.
 
 # ATMS section messages
 atm.title=Instabank also utilizes a broad network of ATMs for free withdrawals and deposits.
+
+# Tariffs section
+tariffs.title=<span>Our Tariffs</span>
+tariff.feature.transfer=Transfer money to your Facebook friends for free.</span>
+tariff.feature.interest=Use your Instabank card and receive up to 10 %% annual rate on the balance
+tariff.feature.network=Withdraw cash and top up the balance with no commission using a broad network of ATM of MasterBank and VPB.
 
 # Footer title
 footer.title=Follow us on social media
