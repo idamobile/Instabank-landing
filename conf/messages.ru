@@ -18,6 +18,13 @@ leader.email.hint=Ваш e-mail
 subscribe.form.back_to_form=Вернуться к форме
 subscribe.form.success=Чудно!<br/>Мы известим Вас<br/> когда сервис запустится
 
+leader.unsubscribe.title=Отписаться
+leader.unsubscribe.description=Чтобы отписаться, укажите свой e-mail
+
+unsubscribe.error.email_empty=Пожалуйста, введите e-mail
+unsubscribe.success=Ваш e-mail успешно исключен из списка рассылки
+unsubscribe.error.subscriber_not_found=Указанный адрес не зарегистрирован
+
 newsletter.title=Вы пользуетесь банком почти каждый день,<br/>поэтому он должен быть удобным и понятным.
 newsletter.main=Мы создали банк для тех, кто ценит красоту iPhone и возможности Facebook.
 

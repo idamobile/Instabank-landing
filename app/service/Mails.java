@@ -16,24 +16,10 @@ public class Mails extends Mailer {
         setFrom(Play.configuration.getProperty("mail.smtp.sender.email"));
         setSubject(Messages.get("email.subject.new"));
         addHeader("Precedence", "bulk");
-        addHeader("List-Unsubscribe", "http://instabank.ru/unsubscribe?email="+recipient);
+        addHeader("List-Unsubscribe", "http://instabank.ru/unsubscribe");
         try {
-            send(recipient);
+            send();
             Logger.info("New user notified: " + recipient);
-        } catch (Throwable t) {
-            Logger.error(t, "Unable to send email to recipient: " + recipient);
-        }
-    }
-
-    public static void welcomeExisting(String recipient) {
-        addRecipient(recipient);
-        setFrom(Play.configuration.getProperty("mail.smtp.sender.email"));
-        setSubject(Messages.get("email.subject.existing"));
-        addHeader("Precedence", "bulk");
-        addHeader("List-Unsubscribe", "http://instabank.ru/unsubscribe?email="+recipient);
-        try {
-            send(recipient);
-            Logger.info("Existing user notified: " + recipient);
         } catch (Throwable t) {
             Logger.error(t, "Unable to send email to recipient: " + recipient);
         }

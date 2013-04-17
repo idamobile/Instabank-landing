@@ -17,6 +17,12 @@ leader.name.hint=Your name
 leader.email.hint=Your e-mail address
 subscribe.form.back_to_form=Back to sign up form
 subscribe.form.success=Thanks for signing up! We will keep you posted on our progress.
+leader.unsubscribe.title=Unsubscribe
+leader.unsubscribe.description=To unsubscribe enter your email below
+
+unsubscribe.error.email_empty=Please enter email
+unsubscribe.success=You have been unsubscribed successfully
+unsubscribe.error.subscriber_not_found=Specified e-mail was not registered
 
 newsletter.title=You use bank almost every day<br/>that's why it should be beautiful and intelligible.
 newsletter.main=A bank for those who appreciate the beauty of iPhone<br/> and the convenience of Facebook

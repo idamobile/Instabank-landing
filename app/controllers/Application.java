@@ -21,6 +21,9 @@ public class Application extends Controller {
     private static final String SESSION_KEY_CODE = "code";
     private static final String SESSION_KEY_LOCALE = "locale";
 
+    private static final String UNSUBSCRIBE_FLASH_KEY_ERROR = "error";
+    private static final String UNSUBSCRIBE_FLASH_KEY_SUCCESS = "success";
+
 
     public static void index(String locale) {
         if (StringUtils.isEmpty(locale)) {
@@ -36,14 +39,21 @@ public class Application extends Controller {
     }
 
     public static void unsubscribe(String email) {
-        Subscriber s = Subscriber.find("byEmail", email).first();
-        if (s != null) {
-            s.status = Subscriber.Status.UNSUBSCRIBED;
-            s.save();
-            Logger.info("User %s was unsubscribed", email);
-        }
+        if ("POST".equals(request.method)) {
+            if (StringUtils.isEmpty(email)) {
+                flash(UNSUBSCRIBE_FLASH_KEY_ERROR, Messages.get("unsubscribe.error.email_empty"));
+            } else {
+                Subscriber subscriber = Subscriber.findByEmail(email);
+                if (subscriber != null) {
+                    subscriber.unsubscribe();
+                    flash(UNSUBSCRIBE_FLASH_KEY_SUCCESS, Messages.get("unsubscribe.success"));
+                } else {
+                    flash(UNSUBSCRIBE_FLASH_KEY_ERROR, Messages.get("unsubscribe.error.subscriber_not_found"));
+                }
+            }
 
-        index(Lang.get());
+        }
+        render();
     }
 
     public static void subscribe(String name, String email, String code) {
@@ -63,13 +73,13 @@ public class Application extends Controller {
             errorMessage = Messages.get("name.empty");
         } else if (!email.matches(EMAIL_REGEX)) {
             errorMessage = Messages.get("email.invalid");
-        } else if (Subscriber.find("byEmail", email).fetch().size() > 0) {
+        } else if (Subscriber.isSubscribed(email)) {
             errorMessage = Messages.get("email.already_exists");
         } else {
             try {
-                Subscriber subscriber = Subscriber.create(name, email.toLowerCase(), request.remoteAddress);
+                Subscriber subscriber = Subscriber.subscribe(name, email.toLowerCase(), request.remoteAddress);
                 Mails.welcomeNew(subscriber.email);
-                subscriber.updateStatus(Subscriber.Status.GREETING_SENT);
+                subscriber.updateNumericStatus(Subscriber.NUMERIC_STATUS_NEWLY_REGISTERED);
             } catch (Exception ex) {
                 errorMessage = Messages.get("email.persisting_error") + ex.getMessage();
                 Logger.error("Unable to persist email", ex);

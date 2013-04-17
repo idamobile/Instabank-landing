@@ -4,7 +4,7 @@
 
 # Home page
 GET     /subscribe                              Application.subscribe
-GET     /unsubscribe                            Application.unsubscribe
+*       /unsubscribe                            Application.unsubscribe
 GET     /{<(en|ru)>locale}                      Application.index
 GET     /                                       Application.index
 GET     /offer                                  Application.offer

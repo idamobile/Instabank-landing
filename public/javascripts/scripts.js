@@ -125,6 +125,7 @@
                         vars.form_result = d.result;
                         if(d.result){
                             showMessage('success', d.msg, vars);
+                            _gaq.push(['_trackPageview', '/subscribe']);
                         }else{
                             showMessage('invalid', d.msg, vars);
                         }
