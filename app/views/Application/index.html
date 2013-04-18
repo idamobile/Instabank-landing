@@ -106,8 +106,8 @@
             *{</div>}*
 
             <ul class="menu">
-                <li><a href="//instabank.ru/static/tariffs.pdf">тарифы</a></li>
-                *{<li><a href="javascript:void(0);">контакты</a></li>}*
+                <li><a href="//instabank.ru/static/tariffs.pdf">&{'tariffs'}</a></li>
+                <li><a href="javascript:slideTo($('#contacts-container'));" >&{'contacts'}</a></li>
             </ul>
 
             <a class="logo" href="http://instabank.ru">
@@ -202,7 +202,9 @@
 			</div>
 			
 			<div class="tarif">
-				<p class="callout">&{'tariffs.title'}</p>
+				<p class="callout">
+                    <a href="//instabank.ru/static/tariffs.pdf">&{'tariffs.title'}</a>
+                </p>
 				<p class="feature transfer">&{'tariff.feature.transfer'}</p>
 				<p class="feature interest">&{'tariff.feature.interest'}</p>
 				<p class="feature network">&{'tariff.feature.network'}</p>
@@ -242,7 +244,14 @@
 	    		</div>
 	    		<div class="overlay"></div>
 	    	</div>
-	    	<p class="callout">&{'footer.title'}</p>
+
+            <div id="contacts-container">
+                <p class="callout">&{'contacts'}</p>
+                <p class="contacts phone">+7(499)678-20-30</p>
+                <p class="contacts email">contact@instabank.ru</p>
+            </div>
+
+            <p class="callout">&{'footer.title'}</p>
 			<a href="https://www.facebook.com/Instabank" class="fb">Facebook</a>
 			<!-- <a href="javascript:void(0);" class="yt">YouTube</a> -->
 			<a href="https://twitter.com/instabankru" class="tw">Twitter</a>

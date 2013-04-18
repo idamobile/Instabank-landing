@@ -68,6 +68,7 @@ security.bullet_four.description=All deposits and accounts are protected<br/> by
 atm.title=Instabank also utilizes a broad network of ATMs for free withdrawals and deposits.
 
 # Tariffs section
+tariffs=tariffs
 tariffs.title=<span>Our Tariffs</span>
 tariff.feature.transfer=Transfer money to your Facebook friends for free.</span>
 tariff.feature.interest=Use your Instabank card and receive up to 10 %% annual rate on the balance
@@ -75,3 +76,6 @@ tariff.feature.network=Withdraw cash and top up the balance with no commission u
 
 # Footer title
 footer.title=Follow us on social media
+
+# Contacts section
+contacts=Contacts

@@ -1,3 +1,10 @@
+function slideTo(elem)
+{
+    $('html, body').animate({
+        scrollTop: elem.offset().top
+    }, 1300, 'easeInOutCubic', function(){});
+}
+
 (function($){
 
     /**
@@ -12,7 +19,7 @@
 		$('#invite').click(function(){
 			slideTo($('.footer'));
 		});
-	});
+    });
 
 
     /**
@@ -26,15 +33,6 @@
 		});
 		*/
 	});
-
-
-	function slideTo(elem)
-	{
-		$('html, body').animate({
-			scrollTop: elem.offset().top
-		}, 1300, 'easeInOutCubic', function(){});
-	}
-
 
     /**
      * Initialize Newsletter Ajax Signup Functionality
