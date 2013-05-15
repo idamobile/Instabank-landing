@@ -25,7 +25,7 @@
 	<link rel="stylesheet" type="text/css" href="@{'/public/css/reset.css'}" media="all" />
     <link rel="stylesheet" type="text/css" href="@{'/public/css/fonts.css'}" media="all" />
     #{if play.i18n.Lang.get() == 'en'}
-    <link rel="stylesheet" type="text/css" href="@{'/public/css/styles.css'}" media="all" />
+    <link rel="stylesheet" type="text/css" href="@{'/public/css/styles_en.css'}" media="all" />
     #{/if} #{else}
     <link rel="stylesheet" type="text/css" href="@{'/public/css/styles.css'}" media="all" />
     #{/else}
@@ -101,14 +101,13 @@
 <div class="wrapper">
 	<div class="header-container">
 	    <div class="header content">
-            *{<div style="float: right; margin-right: 20px; z-index: 2000; position: relative; white-space: nowrap;">}*
-                *{<a href="/en" class="logo">en</a> | <a href="/ru" class="logo">ru</a>}*
-            *{</div>}*
 
+            #{if play.i18n.Lang.get() == 'ru'}
             <ul class="menu">
                 <li><a href="//instabank.ru/static/tariffs.pdf">&{'tariffs'}</a></li>
                 <li><a href="javascript:slideTo($('#contacts-container'));" >&{'contacts'}</a></li>
             </ul>
+            #{/if}
 
             <a class="logo" href="http://instabank.ru">
 				<img src="@{'/public/css/images/logo.png'}" alt="Instabank Logo" width="" height="" />
@@ -140,8 +139,12 @@
                 </div>
 				<p>&{'newsletter.title'}</p>
 				<p class="small">&{'newsletter.main'}</p>
+
+                #{if play.i18n.Lang.get() == 'ru'}
 				<div class="feature percent"></div>
 				<div class="feature insurance"></div>
+                #{/if}
+
 			</div>
 
 			<!-- Reports -->
@@ -200,7 +203,8 @@
 				</div>
 				<div class="phone"></div>
 			</div>
-			
+
+            #{if play.i18n.Lang.get() == 'ru'}
 			<div class="tarif">
 				<p class="callout">
                     <a href="//instabank.ru/static/tariffs.pdf">&{'tariffs.title'}</a>
@@ -208,7 +212,8 @@
 				<p class="feature transfer">&{'tariff.feature.transfer'}</p>
 				<p class="feature interest">&{'tariff.feature.interest'}</p>
 				<p class="feature network">&{'tariff.feature.network'}</p>
-	    </div>
+	        </div>
+            #{/if}
 	</div>
 	
 	<div class="footer-container">	
@@ -256,6 +261,8 @@
 			<!-- <a href="javascript:void(0);" class="yt">YouTube</a> -->
 			<a href="https://twitter.com/instabankru" class="tw">Twitter</a>
 			<a href="http://instagram.com/instabankru/" class="ig">Instagram</a>
+
+            #{if play.i18n.Lang.get() == 'ru'}
 			<p class="legal">Банковские услуги предоставляются АКБ «ВПБ» (ЗАО)<br/>
 				Генеральная лицензия ЦБ РФ №3065<br/>
 				АКБ "ВПБ" (ЗАО) внесен в реестр Банков - участников системы обязательного <br/>
@@ -263,6 +270,8 @@
 				<br/>
 				Карта Instabank принимается везде, где принимаются карты MasterCard
 			</p>
+            #{/if}
+
 	    </div>
 	</div>
 </div>

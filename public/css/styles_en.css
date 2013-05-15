@@ -81,7 +81,7 @@ html, body {
 
 .leader {
 	height: 568px;
-	background: transparent url(images/bg/leader.jpg) no-repeat 0 0;
+	background: transparent url(images/bg_en/leader.jpg) no-repeat 0 0;
 	position: relative;
 }
 .leader .logo {
@@ -112,7 +112,7 @@ html, body {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	background: transparent url(images/bg/leader_phone.png) no-repeat 0 0;
+	background: transparent url(images/bg_en/leader_phone.png) no-repeat 0 0;
 }
 
 .leader .subscribe-container {
@@ -325,7 +325,7 @@ html, body {
 	width: 305px;
 	height: 808px;
 	position: absolute;
-	background: transparent url(images/bg/report.png) no-repeat 0 0;
+	background: transparent url(images/bg_en/report.png) no-repeat 0 0;
 	left: 76px;
 	top: -27px;
 }
@@ -336,7 +336,7 @@ html, body {
     line-height: 1.2;
 	margin: 0 0 56px 430px;
 	padding: 108px 0 0 7px;
-	background: transparent url(images/bg/report_note.jpg) no-repeat 0 0;
+	background: transparent url(images/bg_en/report_note.jpg) no-repeat 0 0;
 }
 .report .callout span {
 	font-family: 'PFDinDisplayProMedium', Arial;
@@ -360,7 +360,7 @@ html, body {
 }
 .social {
 	height: 695px;
-	background: transparent url(images/bg/social.jpg) no-repeat 0 0;
+	background: transparent url(images/bg_en/social.jpg) no-repeat 0 0;
 	color: #fff;
 	padding: 75px 0 0 72px;
 }
@@ -396,12 +396,12 @@ html, body {
 	width: 354px;
 	height: 811px;
 	position: absolute;
-	background: transparent url(images/bg/security.png) no-repeat 0 0;
+	background: transparent url(images/bg_en/security.png) no-repeat 0 0;
 	right: 69px;
 	top: -29px;
 }
 .security .callout {
-    background: url("images/bg/security_lock.jpg") no-repeat scroll 0 0 transparent;
+    background: url("images/bg_en/security_lock.jpg") no-repeat scroll 0 0 transparent;
     font-family: 'PFDinDisplayProThin',Arial;
     font-size: 40px;
     line-height: 1.2;
@@ -439,7 +439,7 @@ html, body {
     font-size: 40px;
     line-height: 1.2;
     margin: 0 0 42px 25px;
-	background: transparent url(images/bg/atms_marker.png) no-repeat 0 0;
+	background: transparent url(images/bg_en/atms_marker.png) no-repeat 0 0;
 	padding: 2px 0 0 98px;
 }
 .atms .callout span {
@@ -463,7 +463,7 @@ html, body {
 .atms .cards {
 	width: 1064px;
 	height: 426px;
-	background: transparent url(images/bg/atms.png) no-repeat 0 0;
+	background: transparent url(images/bg_en/atms.png) no-repeat 0 0;
 	position: absolute;
 	bottom: -168px;
 	left: 99px;
@@ -493,7 +493,7 @@ html, body {
 	width: 280px;
 	height: 290px;
 	padding: 125px 0 0 0;
-	background-image: url(images/bg/tarif_features.png);
+	background-image: url(images/bg_en/tarif_features.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	margin: 0 40px 0 0;
