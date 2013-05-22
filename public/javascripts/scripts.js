@@ -1,10 +1,3 @@
-function slideTo(elem)
-{
-    $('html, body').animate({
-        scrollTop: elem.offset().top
-    }, 1300, 'easeInOutCubic', function(){});
-}
-
 (function($){
 
     /**
@@ -15,6 +8,7 @@ function slideTo(elem)
 		// inin newsletter form ajax
 		initNewsletterAjax();
         initSubscribe();
+		initVideoPopup();
 
 		$('#invite').click(function(){
 			slideTo($('.footer'));
@@ -33,6 +27,23 @@ function slideTo(elem)
 		});
 		*/
 	});
+
+
+	function initVideoPopup()
+	{
+		$('.videopop').fancybox({
+			padding: 0
+		});
+	}
+
+
+	function slideTo(elem)
+	{
+		$('html, body').animate({
+			scrollTop: elem.offset().top
+		}, 1300, 'easeInOutCubic', function(){});
+	}
+
 
     /**
      * Initialize Newsletter Ajax Signup Functionality

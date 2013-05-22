@@ -1,5 +1,7 @@
 package controllers;
 
+import models.FaqItem;
+import models.Review;
 import models.Subscriber;
 import org.apache.commons.lang.StringUtils;
 import play.Logger;
@@ -11,6 +13,7 @@ import service.Mails;
 
 import java.io.File;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -105,6 +108,24 @@ public class Application extends Controller {
 
     public static void install() {
         redirect(Play.configuration.getProperty("instabank.appstore.url"), true);
+    }
+
+    public static void faq() {
+        String locale = session.get(SESSION_KEY_LOCALE);
+        locale = StringUtils.isEmpty(locale)? "ru": locale;
+
+        Lang.set(locale);
+
+        List<FaqItem> items = FaqItem.list(locale);
+        render(items);
+    }
+
+    public static void press() {
+        String locale = session.get(SESSION_KEY_LOCALE);
+        Lang.set(locale);
+
+        List<Review> items = Review.list(locale);
+        render(items);
     }
 
 }

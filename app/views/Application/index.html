@@ -1,282 +1,185 @@
-<!DOCTYPE html>
-<html xml:lang="ru" lang="ru">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Instabank</title>
+#{extends 'main.html'/}
 
-    <meta name="google-site-verification" content="PRQdZo0on1EPc-KO2qRiFeM9k3Lds8x96UopdLMNAks" />
-
-    <meta name="description" content="Instabank. Re-imagine banking." />
-
-    <meta property="og:title" content="Instabank" />
-    <meta property="og:description" content="Instabank. Re-imagine banking." />
-    <meta property="og:type" content="company" />
-    <meta property="og:url" content="https://www.facebook.com/Instabank" />
-    <meta property="og:image" content="@{'/public/images/instabank.png'}" />
-    <meta property="og:site_name" content="Instabank" />
-    <meta property="fb:app_id" content="177882139014522" />
-    <meta property="fb:admins" content="657129580,100001896453784,100003275223153,100000375640805" />
-
-    <meta name="keywords" content="Instabank, Future of Banking" />
-
-    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
-	<meta name="viewport" content="width=960"/>
-
-    <link rel="shortcut icon" href="@{'/public/images/favicon.ico'}" type="image/x-icon" />
-
-    <!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="@{'/public/css/reset.css'}" media="all" />
-    <link rel="stylesheet" type="text/css" href="@{'/public/css/fonts.css'}" media="all" />
-    #{if play.i18n.Lang.get() == 'en'}
-    <link rel="stylesheet" type="text/css" href="@{'/public/css/styles_en.css'}" media="all" />
-    #{/if} #{else}
-    <link rel="stylesheet" type="text/css" href="@{'/public/css/styles.css'}" media="all" />
-    #{/else}
-	<!-- JS -->
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-    <script type="text/javascript" src="@{'/public/javascripts/jquery.easing-1.3.min.js'}"></script>
-    <script type="text/javascript" src="@{'/public/javascripts/scripts.js'}"></script>
-
+#{set 'moreScripts'}
     <script type="text/javascript">
-        extras = '${code}';
-        subscribe_progress = "&{'subscribing'}";
+        var extras = '${code}';
+        var subscribe_progress = "&{'subscribing'}";
     </script>
+#{/set}
 
-</head>
-<body class="home">
+<div class="header-container">
+    <div class="header content">
+        <a class="logo" href="http://instabank.ru">
+            <img src="@{'/public/css/images/logo.png'}" alt="Instabank Logo" width="" height="" />
+        </a>
 
-<!-- FB -->
-<div id="fb-root"></div>
-<script>
-    window.fbAsyncInit = function() {
-        // init the FB JS SDK
-        FB.init({
-            appId      : '177882139014522', // App ID from the App Dashboard
-            status     : true, // check the login status upon init?
-            cookie     : true, // set sessions cookies to allow your server to access the session?
-            xfbml      : true  // parse XFBML tags on this page?
-        });
 
-        // Additional initialization code such as adding Event Listeners goes here
+        <ul class="menu">
+            <li><a href="@{Application.press()}">&{'nav.press'}</a></li>
+            <li><a href="@{Application.faq()}">&{'nav.faq'}</a></li>
+        </ul>
+        *{<div class="langs">}*
+            *{<span class="item" title="RUS">RUS</span>}*
+            *{<a class="item" href="javascript:void(0);" title="ENG">ENG</a>}*
+        *{</div>}*
 
-    };
 
-    // Load the SDK's source Asynchronously
-    (function(d, debug){
-        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement('script'); js.id = id; js.async = true;
-        #{if play.i18n.Lang.get() == 'en'}
-        js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
-        #{/if} #{else}
-        js.src = "//connect.facebook.net/ru_RU/all" + (debug ? "/debug" : "") + ".js";
-        #{/else}
-        ref.parentNode.insertBefore(js, ref);
-    }(document, /*debug*/ false));
-</script>
+    </div>
+</div>
 
-<script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=177882139014522";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
+<div class="main-container">
+    <div class="main content">
 
-<!-- Google Analytics -->
-<script type="text/javascript">
+        <!-- Leader -->
+        <div class="leader">
+            <img src="@{'/public/css/images/logo_leader.png'}" class="logo" alt="Instabank Logo"/>
+            <p class="callout">&{'leader.title'}</p>
+            <div class="phone"></div>
+            <div class="subscribe-container">
+                <div class="btn-container">
+                    <button class="button btn-blue-big" id="invite">
+                        <span><span>&{'leader.subscribe.request_invite'}</span></span>
+                    </button>
+                </div>
+                <img class="videopop" src="@{'/public/css/images/btn_video.png'}" data-fancybox-href="http://www.youtube.com/embed/xeY0a0o7ACw?showinfo=0" data-fancybox-type="iframe" title="Показать видео" alt="Видео Презентация"/>
+            </div>
+        </div>
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-39053086-1']);
-    _gaq.push(['_setDomainName', 'instabank.ru']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-</script>
-
-<div class="wrapper">
-	<div class="header-container">
-	    <div class="header content">
+        <!-- Newsletter -->
+        <div class="newsletter">
+            <div class="fb">
+                <div class="fb-like" data-href="http://www.facebook.com/Instabank" data-send="false" data-width="435" data-show-faces="true"></div>
+            </div>
+            <p>&{'newsletter.title'}</p>
+            <p class="small">&{'newsletter.main'}</p>
 
             #{if play.i18n.Lang.get() == 'ru'}
-            <ul class="menu">
-                <li><a href="//instabank.ru/static/tariffs.pdf">&{'tariffs'}</a></li>
-                <li><a href="javascript:slideTo($('#contacts-container'));" >&{'contacts'}</a></li>
-            </ul>
+            <div class="feature percent"></div>
+            <div class="feature insurance"></div>
             #{/if}
-
-            <a class="logo" href="http://instabank.ru">
-				<img src="@{'/public/css/images/logo.png'}" alt="Instabank Logo" width="" height="" />
-			</a>
 
         </div>
-	</div>
-	<div class="main-container">	
-	    <div class="main content">
 
-            <!-- Leader -->
-            <div class="leader">
-                <img src="@{'/public/css/images/logo_leader.png'}" class="logo" alt="Instabank Logo"/>
-                <p class="callout">&{'leader.title'}</p>
-                <div class="phone"></div>
-                <div class="subscribe-container">
-                    <div class="btn-container">
-                        <button class="button btn-blue-big" id="invite">
-                            <span><span>&{'leader.subscribe.request_invite'}</span></span>
-                        </button>
-                    </div>
-                </div>
+        <!-- Reports -->
+        <div class="report">
+            <p class="callout">&{'reports.title'}</p>
+            <div class="feature">
+                <p class="title">&{'reports.bullet_one.title'}</p>
+                <p class="descr">&{'reports.bullet_one.description'}</p>
             </div>
-
-            <!-- Newsletter -->
-            <div class="newsletter">
-                <div class="fb">
-                    <div class="fb-like" data-href="http://www.facebook.com/Instabank" data-send="false" data-width="435" data-show-faces="true"></div>
-                </div>
-				<p>&{'newsletter.title'}</p>
-				<p class="small">&{'newsletter.main'}</p>
-
-                #{if play.i18n.Lang.get() == 'ru'}
-				<div class="feature percent"></div>
-				<div class="feature insurance"></div>
-                #{/if}
-
-			</div>
-
-			<!-- Reports -->
-			<div class="report">
-				<p class="callout">&{'reports.title'}</p>
-				<div class="feature">
-					<p class="title">&{'reports.bullet_one.title'}</p>
-					<p class="descr">&{'reports.bullet_one.description'}</p>
-				</div>
-				<div class="feature">
-					<p class="title">&{'reports.bullet_two.title'}</p>
-					<p class="descr">&{'reports.bullet_two.description'}</p>
-				</div>
-				<div class="feature">
-					<p class="title"><span class="soon">&{'reports.soon'}</span>&{'reports.bullet_three.title'}</p>
-					<p class="descr">&{'reports.bullet_three.description'}</p>
-				</div>
-				<div class="phone"></div>
-			</div>
-			
-			<!-- Social -->
-			<div class="social">
-				<p class="callout">&{'social.title'}</p>
-				<div class="feature">
-					<p class="title"><span class="soon">&{'reports.soon'}</span>&{'social.bullet_one.titile'}</p>
-					<p class="descr">&{'social.bullet_one.description'}</p>
-				</div>
-				<div class="feature">
-					<p class="title"><span class="soon">&{'reports.soon'}</span>&{'social.bullet_two.title'}</p>
-					<p class="descr">&{'social.bullet_two.description'}</p>
-				</div>
-				<div class="feature">
-					<p class="title"><span class="soon">&{'reports.soon'}</span>&{'social.bullet_three.title'}</p>
-					<p class="descr">&{'social.bullet_three.description'}</p>
-				</div>
-			</div>
-			
-			<!-- Security -->
-			<div class="security">
-				<p class="callout">&{'security.title'}</p>
-				<div class="feature">
-					<p class="title">&{'security.bullet_one.title'}</p>
-					<p class="descr">&{'security.bullet_one.description'}</p>
-				</div>
-				<div class="feature">
-					<p class="title">&{'security.bullet_two.title'}</p>
-					<p class="descr">&{'security.bullet_two.description'}</p>
-				</div>
-				<div class="feature">
-					<p class="title">&{'security.bullet_three.title'}</p>
-					<p class="descr">&{'security.bullet_three.description'}</p>
-				</div>
-				<div class="feature">
-					<p class="title">&{'security.bullet_four.title'}</p>
-					<p class="descr">&{'security.bullet_four.description'}</p>
-				</div>
-				<div class="phone"></div>
-			</div>
-
-            #{if play.i18n.Lang.get() == 'ru'}
-			<div class="tarif">
-				<p class="callout">
-                    <a href="//instabank.ru/static/tariffs.pdf">&{'tariffs.title'}</a>
-                </p>
-				<p class="feature transfer">&{'tariff.feature.transfer'}</p>
-				<p class="feature interest">&{'tariff.feature.interest'}</p>
-				<p class="feature network">&{'tariff.feature.network'}</p>
-	        </div>
-            #{/if}
-	</div>
-	
-	<div class="footer-container">	
-	    <div class="footer content">
-	    	<div class="signup">
-	    		<p class="title">&{'leader.subscribe.title'}</p>
-	    		<p class="info">&{'leader.subscribe.description'}</p>
-                <div class="form-container">
-                    <form action="@{Application.subscribe}" method="post" id="signup-form" name="signup">
-                        <div class="input-container">
-                            <input type="text" class="input-text" value="" name="name" id="form_name" placeholder="&{'leader.name.hint'}" />
-                        </div>
-                        <div class="input-container">
-                            <input type="text" class="input-text" value="" name="email" id="form_email" placeholder="&{'leader.email.hint'}" />
-                            <input type="hidden" value="" name="code"/>
-                        </div>
-                        <button type="submit" class="button">
-                            <span><span>
-                            <span>&{'leader.subscribe.send'}</span>
-                            <img class="loader" src="@{'/public/css/images/loader.gif'}" />
-                            </span></span>
-                        </button>
-                    </form>
-                </div>
-	    		<div class="result">
-	    			<p class="msg">&{'subscribe.form.success'}</p>
-					<button type="button" class="button">
-					    <span><span>&{'subscribe.form.back_to_form'}</span></span>
-					</button>
-	    		</div>
-	    		<div class="lines">
-	    			<div></div>
-	    		</div>
-	    		<div class="overlay"></div>
-	    	</div>
-
-            <div id="contacts-container">
-                <p class="callout">&{'contacts'}</p>
-                <p class="contacts phone">+7(499)678-20-30</p>
-                <p class="contacts email">contact@instabank.ru</p>
+            <div class="feature">
+                <p class="title">&{'reports.bullet_two.title'}</p>
+                <p class="descr">&{'reports.bullet_two.description'}</p>
             </div>
+            <div class="feature">
+                <p class="title"><span class="soon">&{'reports.soon'}</span>&{'reports.bullet_three.title'}</p>
+                <p class="descr">&{'reports.bullet_three.description'}</p>
+            </div>
+            <div class="phone"></div>
+        </div>
 
-            <p class="callout">&{'footer.title'}</p>
-			<a href="https://www.facebook.com/Instabank" class="fb">Facebook</a>
-			<!-- <a href="javascript:void(0);" class="yt">YouTube</a> -->
-			<a href="https://twitter.com/instabankru" class="tw">Twitter</a>
-			<a href="http://instagram.com/instabankru/" class="ig">Instagram</a>
+        <!-- Social -->
+        <div class="social">
+            <p class="callout">&{'social.title'}</p>
+            <div class="feature">
+                <p class="title"><span class="soon">&{'reports.soon'}</span>&{'social.bullet_one.titile'}</p>
+                <p class="descr">&{'social.bullet_one.description'}</p>
+            </div>
+            <div class="feature">
+                <p class="title"><span class="soon">&{'reports.soon'}</span>&{'social.bullet_two.title'}</p>
+                <p class="descr">&{'social.bullet_two.description'}</p>
+            </div>
+            <div class="feature">
+                <p class="title"><span class="soon">&{'reports.soon'}</span>&{'social.bullet_three.title'}</p>
+                <p class="descr">&{'social.bullet_three.description'}</p>
+            </div>
+        </div>
 
-            #{if play.i18n.Lang.get() == 'ru'}
-			<p class="legal">Банковские услуги предоставляются АКБ «ВПБ» (ЗАО)<br/>
-				Генеральная лицензия ЦБ РФ №3065<br/>
-				АКБ "ВПБ" (ЗАО) внесен в реестр Банков - участников системы обязательного <br/>
-				страхования вкладов 24 февраля 2005 года под номером 691.<br/>
-				<br/>
-				Карта Instabank принимается везде, где принимаются карты MasterCard
-			</p>
-            #{/if}
+        <!-- Security -->
+        <div class="security">
+            <p class="callout">&{'security.title'}</p>
+            <div class="feature">
+                <p class="title">&{'security.bullet_one.title'}</p>
+                <p class="descr">&{'security.bullet_one.description'}</p>
+            </div>
+            <div class="feature">
+                <p class="title">&{'security.bullet_two.title'}</p>
+                <p class="descr">&{'security.bullet_two.description'}</p>
+            </div>
+            <div class="feature">
+                <p class="title">&{'security.bullet_three.title'}</p>
+                <p class="descr">&{'security.bullet_three.description'}</p>
+            </div>
+            <div class="feature">
+                <p class="title">&{'security.bullet_four.title'}</p>
+                <p class="descr">&{'security.bullet_four.description'}</p>
+            </div>
+            <div class="phone"></div>
+        </div>
 
-	    </div>
-	</div>
+        #{if play.i18n.Lang.get() == 'ru'}
+
+        <div class="tarif">
+            <p class="callout">О наших <span>тарифах</span></p>
+            <p class="legend">Комиссия за обслуживание — </br>
+                <span>150р. <span>в месяц,</span></span></br>
+                включая мобильный банк, банковскую карту, переводы друзьям через Instabank и Facebook,</br>
+                уведомления об операциях и многое другое.
+            </p>
+            <p class="ribbon">
+                Первым 1000 клиентам<span> — первый год бесплатно!</span>
+            </p>
+            <a href="//instabank.ru/static/tariffs.pdf" class="readmore" title="&{'tariffs.title'}">&{'tariffs.title'}</a>
+            <p class="feature transfer">&{'tariff.feature.transfer'}</p>
+            <p class="feature interest">&{'tariff.feature.interest'}</p>
+            <p class="feature network">&{'tariff.feature.network'}</p>
+        </div>
+        #{/if}
+    </div>
 </div>
-</body>
-</html>
+
+
+#{set 'footerContent'}
+
+    <div class="signup iphone">
+        <p class="title">У меня <span>iPhone</span></p>
+        <p class="info">Скачайте приложение, закажите карту и начните использовать Instabank</p>
+        <a class="applink" href="https://itunes.apple.com/ru/app/instabank/id595302633">
+            <img class="applink" src="@{'/public/css/images/btn_appstore.png'}" alt="Загрузить приложение из AppStore"/>
+        </a>
+        <div class="lines">
+            <div></div>
+        </div>
+    </div>
+    <div class="signup android">
+        <p class="title">У меня <span>Android</span></p>
+        <div class="form-container">
+            <form action="@{Application.subscribe}" method="post" id="signup-form" name="signup">
+                <div class="input-container">
+                    <input type="text" class="input-text" value="" name="name" id="form_name" placeholder="&{'leader.name.hint'}" />
+                </div>
+                <div class="input-container">
+                    <input type="text" class="input-text" value="" name="email" id="form_email" placeholder="&{'leader.email.hint'}" />
+                    <input type="hidden" value="" name="code"/>
+                </div>
+                <button type="submit" class="button">
+                <span><span>
+                <span>&{'leader.subscribe.send'}</span>
+                <img class="loader" src="@{'/public/css/images/loader.gif'}" />
+                </span></span>
+                </button>
+            </form>
+        </div>
+        <div class="result">
+            <p class="msg"></p>
+            <button type="button" class="button">
+                <span><span>Вернуться к форме</span></span>
+            </button>
+        </div>
+        <div class="lines">
+            <div></div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+#{/set}

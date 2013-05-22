@@ -9,6 +9,8 @@ GET     /{<(en|ru)>locale}                      Application.index
 GET     /                                       Application.index
 GET     /offer                                  Application.offer
 GET     /install                                Application.install
+GET     /press                                  Application.press
+GET     /faq                                    Application.faq
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

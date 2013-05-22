@@ -1,0 +1,38 @@
+#{extends 'main.html'/}
+	<div class="header-container">
+	    <div class="header content">
+			<a class="logo" href="/">
+                <img src="@{'/public/css/images/logo.png'}" alt="Instabank Logo" width="" height="" />
+			</a>
+			<!--div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-action="like"></div-->
+            <ul class="menu">
+                <li><a href="@{Application.press()}">Пресса о нас</a></li>
+                <li><a href="@{Application.faq()}">Частые вопросы</a></li>
+            </ul>
+			<div class="langs">
+				<span class="item" title="RUS">RUS</span>
+				<a class="item" href="javascript:void(0);" title="ENG">ENG</a>
+			</div>
+	    </div>
+	</div>
+	<div class="main-container">	
+	    <div class="main content">
+			
+			<div class="page">
+				<h1 class="page-title">Пресса о нас</h1>
+				<div class="std">
+                    #{list items: items, as: 'item'}
+                        <div class="press-item">
+                            <div class="item-logo">
+                                <img src="${item.imageUrl}" alt=""/>
+                            </div>
+                            <p class="title">${item.title}</p>
+                            <p class="intro">${item.content}</p>
+                            <a class="readmore" href="${item.sourceUrl}" target="_blank">Читать полностью</a>
+                        </div>
+                    #{/list}
+				</div>
+			</div>
+			
+	    </div>
+	</div>
