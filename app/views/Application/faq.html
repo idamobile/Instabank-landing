@@ -6,20 +6,20 @@
                 <img src="@{'/public/css/images/logo.png'}" alt="Instabank Logo" width="" height="" />
 			</a>
             <ul class="menu">
-                <li><a href="@{Application.press()}">Пресса о нас</a></li>
-                <li><a href="@{Application.faq()}">Частые вопросы</a></li>
+                <li><a href="@{Application.press()}">&{'nav.press'}</a></li>
+                <li><a href="@{Application.faq()}">&{'nav.faq'}</a></li>
             </ul>
-			<div class="langs">
-				<span class="item" title="RUS">RUS</span>
-				<a class="item" href="javascript:void(0);" title="ENG">ENG</a>
-			</div>
+            <div class="langs">
+                <a class="item" href="@{Application.faq("ru")}" title="RUS">RUS</a>
+                <a class="item" href="@{Application.faq("en")}" title="ENG">ENG</a>
+            </div>
 	    </div>
 	</div>
 	<div class="main-container">	
 	    <div class="main content">
 			
 			<div class="page">
-				<h1 class="page-title">Частые вопросы</h1>
+				<h1 class="page-title">&{'nav.faq'}</h1>
 				<div class="std">
                     #{list items: items, as: 'item'}
                     <div class="faq-item">

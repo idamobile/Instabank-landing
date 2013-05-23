@@ -12,18 +12,14 @@
         <a class="logo" href="http://instabank.ru">
             <img src="@{'/public/css/images/logo.png'}" alt="Instabank Logo" width="" height="" />
         </a>
-
-
         <ul class="menu">
             <li><a href="@{Application.press()}">&{'nav.press'}</a></li>
             <li><a href="@{Application.faq()}">&{'nav.faq'}</a></li>
         </ul>
-        *{<div class="langs">}*
-            *{<span class="item" title="RUS">RUS</span>}*
-            *{<a class="item" href="javascript:void(0);" title="ENG">ENG</a>}*
-        *{</div>}*
-
-
+        <div class="langs">
+            <a class="item" href="@{Application.index("ru")}" title="RUS">RUS</a>
+            <a class="item" href="@{Application.index("en")}" title="ENG">ENG</a>
+        </div>
     </div>
 </div>
 
@@ -82,15 +78,15 @@
         <div class="social">
             <p class="callout">&{'social.title'}</p>
             <div class="feature">
-                <p class="title"><span class="soon">&{'reports.soon'}</span>&{'social.bullet_one.titile'}</p>
+                <p class="title">&{'social.bullet_one.title'}</p>
                 <p class="descr">&{'social.bullet_one.description'}</p>
             </div>
             <div class="feature">
-                <p class="title"><span class="soon">&{'reports.soon'}</span>&{'social.bullet_two.title'}</p>
+                <p class="title">&{'social.bullet_two.title'}</p>
                 <p class="descr">&{'social.bullet_two.description'}</p>
             </div>
             <div class="feature">
-                <p class="title"><span class="soon">&{'reports.soon'}</span>&{'social.bullet_three.title'}</p>
+                <p class="title">&{'social.bullet_three.title'}</p>
                 <p class="descr">&{'social.bullet_three.description'}</p>
             </div>
         </div>

@@ -30,11 +30,14 @@ public class Application extends Controller {
 
     public static void index(String locale) {
         if (StringUtils.isEmpty(locale)) {
-//            locale = Lang.getLocale().getLanguage();
-            locale = "ru";
+            locale = session.get(SESSION_KEY_LOCALE);
+        } else {
+            session.put(SESSION_KEY_LOCALE, locale);
         }
+
+        locale = StringUtils.isEmpty(locale)? "ru": locale;
+
         Lang.set(locale);
-        session.put(SESSION_KEY_LOCALE, locale);
 
         String code = UUID.randomUUID().toString();
         session.put(SESSION_KEY_CODE, code);
@@ -110,8 +113,13 @@ public class Application extends Controller {
         redirect(Play.configuration.getProperty("instabank.appstore.url"), true);
     }
 
-    public static void faq() {
-        String locale = session.get(SESSION_KEY_LOCALE);
+    public static void faq(String locale) {
+        if (StringUtils.isEmpty(locale)) {
+            locale = session.get(SESSION_KEY_LOCALE);
+        } else {
+            session.put(SESSION_KEY_LOCALE, locale);
+        }
+
         locale = StringUtils.isEmpty(locale)? "ru": locale;
 
         Lang.set(locale);
@@ -120,8 +128,15 @@ public class Application extends Controller {
         render(items);
     }
 
-    public static void press() {
-        String locale = session.get(SESSION_KEY_LOCALE);
+    public static void press(String locale) {
+        if (StringUtils.isEmpty(locale)) {
+            locale = session.get(SESSION_KEY_LOCALE);
+        } else {
+            session.put(SESSION_KEY_LOCALE, locale);
+        }
+
+        locale = StringUtils.isEmpty(locale)? "ru": locale;
+
         Lang.set(locale);
 
         List<Review> items = Review.list(locale);

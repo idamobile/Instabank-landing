@@ -45,7 +45,7 @@ reports.bullet_three.description=Instabank автоматически сорти
 
 # Social section messages
 social.title=Простые расчеты с друзьями
-social.bullet_one.titile=Переводы друзьям
+social.bullet_one.title=Переводы друзьям
 social.bullet_one.description=Отправить деньги друзьям так же просто как СМС,<br/>даже если у них нет Instabank. Без комиссии.
 
 social.bullet_two.title=Денежные запросы

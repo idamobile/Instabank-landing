@@ -44,7 +44,7 @@ reports.bullet_three.description=Instabank automatically sorts your expenses int
 
 # Social section messages
 social.title=Simple money exchanges between friends
-social.bullet_one.titile=Sending money to friends
+social.bullet_one.title=Sending money to friends
 social.bullet_one.description=Sending money to friends is as easy as sending<br/> a text - even if they're not with Instabank. No fees, no hassle.
 
 social.bullet_two.title=Requesting money

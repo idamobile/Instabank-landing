@@ -32,7 +32,11 @@
 	function initVideoPopup()
 	{
 		$('.videopop').fancybox({
-			padding: 0
+			padding: 0,
+            helpers:  {
+                title:  null
+            },
+            width: 980
 		});
 	}
 
