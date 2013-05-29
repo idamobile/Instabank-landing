@@ -12,6 +12,8 @@ GET     /install                                Application.install
 GET     /press                                  Application.press
 GET     /faq                                    Application.faq
 
+*       /sendmail                               SendMail.send
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

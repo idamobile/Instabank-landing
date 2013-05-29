@@ -104,6 +104,27 @@
         </script>
 
         <div class="wrapper">
+            <div class="header-container">
+                <div class="header content">
+                    <a class="logo" href="/">
+                        <img src="@{'/public/css/images/logo.png'}" alt="Instabank Logo" width="" height="" />
+                    </a>
+                    <ul class="menu">
+                        <li><a href="@{Application.press()}">&{'nav.press'}</a></li>
+                        <li><a href="@{Application.faq()}">&{'nav.faq'}</a></li>
+                    </ul>
+                    <div class="langs">
+                    #{if play.i18n.Lang.get() == 'ru'}
+                        <span class="item">RUS</span>
+                        <a class="item" href="@{Application.index("en")}" title="ENG">ENG</a>
+                    #{/if} #{else}
+                        <a class="item" href="@{Application.index("ru")}" title="RUS">RUS</a>
+                        <span class="item">ENG</span>
+                    #{/else}
+                    </div>
+                </div>
+            </div>
+
             #{doLayout /}
 
                 <div class="footer-container">
@@ -121,13 +142,7 @@
                             +7 (499) 678-20-30</br>
                             <a href="mailto:contact@instabank.ru">contact@instabank.ru</a>
                         </p>
-                        <p class="legal">Банковские услуги предоставляются АКБ «ВПБ» (ЗАО)<br/>
-                            Генеральная лицензия ЦБ РФ №3065<br/>
-                            АКБ "ВПБ" (ЗАО) внесен в реестр Банков - участников системы обязательного <br/>
-                            страхования вкладов 24 февраля 2005 года под номером 691.<br/>
-                            <br/>
-                            Карта Instabank принимается везде, где принимаются карты MasterCard
-                        </p>
+                        <p class="legal">&{'main.legal'}</p>
                     </div>
                 </div>
 

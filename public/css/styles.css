@@ -262,6 +262,10 @@ html, body {
     cursor: pointer;
 }
 
+.fancybox-wrap .fancybox-close {
+    background: url(images/bg/btn_close.png) no-repeat 0 0;
+}
+
 .newsletter {
 	height: 509px;
 	border-bottom: 1px dotted #d4d4d4;

@@ -7,22 +7,6 @@
     </script>
 #{/set}
 
-<div class="header-container">
-    <div class="header content">
-        <a class="logo" href="http://instabank.ru">
-            <img src="@{'/public/css/images/logo.png'}" alt="Instabank Logo" width="" height="" />
-        </a>
-        <ul class="menu">
-            <li><a href="@{Application.press()}">&{'nav.press'}</a></li>
-            <li><a href="@{Application.faq()}">&{'nav.faq'}</a></li>
-        </ul>
-        <div class="langs">
-            <a class="item" href="@{Application.index("ru")}" title="RUS">RUS</a>
-            <a class="item" href="@{Application.index("en")}" title="ENG">ENG</a>
-        </div>
-    </div>
-</div>
-
 <div class="main-container">
     <div class="main content">
 
@@ -138,8 +122,8 @@
 #{set 'footerContent'}
 
     <div class="signup iphone">
-        <p class="title">У меня <span>iPhone</span></p>
-        <p class="info">Скачайте приложение, закажите карту и начните использовать Instabank</p>
+        <p class="title">&{'footer.ihave'} <span>iPhone</span></p>
+        <p class="info">&{'footer.download'}</p>
         <a class="applink" href="https://itunes.apple.com/ru/app/instabank/id595302633">
             <img class="applink" src="@{'/public/css/images/btn_appstore.png'}" alt="Загрузить приложение из AppStore"/>
         </a>
@@ -148,7 +132,7 @@
         </div>
     </div>
     <div class="signup android">
-        <p class="title">У меня <span>Android</span></p>
+        <p class="title">&{'footer.ihave'} <span>Android</span></p>
         <div class="form-container">
             <form action="@{Application.subscribe}" method="post" id="signup-form" name="signup">
                 <div class="input-container">

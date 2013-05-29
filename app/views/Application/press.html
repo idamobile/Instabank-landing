@@ -1,20 +1,5 @@
 #{extends 'main.html'/}
-	<div class="header-container">
-	    <div class="header content">
-			<a class="logo" href="/">
-                <img src="@{'/public/css/images/logo.png'}" alt="Instabank Logo" width="" height="" />
-			</a>
-            <ul class="menu">
-                <li><a href="@{Application.press()}">&{'nav.press'}</a></li>
-                <li><a href="@{Application.faq()}">&{'nav.faq'}</a></li>
-            </ul>
-            <div class="langs">
-                <a class="item" href="@{Application.press("ru")}" title="RUS">RUS</a>
-                <a class="item" href="@{Application.press("en")}" title="ENG">ENG</a>
-            </div>
-	    </div>
-	</div>
-	<div class="main-container">	
+	<div class="main-container">
 	    <div class="main content">
 			
 			<div class="page">
@@ -27,7 +12,7 @@
                             </div>
                             <p class="title">${item.title}</p>
                             <p class="intro">${item.content}</p>
-                            <a class="readmore" href="${item.sourceUrl}" target="_blank">Читать полностью</a>
+                            <a class="readmore" href="${item.sourceUrl}" target="_blank">&{'press.readmore'}</a>
                         </div>
                     #{/list}
 				</div>
