@@ -8,6 +8,7 @@ email.already_exists=Этот адрес уже зарегистрирован
 email.persisting_error=Невозможно сохранить адрес
 email.saved=Ваш адрес был успешно сохранен, спасибо за проявленный интерес!
 email.subject.new=Instabank - Ваша заявка получена
+email.subject.card_ordered=Instabank - Вы заказали карту
 email.subject.existing=Instabank - Ваша заявка
 
 # Main page messages

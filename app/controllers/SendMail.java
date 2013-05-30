@@ -1,10 +1,10 @@
 package controllers;
 
 import org.apache.commons.lang.StringUtils;
-import play.Logger;
 import play.Play;
 import play.mvc.Before;
 import play.mvc.Controller;
+import service.Mails;
 
 /**
  * @author: Sergey Royz
@@ -33,8 +33,8 @@ public class SendMail extends Controller{
     }
 
     public static void send(String email, String classifier) {
-        Logger.info("Sending email to: %s; type: %s", email, classifier);
-        renderText("Hello world: ");
+        Mails.cardOrdered(email);
+        render("success");
     }
 
 }

@@ -8,6 +8,7 @@ email.already_exists=This e-mail address has already been registered
 email.persisting_error=Unable to persist email
 email.saved=Your application has been recorded, thank you!
 email.subject.new=Instabank - Your request received
+email.subject.card_ordered=Instabank - You have ordered new card
 email.subject.existing=Instabank - Your request
 
 # Main page messages
