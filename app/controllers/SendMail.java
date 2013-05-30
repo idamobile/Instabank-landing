@@ -34,7 +34,7 @@ public class SendMail extends Controller{
 
     public static void send(String email, String classifier) {
         Mails.cardOrdered(email);
-        render("success");
+        renderText("success");
     }
 
 }
