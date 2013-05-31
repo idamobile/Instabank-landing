@@ -81,7 +81,9 @@ tariff.feature.network=<span>Снимайте деньги и<br/>пополня
 
 # Footer title
 footer.title=Следите за нами!
-footer.ihave=У меня
+footer.title.iphone=У меня <span>iPhone</span>
+footer.title.android=У меня <span>Android</span>
+footer.form.back=Вернуться к форме
 footer.download=Скачайте приложение, закажите карту и начните использовать Instabank
 
 # Contacts section

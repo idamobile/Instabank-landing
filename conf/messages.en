@@ -80,7 +80,9 @@ tariff.feature.network=Withdraw cash and top up the balance with no commission u
 
 # Footer title
 footer.title=Follow us on social media
-footer.ihave=I have
+footer.title.iphone=I use an <span>iPhone</span>
+footer.title.android=I have an <span>Android</span> phone
+footer.form.back=Back
 footer.download=Download the App and become the Instabank user instantly
 
 # Contacts section

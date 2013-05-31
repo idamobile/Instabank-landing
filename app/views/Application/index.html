@@ -122,7 +122,7 @@
 #{set 'footerContent'}
 
     <div class="signup iphone">
-        <p class="title">&{'footer.ihave'} <span>iPhone</span></p>
+        <p class="title">&{'footer.title.iphone'}</p>
         <p class="info">&{'footer.download'}</p>
         <a class="applink" href="https://itunes.apple.com/ru/app/instabank/id595302633">
             <img class="applink" src="@{'/public/css/images/btn_appstore.png'}" alt="Загрузить приложение из AppStore"/>
@@ -132,7 +132,7 @@
         </div>
     </div>
     <div class="signup android">
-        <p class="title">&{'footer.ihave'} <span>Android</span></p>
+        <p class="title">&{'footer.title.android'}</p>
         <div class="form-container">
             <form action="@{Application.subscribe}" method="post" id="signup-form" name="signup">
                 <div class="input-container">
@@ -153,7 +153,7 @@
         <div class="result">
             <p class="msg"></p>
             <button type="button" class="button">
-                <span><span>Вернуться к форме</span></span>
+                <span><span>&{'footer.form.back'}</span></span>
             </button>
         </div>
         <div class="lines">
