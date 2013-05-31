@@ -18,6 +18,10 @@ public class Subscriber extends Model {
         NOT_CONFIRMED, CONFIRMED, GREETING_SENT, UNSUBSCRIBED
     }
 
+    public enum Platform {
+        IPHONE, ANDROID
+    }
+
     @Column(name = "name", nullable = true)
     public String name;
 
@@ -40,6 +44,10 @@ public class Subscriber extends Model {
     @Column(name = "is_subscribed", nullable = false)
     public boolean subscribed = true;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "platform", nullable = true)
+    public Platform platform;
+
     public Subscriber() {
 
     }
@@ -49,6 +57,7 @@ public class Subscriber extends Model {
         this.email = email;
         this.remoteAddress = remoteAddress;
         subscriptionDate = new Date();
+        platform = Platform.ANDROID;
     }
 
     public static boolean isSubscribed(String email) {
