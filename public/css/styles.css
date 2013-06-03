@@ -266,6 +266,16 @@ html, body {
     background: url(images/bg/btn_close.png) no-repeat 0 0;
 }
 
+.hotfix {
+    text-align: center;
+    position: relative;
+    color: #232323;
+    padding: 34px 0 0;
+    font-size: 40px;
+    font-family: 'PFDinDisplayProThin', Arial;
+    line-height: 1.23;
+}
+
 .newsletter {
 	height: 509px;
 	border-bottom: 1px dotted #d4d4d4;
@@ -668,7 +678,6 @@ html, body {
 	margin: 17px 0 0;
 }
 
-
 .footer {
 	padding: 103px 0 0;
 	font-family: 'PFDinDisplayProMedium', Arial;
@@ -856,6 +865,16 @@ html, body {
 	line-height: 1.4;
 	font-family: Helvetica;
 }
+
+.footer .legal_fx {
+    text-align: center;
+    color: #969696;
+    font-size: 13px;
+    margin: 50px 0;
+    line-height: 1.4;
+    font-family: Helvetica;
+}
+
 
 .button {
 	overflow: visible;

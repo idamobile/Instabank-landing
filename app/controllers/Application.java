@@ -28,7 +28,18 @@ public class Application extends Controller {
     private static final String UNSUBSCRIBE_FLASH_KEY_SUCCESS = "success";
 
 
+    public static void hotfix() {
+        Lang.set("ru");
+        render();
+    }
+
     public static void index(String locale) {
+
+        if (!"en".equals(locale)) {
+            Lang.set("ru");
+            render("/Application/hotfix.html");
+        }
+
         if (StringUtils.isEmpty(locale)) {
             locale = session.get(SESSION_KEY_LOCALE);
         } else {

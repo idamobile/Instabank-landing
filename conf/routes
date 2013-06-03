@@ -11,6 +11,7 @@ GET     /offer                                  Application.offer
 GET     /install                                Application.install
 GET     /press                                  Application.press
 GET     /faq                                    Application.faq
+GET     /stub                                   Application.hotfix
 
 *       /sendmail                               SendMail.send
 
