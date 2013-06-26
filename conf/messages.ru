@@ -9,17 +9,13 @@ email.persisting_error=Невозможно сохранить адрес
 email.saved=Ваш адрес был успешно сохранен, спасибо за проявленный интерес!
 email.subject.new=Instabank - Ваша заявка получена
 email.subject.card_ordered=Instabank - Вы заказали карту
-email.subject.existing=Instabank - Ваша заявка
 
 # Main page messages
-leader.title=<span>Банк,</span> каким он должен быть сегодня
-leader.subscribe.request_invite=Стать клиентом
+leader.title=Лучше, чем банк.
 leader.subscribe.title=Получите приглашение
-leader.subscribe.description=Сейчас стать клиентом Instabank можно только по<br/> приглашению. <span>Оставьте заявку, чтобы попасть в число<br/> первых пользователей.</span>
 leader.subscribe.send=Отправить
 leader.name.hint=Ваше имя
 leader.email.hint=Ваш e-mail
-subscribe.form.back_to_form=Вернуться к форме
 subscribe.form.success=Чудно!<br/>Мы известим Вас<br/> когда сервис запустится
 
 leader.unsubscribe.title=Отписаться
@@ -67,29 +63,23 @@ security.bullet_three.title=Шифрование
 security.bullet_three.description=Каждый байт информации надёжно защищён сертифицированными<br/> алгоритмами, гарантирующими полную сохранность персональных<br/> данных.
 
 security.bullet_four.title=Вклады застрахованы
-security.bullet_four.description=Все вклады и счета застрахованы системой обязательного<br/> страхования вкладов.
 
 # ATMS section messages
 atm.title=<span>Ах да!</span> У Instabank широкая сеть бесплатных банкоматов. Снимайте деньги и пополняйте счет без комиссии.
 
 # Tariffs section
-tariffs=тарифы
 tariffs.title=Подробнее о наших тарифах
-tariff.feature.transfer=Переводите деньги<br/><span>друзьям из Facebook<br/>бесплатно.</span>
-tariff.feature.interest=Пользуйтесь картой<br/>Instabank и получайте до<br/><span>10%% годовых на сумму<br/>остатка.</span>
-tariff.feature.network=<span>Снимайте деньги и<br/>пополняйте счет без<br/>комиссии</span> в широкой сети<br/>банкоматов Мастер-Банк<br/>и ВПБ.
 
 # Footer title
 footer.title=Следите за нами!
 footer.title.iphone=У меня <span>iPhone</span>
 footer.title.android=У меня <span>Android</span>
 footer.form.back=Вернуться к форме
-footer.download=Скачайте приложение, закажите карту и начните использовать Instabank
 
 # Contacts section
 contacts=Контакты
 
 main.legal=Банковские услуги предоставляются АКБ «ВПБ» (ЗАО)<br/>Генеральная лицензия ЦБ РФ №3065<br/>АКБ "ВПБ" (ЗАО) внесен в реестр Банков - участников системы обязательного <br/>страхования вкладов 24 февраля 2005 года под номером 691.<br/><br/>Карта Instabank принимается везде, где принимаются карты MasterCard
-main.legal.privacy=Политика конфиденциальности
+main.legal.privacy=Подробнее об условиях
 
 press.readmore=Читать полностью

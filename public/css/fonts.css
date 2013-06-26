@@ -70,3 +70,15 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'PFDinDisplayProExtraThin';
+    src: url('fonts/pfdindisplaypro-extrathin.eot');
+    src: url('fonts/pfdindisplaypro-extrathin.eot?#iefix') format('embedded-opentype'),
+         url('fonts/pfdindisplaypro-extrathin.woff') format('woff'),
+         url('fonts/pfdindisplaypro-extrathin.ttf') format('truetype'),
+         url('fonts/pfdindisplaypro-extrathin.svg#PFDinDisplayProExtraThin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

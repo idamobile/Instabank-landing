@@ -27,7 +27,7 @@ h5            { font-size:12px; font-weight:bold; }
 h6            { font-size:11px; font-weight:bold; }
 
 /* Forms */
-form          { display:inline; }
+form          {  }
 fieldset      { border:0; }
 legend        { display:none; }
 

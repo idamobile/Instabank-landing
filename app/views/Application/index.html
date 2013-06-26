@@ -14,14 +14,12 @@
         <div class="leader">
             <img src="@{'/public/css/images/logo_leader.png'}" class="logo" alt="Instabank Logo"/>
             <p class="callout">&{'leader.title'}</p>
-            <div class="phone"></div>
+				<p class="legend">Мы сделали процесс распоряжения денежными средствами удобным и карсивым.</p>
+				<!--div class="phone"></div-->
             <div class="subscribe-container">
-                <div class="btn-container">
-                    <button class="button btn-blue-big" id="invite">
-                        <span><span>&{'leader.subscribe.request_invite'}</span></span>
-                    </button>
-                </div>
-                <img class="videopop" src="@{'/public/css/images/btn_video.png'}" data-fancybox-href="http://www.youtube.com/embed/xeY0a0o7ACw?showinfo=0" data-fancybox-type="iframe" title="Показать видео" alt="Видео Презентация"/>
+
+					<a class="playlink" href="javascript:void(0);" id="invite">У меня Android</a>
+					<a class="applink" href="javascript:void(0);" title="Загрузить приложение для iOS">&nbsp;</a>
             </div>
         </div>
 
@@ -30,14 +28,6 @@
             <div class="fb">
                 <div class="fb-like" data-href="http://www.facebook.com/Instabank" data-send="false" data-width="435" data-show-faces="true"></div>
             </div>
-            <p>&{'newsletter.title'}</p>
-            <p class="small">&{'newsletter.main'}</p>
-
-            #{if play.i18n.Lang.get() == 'ru'}
-            <div class="feature percent"></div>
-            <div class="feature insurance"></div>
-            #{/if}
-
         </div>
 
         <!-- Reports -->
@@ -90,47 +80,15 @@
                 <p class="title">&{'security.bullet_three.title'}</p>
                 <p class="descr">&{'security.bullet_three.description'}</p>
             </div>
-            <div class="feature">
-                <p class="title">&{'security.bullet_four.title'}</p>
-                <p class="descr">&{'security.bullet_four.description'}</p>
-            </div>
             <div class="phone"></div>
         </div>
 
-        #{if play.i18n.Lang.get() == 'ru'}
-
-        <div class="tarif">
-            <p class="callout">О наших <span>тарифах</span></p>
-            <p class="legend">Комиссия за обслуживание — </br>
-                <span>150р. <span>в месяц,</span></span></br>
-                включая мобильный банк, банковскую карту, переводы друзьям через Instabank и Facebook,</br>
-                уведомления об операциях и многое другое.
-            </p>
-            <p class="ribbon">
-                Первым 1000 клиентам<span> — первый год бесплатно!</span>
-            </p>
-            <a href="//instabank.ru/static/tariffs.pdf" class="readmore" title="&{'tariffs.title'}">&{'tariffs.title'}</a>
-            <p class="feature transfer">&{'tariff.feature.transfer'}</p>
-            <p class="feature interest">&{'tariff.feature.interest'}</p>
-            <p class="feature network">&{'tariff.feature.network'}</p>
-        </div>
-        #{/if}
     </div>
 </div>
 
 
 #{set 'footerContent'}
 
-    <div class="signup iphone">
-        <p class="title">&{'footer.title.iphone'}</p>
-        <p class="info">&{'footer.download'}</p>
-        <a class="applink" href="https://itunes.apple.com/ru/app/instabank/id595302633">
-            <img class="applink" src="@{'/public/css/images/btn_appstore.png'}" alt="Загрузить приложение из AppStore"/>
-        </a>
-        <div class="lines">
-            <div></div>
-        </div>
-    </div>
     <div class="signup android">
         <p class="title">&{'footer.title.android'}</p>
         <div class="form-container">

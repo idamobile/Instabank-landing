@@ -9,17 +9,13 @@ email.persisting_error=Unable to persist email
 email.saved=Your application has been recorded, thank you!
 email.subject.new=Instabank - Your request received
 email.subject.card_ordered=Instabank - You have ordered new card
-email.subject.existing=Instabank - Your request
 
 # Main page messages
 leader.title=<span>Banking,</span> reimagined
-leader.subscribe.request_invite=Request an invite
 leader.subscribe.title=Sign up
-leader.subscribe.description=For now you can become a client of Instabank only by invitation.<br/>Leave a request to be among our first users
 leader.subscribe.send=Submit
 leader.name.hint=Your name
 leader.email.hint=Your e-mail address
-subscribe.form.back_to_form=Back to sign up form
 subscribe.form.success=Thanks for signing up! We will keep you posted on our progress.
 leader.unsubscribe.title=Unsubscribe
 leader.unsubscribe.description=To unsubscribe enter your email below
@@ -66,24 +62,18 @@ security.bullet_three.title=Encryption
 security.bullet_three.description=Each data byte is securely protected by certified algorithms,<br/>which guarantee your personal data's safety.
 
 security.bullet_four.title=Deposit insurance
-security.bullet_four.description=All deposits and accounts are protected<br/> by an obligatory deposit insurance system.
 
 # ATMS section messages
 atm.title=Instabank also utilizes a broad network of ATMs for free withdrawals and deposits.
 
 # Tariffs section
-tariffs=tariffs
 tariffs.title=<span>Our Tariffs</span>
-tariff.feature.transfer=Transfer money to your Facebook friends for free.</span>
-tariff.feature.interest=Use your Instabank card and receive up to 10 %% annual rate on the balance
-tariff.feature.network=Withdraw cash and top up the balance with no commission using a broad network of ATM of MasterBank and VPB.
 
 # Footer title
 footer.title=Follow us on social media
 footer.title.iphone=I use an <span>iPhone</span>
 footer.title.android=I have an <span>Android</span> phone
 footer.form.back=Back
-footer.download=Download the App and become the Instabank user instantly
 
 # Contacts section
 contacts=Contacts

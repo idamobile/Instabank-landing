@@ -25,6 +25,9 @@ html, body {
 	height: 100%;
 }
 .wrapper {
+	/*background: transparent url(images/bg/full.jpg) no-repeat 50% 0;*/
+	/*background: transparent url(images/bg/full_press.jpg) no-repeat 50% 0;*/
+	/*background: transparent url(images/bg/full_faq.jpg) no-repeat 50% 0;*/
 	overflow: hidden;
 	width: 100%;
 }
@@ -104,32 +107,39 @@ html, body {
 }
 
 .leader {
-	height: 568px;
+	height: 508px;
 	background: transparent url(images/bg/leader.jpg) no-repeat 0 0;
 	position: relative;
 }
 .leader .logo {
 	position: absolute;
-	top: 63px;
-	left: 67px;
+	top: 129px;
+	left: 53px;
 }
 
 .leader .callout {
     color: #FFFFFF;
-    font-family: 'PFDinDisplayProThin',Arial;
-    font-size: 50px;
-    left: 72px;
+    font-family: 'PFDinDisplayProExtraThin', Arial;
+    font-size: 55px;
+    left: 57px;
     line-height: 1;
     position: absolute;
     text-shadow: 0 1px 3px #000000;
-    top: 183px;
-    width: 350px;
+    top: 275px;
 }
 
 .leader .callout span {
 	font-family: 'PFDinDisplayProMedium', Arial;
 }
-
+.leader .legend {
+	font-family: 'PFDinDisplayProRegular', Arial;
+	position: absolute;
+	top: 336px;
+	left: 60px;
+	font-size: 16px;
+	color: #fff;
+	width: 360px;
+}
 .leader .phone {
 	height: 637px;
 	width: 385px;
@@ -138,12 +148,16 @@ html, body {
 	right: 0;
 	background: transparent url(images/bg/leader_phone.png) no-repeat 0 0;
 }
-
 .leader .subscribe-container {
 	position: absolute;
-	top: 416px;
-	left: 70px;
+	top: 413px;
+	left: 59px;
 	overflow: visible!important;
+}
+.leader .subscribe-container:after {
+	display: block;
+	content: "";
+	clear: both;
 }
 .leader .subscribe-container .hint {
 	font-size: 16px;
@@ -155,6 +169,23 @@ html, body {
 }
 .leader .subscribe-container .hint span {
 	font-family: 'PFDinDisplayProMedium', Arial;
+}
+.leader .subscribe-container .applink {
+	display: block;
+	width: 183px;
+	height: 53px;
+	background: url(images/btn_appstore.png) no-repeat 0 0;
+	float: left;
+}
+.leader .subscribe-container .playlink {
+	display: block;
+	float: right;
+	color: #14b7e9;
+	font-family: 'PFDinDisplayProRegular', Arial;
+	font-size: 16px;
+	margin: 19px 0 0 21px;
+	border-bottom: 1px solid;
+	line-height: 1;
 }
 .leader .subscribe {
 	position: relative;
@@ -261,7 +292,6 @@ html, body {
     display: block;
     cursor: pointer;
 }
-
 .fancybox-wrap .fancybox-close {
     background: url(images/bg/btn_close.png) no-repeat 0 0;
 }
@@ -277,8 +307,7 @@ html, body {
 }
 
 .newsletter {
-	height: 509px;
-	border-bottom: 1px dotted #d4d4d4;
+	height: 207px;
 	text-align: center;
 	position: relative;
     color: #232323;
@@ -414,13 +443,13 @@ html, body {
 	height: 695px;
 	background: transparent url(images/bg/social.jpg) no-repeat 0 0;
 	color: #fff;
-	padding: 75px 0 0 72px;
+	padding: 44px 0 0 72px;
 }
 .social .callout {
     font-family: 'PFDinDisplayProThin',Arial;
     font-size: 40px;
     line-height: 1.2;
-    margin: 0 0 55px;
+    margin: 0 0 85px;
 }
 .social .callout span {
     font-family: 'PFDinDisplayProBold',Arial;
@@ -440,7 +469,7 @@ html, body {
 }
 .security {
 	position: relative;
-	height: 900px;
+	height: 709px;
 	padding: 87px 0 0 67px;
 	border-bottom: 1px solid #ced3d6;
 }
@@ -449,7 +478,7 @@ html, body {
 	height: 811px;
 	position: absolute;
 	background: transparent url(images/bg/security.png) no-repeat 0 0;
-	right: 69px;
+	right: 22px;
 	top: -29px;
 }
 .security .callout {
@@ -678,14 +707,23 @@ html, body {
 	margin: 17px 0 0;
 }
 
+
 .footer {
-	padding: 103px 0 0;
+	padding: 100px 0 0;
 	font-family: 'PFDinDisplayProMedium', Arial;
 }
 .footer .callout {
 	font-size: 40px;
 	line-height: 1;
-	margin: 0 0 34px;
+	margin: 110px 0 34px;
+}
+.footer .terms {
+	font-size: 20px;
+	font-family: 'PFDinDisplayProBold', Arial;
+	padding: 0 0 66px;
+}
+.footer .terms a {
+	color: #2eb0da;
 }
 .footer .signup {
 	width: 476px;
@@ -701,8 +739,8 @@ html, body {
 	height: 363px;
 }
 .footer .signup.android {
-	float: right;
 	height: 363px;
+	margin: 0 auto;
 }
 .footer .signup.iphone .info {
     margin: 0 0 65px;
@@ -776,7 +814,6 @@ html, body {
 	padding: 0 12px;
 	border-radius: 5px;
 	border: none;
-	box-shadow: none;
 	font-size: 20px;
 }
 .footer .signup .button.progress span span {
