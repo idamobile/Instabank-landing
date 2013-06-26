@@ -111,7 +111,7 @@
                     </a>
                     <ul class="menu">
                         <li><a href="@{Application.press()}">&{'nav.press'}</a></li>
-                        <li><a href="@{Application.faq()}">&{'nav.faq'}</a></li>
+                        <li><a href="http://www.vpb.su/page/instabank_faq">&{'nav.faq'}</a></li>
                     </ul>
                     <div class="langs">
                     #{if play.i18n.Lang.get() == 'ru'}
@@ -130,7 +130,8 @@
                 <div class="footer-container">
                     <div class="footer content">
                         <p class="terms">
-                            <a href="/static/instabank-privacy-policy.docx">&{'main.legal.privacy'}</a>
+                            *{<a href="/static/instabank-privacy-policy.docx">&{'main.legal.privacy'}</a>}*
+                            <a href="/static/tariffs.pdf">&{'main.legal.privacy'}</a>
                         </p>
 
                         #{get 'footerContent' /}

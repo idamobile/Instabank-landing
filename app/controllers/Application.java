@@ -28,11 +28,6 @@ public class Application extends Controller {
     private static final String UNSUBSCRIBE_FLASH_KEY_SUCCESS = "success";
 
 
-    public static void original() {
-        Lang.set("ru");
-        render("/Application/index.html");
-    }
-
     public static void hotfix() {
         Lang.set("ru");
         render();
@@ -42,7 +37,6 @@ public class Application extends Controller {
 
         if (!"en".equals(locale)) {
             Lang.set("ru");
-            render("/Application/hotfix.html");
         }
 
         if (StringUtils.isEmpty(locale)) {
