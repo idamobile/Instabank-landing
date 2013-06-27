@@ -113,7 +113,7 @@
                         <li><a href="@{Application.press()}">&{'nav.press'}</a></li>
                         <li><a href="http://www.vpb.su/page/instabank_faq">&{'nav.faq'}</a></li>
                     </ul>
-                    <div class="langs">
+                    <div class="langs" style="display: none;">
                     #{if play.i18n.Lang.get() == 'ru'}
                         <span class="item">RUS</span>
                         <a class="item" href="@{Application.index("en")}" title="ENG">ENG</a>
@@ -131,7 +131,7 @@
                     <div class="footer content">
                         <p class="terms">
                             *{<a href="/static/instabank-privacy-policy.docx">&{'main.legal.privacy'}</a>}*
-                            <a href="/static/tariffs.pdf">&{'main.legal.privacy'}</a>
+                            <a href="http://www.vpb.su/page/instabank">&{'main.legal.privacy'}</a>
                         </p>
 
                         #{get 'footerContent' /}
