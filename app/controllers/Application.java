@@ -36,7 +36,7 @@ public class Application extends Controller {
     public static void index(String locale) {
 
         if (!"en".equals(locale)) {
-            Lang.set("ru");
+            locale = "ru";
         }
 
         if (StringUtils.isEmpty(locale)) {
