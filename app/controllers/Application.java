@@ -54,6 +54,14 @@ public class Application extends Controller {
         render(code);
     }
 
+    public static void index_en() {
+        session.put(SESSION_KEY_LOCALE, "en");
+        Lang.set("en");
+        String code = UUID.randomUUID().toString();
+        session.put(SESSION_KEY_CODE, code);
+        render(code);
+    }
+
     public static void unsubscribe(String email) {
         if ("POST".equals(request.method)) {
             if (StringUtils.isEmpty(email)) {

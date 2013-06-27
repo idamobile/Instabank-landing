@@ -1,0 +1,165 @@
+#{extends 'main_en.html'/}
+
+#{set 'moreScripts'}
+    <script type="text/javascript">
+        var extras = '${code}';
+        var subscribe_progress = "&{'subscribing'}";
+    </script>
+#{/set}
+
+<div class="main-container">
+    <div class="main content">
+
+        <!-- Leader -->
+        <div class="leader">
+            <img src="@{'/public/css/images/logo_leader.png'}" class="logo" alt="Instabank Logo"/>
+            <p class="callout">&{'leader.title'}</p>
+            <div class="phone"></div>
+            <div class="subscribe-container">
+                <div class="btn-container">
+                    <button class="button btn-blue-big" id="invite">
+                        <span><span>&{'leader.subscribe.request_invite'}</span></span>
+                    </button>
+                </div>
+                <img class="videopop" src="@{'/public/css/images/btn_video.png'}" data-fancybox-href="http://www.youtube.com/embed/xeY0a0o7ACw?showinfo=0" data-fancybox-type="iframe" title="Показать видео" alt="Видео Презентация"/>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="newsletter">
+            <div class="fb">
+                <div class="fb-like" data-href="http://www.facebook.com/Instabank" data-send="false" data-width="435" data-show-faces="true"></div>
+            </div>
+            <p>&{'newsletter.title'}</p>
+            <p class="small">&{'newsletter.main'}</p>
+
+            #{if play.i18n.Lang.get() == 'ru'}
+            <div class="feature percent"></div>
+            <div class="feature insurance"></div>
+            #{/if}
+
+        </div>
+
+        <!-- Reports -->
+        <div class="report">
+            <p class="callout">&{'reports.title'}</p>
+            <div class="feature">
+                <p class="title">&{'reports.bullet_one.title'}</p>
+                <p class="descr">&{'reports.bullet_one.description'}</p>
+            </div>
+            <div class="feature">
+                <p class="title">&{'reports.bullet_two.title'}</p>
+                <p class="descr">&{'reports.bullet_two.description'}</p>
+            </div>
+            <div class="feature">
+                <p class="title"><span class="soon">&{'reports.soon'}</span>&{'reports.bullet_three.title'}</p>
+                <p class="descr">&{'reports.bullet_three.description'}</p>
+            </div>
+            <div class="phone"></div>
+        </div>
+
+        <!-- Social -->
+        <div class="social">
+            <p class="callout">&{'social.title'}</p>
+            <div class="feature">
+                <p class="title">&{'social.bullet_one.title'}</p>
+                <p class="descr">&{'social.bullet_one.description'}</p>
+            </div>
+            <div class="feature">
+                <p class="title">&{'social.bullet_two.title'}</p>
+                <p class="descr">&{'social.bullet_two.description'}</p>
+            </div>
+            <div class="feature">
+                <p class="title">&{'social.bullet_three.title'}</p>
+                <p class="descr">&{'social.bullet_three.description'}</p>
+            </div>
+        </div>
+
+        <!-- Security -->
+        <div class="security">
+            <p class="callout">&{'security.title'}</p>
+            <div class="feature">
+                <p class="title">&{'security.bullet_one.title'}</p>
+                <p class="descr">&{'security.bullet_one.description'}</p>
+            </div>
+            <div class="feature">
+                <p class="title">&{'security.bullet_two.title'}</p>
+                <p class="descr">&{'security.bullet_two.description'}</p>
+            </div>
+            <div class="feature">
+                <p class="title">&{'security.bullet_three.title'}</p>
+                <p class="descr">&{'security.bullet_three.description'}</p>
+            </div>
+            <div class="feature">
+                <p class="title">&{'security.bullet_four.title'}</p>
+                <p class="descr">&{'security.bullet_four.description'}</p>
+            </div>
+            <div class="phone"></div>
+        </div>
+
+        #{if play.i18n.Lang.get() == 'ru'}
+
+        <div class="tarif">
+            <p class="callout">О наших <span>тарифах</span></p>
+            <p class="legend">Комиссия за обслуживание — </br>
+                <span>150р. <span>в месяц,</span></span></br>
+                включая мобильный банк, банковскую карту, переводы друзьям через Instabank и Facebook,</br>
+                уведомления об операциях и многое другое.
+            </p>
+            <p class="ribbon">
+                Первым 1000 клиентам<span> — первый год бесплатно!</span>
+            </p>
+            <a href="//instabank.ru/static/tariffs.pdf" class="readmore" title="&{'tariffs.title'}">&{'tariffs.title'}</a>
+            <p class="feature transfer">&{'tariff.feature.transfer'}</p>
+            <p class="feature interest">&{'tariff.feature.interest'}</p>
+            <p class="feature network">&{'tariff.feature.network'}</p>
+        </div>
+        #{/if}
+    </div>
+</div>
+
+
+#{set 'footerContent'}
+
+    <div class="signup iphone">
+        <p class="title">&{'footer.title.iphone'}</p>
+        <p class="info">&{'footer.download'}</p>
+        <a class="applink" href="https://itunes.apple.com/ru/app/instabank/id595302633">
+            <img class="applink" src="@{'/public/css/images/btn_appstore.png'}" alt="Загрузить приложение из AppStore"/>
+        </a>
+        <div class="lines">
+            <div></div>
+        </div>
+    </div>
+    <div class="signup android">
+        <p class="title">&{'footer.title.android'}</p>
+        <div class="form-container">
+            <form action="@{Application.subscribe}" method="post" id="signup-form" name="signup">
+                <div class="input-container">
+                    <input type="text" class="input-text" value="" name="name" id="form_name" placeholder="&{'leader.name.hint'}" />
+                </div>
+                <div class="input-container">
+                    <input type="text" class="input-text" value="" name="email" id="form_email" placeholder="&{'leader.email.hint'}" />
+                    <input type="hidden" value="" name="code"/>
+                </div>
+                <button type="submit" class="button">
+                <span><span>
+                <span>&{'leader.subscribe.send'}</span>
+                <img class="loader" src="@{'/public/css/images/loader.gif'}" />
+                </span></span>
+                </button>
+            </form>
+        </div>
+        <div class="result">
+            <p class="msg"></p>
+            <button type="button" class="button">
+                <span><span>&{'footer.form.back'}</span></span>
+            </button>
+        </div>
+        <div class="lines">
+            <div></div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+#{/set}

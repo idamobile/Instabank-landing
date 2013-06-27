@@ -1,0 +1,141 @@
+
+/* Reset ================================================================================= */
+* { 
+	margin: 0; 
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+img           { border:0; vertical-align:top; }
+
+a             { 
+				color: #314a74; 
+				text-decoration: none; 
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			  }
+a:hover       { text-decoration: none; }
+:focus        { outline: 0; }
+
+/* Headings */
+h1            { font-size:20px; font-weight:normal; line-height:1.15; }
+h2            { font-size:18px; font-weight:normal; line-height:1.25; }
+h3            { font-size:16px; font-weight:bold; line-height:1.25; }
+h4            { font-size:14px; font-weight:bold; }
+h5            { font-size:12px; font-weight:bold; }
+h6            { font-size:11px; font-weight:bold; }
+
+/* Forms */
+form          { display:inline; }
+fieldset      { border:0; }
+legend        { display:none; }
+
+/* Table */
+table         { border:0; border-collapse:collapse; border-spacing:0; empty-cells:show; font-size:100%; }
+caption,th,td { vertical-align:top; text-align:left; font-weight:normal; }
+
+/* Content */
+strong        { font-weight:bold; }
+address       { font-style:normal; }
+cite          { font-style:normal; }
+q,
+blockquote    { quotes:none; }
+q:before,
+q:after       { content:''; }
+small,big     { font-size:1em; }
+sup           { font-size:1em; vertical-align:top; }
+
+/* Lists */
+ul,ol         { list-style:none; }
+
+/* Tools */
+.hidden       { display: block !important; 
+				border:0 !important; 
+				margin:0 !important; 
+				padding:0 !important; 
+				font-size:0 !important; 
+				line-height:0 !important; 
+				width:0 !important; 
+				height:0 !important; 
+				overflow:hidden !important;
+}
+.nobr         { white-space:nowrap !important; }
+.wrap         { white-space:normal !important; }
+.a-left       { text-align:left !important; }
+.a-center     { text-align:center !important; }
+.a-right      { text-align:right !important; }
+.v-top        { vertical-align:top; }
+.v-middle     { vertical-align:middle; }
+.f-left,
+.left         { float:left !important; }
+.f-right,
+.right        { float:right !important; }
+.f-none       { float:none !important; }
+.f-fix        { float:left; width:100%; }
+.no-display   { display:none; }
+.no-margin    { margin:0 !important; }
+.no-padding   { padding:0 !important; }
+.no-bg        { background:none !important; }
+
+
+/* Form Elements */
+input,
+select,
+button,
+textarea { 
+	font: 16px Helvetica Neue, sans-serif; 
+	vertical-align: middle;
+	color: #4c4c4c;
+}
+textarea {
+	vertical-align: top;
+}
+
+input.input-text,
+select,
+textarea { 
+	background: #fff; 
+	border: 1px solid #ddd;
+}
+input.input-text,
+textarea { 
+	padding: 2px;
+}
+select { padding:1px; }
+select option { padding-right:10px; }
+select.multiselect option { border-bottom:1px solid #ddd; padding:2px 5px; }
+select.multiselect option:last-child { border-bottom:0; }
+textarea { overflow:auto; }
+input.radio { margin-right:3px; }
+input.checkbox { margin-right:3px; }
+
+button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
+button.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
+
+/* Clears */
+.filter-search .multisearch:after,
+.obj-grid:after,
+.public-menu:after,
+.trip-top:after,
+.title-container:after,
+.actions:after,
+.obj-list .item:after,
+.fieldset:after,
+.clear:after,
+.header-container:after,
+.header-container .top-container:after,
+.header:after,
+.main:after,
+.footer:after,
+.footer-container .bottom-container:after,
+.col-main:after,
+.col2-set:after,
+.col3-set:after,
+.col4-set:after { 
+	display: block; 
+	content: ""; 
+	clear: both;
+}
+
+/* ======================================================================================= */
