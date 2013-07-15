@@ -19,7 +19,7 @@
             <div class="subscribe-container">
 
 					<a class="playlink" href="javascript:void(0);" id="invite">У меня Android</a>
-					<a class="applink" href="https://itunes.apple.com/ru/app/instabank/id595302633" title="Загрузить приложение для iOS">&nbsp;</a>
+					<a class="applink" href="https://itunes.apple.com/ru/app/instabank/id595302633" title="Загрузить приложение для iOS" onclick="iHaveIPhone();">&nbsp;</a>
             </div>
         </div>
 
@@ -89,6 +89,10 @@
 
 #{set 'footerContent'}
 
+    <a style="display: block; margin-top: -40px; padding-bottom: 20px;" href="https://itunes.apple.com/ru/app/instabank/id595302633" title="Загрузить приложение для iOS" onclick="iHaveIPhone();">
+        <img src="@{'/public/css/images/btn_appstore.png'}"/>
+    </a>
+
     <div class="signup android">
         <p class="title">&{'footer.title.android'}</p>
         <div class="form-container">
@@ -119,5 +123,12 @@
         </div>
         <div class="overlay"></div>
     </div>
+
+    <script>
+        function iHaveIPhone() {
+            _gaq.push(['_trackPageview', '/itunes']);
+            return true;
+        }
+    </script>
 
 #{/set}

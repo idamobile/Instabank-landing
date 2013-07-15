@@ -60,7 +60,7 @@ security.title=Несколько слов о<br/><span>безопасности
 security.bullet_one.title=PIN-код
 security.bullet_one.description=Мобильное приложение Instabank в вашем смартфоне защищено<br/> PIN-кодом, как банковские карты. Удобно и надёжно.
 
-security.bullet_two.title=Социальный гарант
+security.bullet_two.title=Инновационный способ защиты
 security.bullet_two.description=В эпоху социальных сетей девичья фамилия матери -<br/> совсем не секрет. Мы разработали революционную систему защиты,<br/> в которой вашу личность подтверждают ваши друзья.
 
 security.bullet_three.title=Шифрование
@@ -93,3 +93,5 @@ main.legal=Мобильное приложение Instabank – это прог
 main.legal.privacy=Подробнее об условиях
 
 press.readmore=Читать полностью
+contacts.phone.description=По вопросам банковского обслуживания и технической поддержки Instabank
+contacts.email.description=По вопросам технической поддержки Instabank
