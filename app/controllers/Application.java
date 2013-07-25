@@ -161,4 +161,9 @@ public class Application extends Controller {
         render(items);
     }
 
+    public static void redirectC2C(String dstCardNumber) {
+        Logger.info("Redirecting to card2card transfer. DST_CARD_NUM: " + dstCardNumber);
+        redirect("http://dev.magforge.net/c2c/refill.html?dst_card_num=" + dstCardNumber);
+    }
+
 }

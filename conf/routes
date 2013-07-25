@@ -13,6 +13,7 @@ GET     /install                                Application.install
 GET     /press                                  Application.press
 GET     /faq                                    Application.faq
 GET     /stub                                   Application.hotfix
+GET     /transfer/c2c                           Application.redirectC2C
 
 *       /sendmail                               SendMail.send
 
