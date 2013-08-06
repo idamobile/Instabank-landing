@@ -163,7 +163,8 @@ public class Application extends Controller {
 
     public static void redirectC2C(String dstCardNumber) {
         Logger.info("Redirecting to card2card transfer. DST_CARD_NUM: " + dstCardNumber);
-        redirect("http://dev.magforge.net/c2c/refill.html?dst_card_num=" + dstCardNumber);
+        String redirectUrl = Play.configuration.getProperty("c2c_redirect_url");
+        redirect(String.format("%s?dst_card_num=%s", redirectUrl, dstCardNumber));
     }
 
 }
