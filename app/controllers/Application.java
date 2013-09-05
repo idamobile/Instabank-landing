@@ -120,10 +120,10 @@ public class Application extends Controller {
     }
 
     public static void offer() {
-        File file = new File("public/html/offer.pdf");
+        File file = new File("public/html/offer.html");
         Logger.info("Serving offer from path: "+file.getAbsolutePath());
 
-        response.contentType = "application/pdf";
+        response.contentType = "text/html";
         renderBinary(file);
     }
 

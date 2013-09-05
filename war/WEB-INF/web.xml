@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
          version="2.4">
 
-    <display-name>Play! (instabank-announcement)</display-name>
+    <display-name>Instabank Ads Page</display-name>
 
     <context-param>
         <param-name>play.id</param-name>
@@ -21,15 +21,15 @@
     </servlet>
 
     <!-- HTTPS Support -->
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>Entire Application</web-resource-name>
-            <url-pattern>/*</url-pattern>
-        </web-resource-collection>
-        <user-data-constraint>
-            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
-        </user-data-constraint>
-    </security-constraint>
+    <!--<security-constraint>-->
+        <!--<web-resource-collection>-->
+            <!--<web-resource-name>Entire Application</web-resource-name>-->
+            <!--<url-pattern>/*</url-pattern>-->
+        <!--</web-resource-collection>-->
+        <!--<user-data-constraint>-->
+            <!--<transport-guarantee>CONFIDENTIAL</transport-guarantee>-->
+        <!--</user-data-constraint>-->
+    <!--</security-constraint>-->
 
     <servlet-mapping>
         <servlet-name>play</servlet-name>
