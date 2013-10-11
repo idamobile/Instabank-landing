@@ -12,7 +12,7 @@ email.subject.card_ordered=Instabank - Вы заказали карту
 email.subject.existing=Instabank - Ваша заявка
 
 # Main page messages
-leader.title=Лучше, чем банк.
+leader.title=Лучше, чем банк
 leader.subscribe.request_invite=Стать клиентом
 leader.subscribe.title=Получите приглашение
 leader.subscribe.description=Сейчас стать клиентом Instabank можно только по<br/> приглашению. <span>Оставьте заявку, чтобы попасть в число<br/> первых пользователей.</span>
