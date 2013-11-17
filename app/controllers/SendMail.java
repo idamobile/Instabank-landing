@@ -1,6 +1,7 @@
 package controllers;
 
 import org.apache.commons.lang.StringUtils;
+import play.Logger;
 import play.Play;
 import play.mvc.Before;
 import play.mvc.Controller;
@@ -11,6 +12,9 @@ import service.Mails;
  * @since: 29.05.2013
  */
 public class SendMail extends Controller{
+
+    private static final String CLASSIFIER_CARD_ORDERED_VALUE = "card_ordered";
+    private static final String CLASSIFIER_USER_JOINED_VALUE = "user_joined";
 
     private static final String USERNAME_PROPERTY = "sendmail.user";
     private static final String PASSWORD_PASSWORD = "sendmail.pass";
@@ -32,8 +36,14 @@ public class SendMail extends Controller{
 
     }
 
-    public static void send(String email, String classifier) {
-        Mails.cardOrdered(email);
+    public static void send(String email, String classifier, String platform) {
+        Logger.info(
+                String.format("Sending notification to %s; classifier: %s; platform: %s", email, classifier, platform));
+        if (CLASSIFIER_CARD_ORDERED_VALUE.equals(classifier)) {
+            Mails.cardOrdered(email);
+        } else if (CLASSIFIER_USER_JOINED_VALUE.equals(classifier)) {
+            Mails.userJoined(email);
+        }
         renderText("success");
     }
 

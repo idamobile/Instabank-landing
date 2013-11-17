@@ -39,4 +39,19 @@ public class Mails extends Mailer {
         }
     }
 
+    public static void userJoined(String recipient) {
+        addRecipient(recipient);
+        setFrom(Play.configuration.getProperty("mail.smtp.sender.email"));
+        setSubject(Messages.get("email.subject.user_joined"));
+        addHeader("Precedence", "bulk");
+        addHeader("List-Unsubscribe", "http://instabank.ru/unsubscribe");
+        try {
+            send();
+            Logger.info("CardOrder notification sent to: " + recipient);
+        } catch (Throwable t) {
+            Logger.error(t, "Unable to send email to recipient: " + recipient);
+        }
+    }
+
+
 }
