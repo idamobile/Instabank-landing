@@ -1,3 +1,4 @@
+nav.tariffs=Тарифы
 nav.press=Пресса о нас
 nav.faq=Вопросы - ответы
 

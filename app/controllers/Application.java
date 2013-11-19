@@ -161,4 +161,18 @@ public class Application extends Controller {
         render(items);
     }
 
+    public static void tariffs(String locale) {
+        if (StringUtils.isEmpty(locale)) {
+            locale = session.get(SESSION_KEY_LOCALE);
+        } else {
+            session.put(SESSION_KEY_LOCALE, locale);
+        }
+
+        locale = StringUtils.isEmpty(locale)? "ru": locale;
+
+        Lang.set(locale);
+
+        render();
+    }
+
 }

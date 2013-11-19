@@ -40,7 +40,6 @@
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
         <script type="text/javascript" src="@{'/public/javascripts/jquery.easing-1.3.min.js'}"></script>
         <script type="text/javascript" src="@{'/public/javascripts/fancybox/jquery.fancybox.pack.js'}"></script>
-        <script type="text/javascript" src="@{'/public/javascripts/scripts.js'}"></script>
 
         #{get 'moreScripts' /}
     </head>
@@ -110,8 +109,9 @@
                         <img src="@{'/public/css/images/logo.png'}" alt="Instabank Logo" width="" height="" />
                     </a>
                     <ul class="menu">
+                        <li><a href="@{Application.tariffs()}">&{'nav.tariffs'}</a></li>
                         <li><a href="@{Application.press()}">&{'nav.press'}</a></li>
-                        <li><a href="http://www.vpb.su/page/instabank_faq">&{'nav.faq'}</a></li>
+                        <li><a href="@{Application.faq()}">&{'nav.faq'}</a></li>
                     </ul>
                     <div class="langs" style="display: none;">
                     #{if play.i18n.Lang.get() == 'ru'}

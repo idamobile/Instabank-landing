@@ -13,6 +13,7 @@ GET     /install                                Application.install
 GET     /press                                  Application.press
 GET     /faq                                    Application.faq
 GET     /stub                                   Application.hotfix
+GET     /tariffs                                Application.tariffs
 
 *       /sendmail                               SendMail.send
 
