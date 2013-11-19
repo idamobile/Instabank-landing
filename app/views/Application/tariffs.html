@@ -6,13 +6,36 @@
         padding: 94px 60px;
     }
 
+    .tariffs h1 {
+        font: 13px/1.4 'PFDinDisplayProMedium', Arial;
+        font-size: 40px;
+    }
+    .tariffs .switch {
+        font-family: 'PFDinDisplayProBold';
+        font-size: 20px;
+        line-height: 60px;
+        color: #2eb0da;
+    }
+
+    a.switch .active{
+        color: #232323;
+    }
+
     .tariffs li {
         clear: both;
         overflow: auto;
-        border-top: 1px solid #000000;
+        border-top: 1px solid #e2e2e2;
         padding-top: 12px;
         padding-bottom: 12px;
+        font-family: 'PFDinDisplayProRegular';
+        font-size: 16px;
+    }
 
+    .tariffs h2 {
+        font-family: 'PFDinDisplayProRegular';
+        font-size: 30px;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
     .tariffs li div:first-child {
@@ -23,6 +46,7 @@
     .tariffs li div:last-child {
         float: right;
         width: 270px;
+        color: #2eb0da;
     }
 </style>
 #{/set}
@@ -55,8 +79,8 @@
         <h1>Тарифы 2013</h1>
 
         <div>
-            <a href="#virtual">Для виртуальной карты</a> /
-            <a href="#plastic">Для пластиковой карты</a>
+            <a class="switch" href="#virtual">Для виртуальной карты</a> /
+            <a class="switch" href="#plastic">Для пластиковой карты</a>
         </div>
         <div id="virtual">
 
