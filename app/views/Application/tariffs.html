@@ -18,7 +18,7 @@
         color: #2eb0da;
     }
 
-    a.switch .active {
+    a.switch.active {
         color: #232323;
     }
 
@@ -92,11 +92,19 @@
 
 #{set 'moreScripts'}
 <script>
+
     function showTab(tabId) {
-//        console.log('Showing tab: ' + tabId);
-        $('#virtual').hide(0);
-        $('#plastic').hide(0);
-        $('#' + tabId).show(0);
+        if ('virtual' == tabId) {
+            $('#plastic').hide();
+            $('#virtual').show();
+            $('a[href="#virtual"]').addClass('active');
+            $('a[href="#plastic"]').removeClass('active');
+        } else {
+            $('#plastic').show();
+            $('#virtual').hide();
+            $('a[href="#plastic"]').addClass('active');
+            $('a[href="#virtual"]').removeClass('active');
+        }
         return false;
     }
 
