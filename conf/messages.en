@@ -11,6 +11,7 @@ email.saved=Your application has been recorded, thank you!
 email.subject.new=Instabank - Your request received
 email.subject.card_ordered=Instabank - You have ordered new card
 email.subject.existing=Instabank - Your request
+email.subject.user_joined=Welcome to Instabank!
 
 # Main page messages
 leader.title=<span>Banking,</span> reimagined

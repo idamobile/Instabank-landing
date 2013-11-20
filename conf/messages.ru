@@ -11,6 +11,7 @@ email.saved=Ваш адрес был успешно сохранен, спаси
 email.subject.new=Instabank - Ваша заявка получена
 email.subject.card_ordered=Instabank - Вы заказали карту
 email.subject.existing=Instabank - Ваша заявка
+email.subject.user_joined=Instabank! Добро пожаловать!
 
 # Main page messages
 leader.title=Лучше, чем банк
