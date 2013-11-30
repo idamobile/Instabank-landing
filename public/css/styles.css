@@ -397,6 +397,60 @@ html, body {
     font-family: 'PFDinDisplayProRegular', Arial;
 }
 
+.card-container {
+    padding: 150px 57px 25px;
+}
+
+.card-block {
+    width: 420px;
+    height: 726px;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+    padding: 32px;
+}
+
+.card-block.free {
+    background: #f5f5f5 url(images/badge_free.png) no-repeat top right;
+}
+
+.card-block.p150 {
+    background: #f5f5f5 url(images/badge_150r.png) no-repeat top right;
+}
+
+.card-block img {
+    display: block;
+    margin-top: 10px;
+}
+
+.card-block h1 {
+    margin-top: 30px;
+    font-family: 'PFDinDisplayProMedium', Arial;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.card-block h2 {
+    font-family: 'PFDinDisplayProThin',Arial;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.card-block p {
+    margin-top: 20px;
+    font-family: 'PFDinDisplayProBold', Arial;
+    font-size: 16px;
+}
+
+.card-block ul {
+    margin-top: 20px;
+}
+
+.card-block li {
+    font-family: 'PFDinDisplayProRegular', Arial;
+    font-size: 14px;
+    line-height: 2em;
+}
+
 .clearfix {
     clear: both;
     overflow: auto;
@@ -481,7 +535,6 @@ html, body {
 	position: relative;
 	height: 709px;
 	padding: 87px 0 0 67px;
-	border-bottom: 1px solid #ced3d6;
 }
 .security .phone {
 	width: 354px;
