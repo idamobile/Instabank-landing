@@ -36,9 +36,9 @@ newsletter.main=Мы создали банк для тех, кто ценит к
 
 # Reports section messages
 reports.soon=скоро
-reports.title=Мобильный банк с большими возможностями
+reports.title=Мобильный банк<br/>с большими возможностями
 reports.bullet_one.title=Переводы друзьям
-reports.bullet_one.description=Отправляйте деньги друзьям по Faceboo без ввода реквизитов. Это так же быстро и просто, как отправить сообщение.
+reports.bullet_one.description=Отправляйте деньги друзьям по Facebook без ввода реквизитов. Это так же быстро и просто, как отправить сообщение.
 
 reports.bullet_two.title=Денежные запросы
 reports.bullet_two.description=Собирайте деньги на общий подарок другу или напоминайте друзьям, что вы оплатили общий счёт в кафе.
@@ -60,13 +60,13 @@ social.bullet_three.description=Каждая покупка по карте пр
 # Security section messages
 security.title=Выгодная карта Instabank
 security.bullet_one.title=Карта с высоким доходом
-security.bullet_one.description=Расплачивайтесь картой в магазинах и ресторанах и зарабатывайте 10%% годовых ежемесячно на остаток по карте (начисляются на минимальную месячную сумму остатка, больше 10 000 рублей). Это лучше чем депозит - замораживать деньги не нужно!
+security.bullet_one.description=Расплачивайтесь картой в магазинах и ресторанах и зарабатывайте 10%% годовых ежемесячно на остаток по карте (начисляются на минимальную месячную сумму остатка больше 10 000 рублей).
 
 security.bullet_two.title=Проценты без ограниечний
 security.bullet_two.description=Лимтиов на максимальную сумму нет - вы заработаете 10%% и с 10 000 рублей, и с 10 миллионов!
 
 security.bullet_three.title=Бакноматы
-security.bullet_three.description=Пополняйте счет и снимайте наличные без комиссии в широкой сети банкоматов (ссылка).
+security.bullet_three.description=Пополняйте счет и снимайте наличные без комиссии в широкой сети банкоматов.
 
 # ATMS section messages
 atm.title=<span>Ах да!</span> У Instabank широкая сеть бесплатных банкоматов. Снимайте деньги и пополняйте счет без комиссии.
