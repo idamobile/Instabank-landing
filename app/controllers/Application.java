@@ -1,6 +1,6 @@
 package controllers;
 
-import models.FaqItem;
+import models.Page;
 import models.Review;
 import models.Subscriber;
 import org.apache.commons.lang.StringUtils;
@@ -45,7 +45,7 @@ public class Application extends Controller {
             session.put(SESSION_KEY_LOCALE, locale);
         }
 
-        locale = StringUtils.isEmpty(locale)? "ru": locale;
+        locale = StringUtils.isEmpty(locale) ? "ru" : locale;
 
         Lang.set(locale);
 
@@ -121,7 +121,7 @@ public class Application extends Controller {
 
     public static void offer() {
         File file = new File("public/html/offer.html");
-        Logger.info("Serving offer from path: "+file.getAbsolutePath());
+        Logger.info("Serving offer from path: " + file.getAbsolutePath());
 
         response.contentType = "text/html";
         renderBinary(file);
@@ -141,9 +141,15 @@ public class Application extends Controller {
         locale = StringUtils.isEmpty(locale)? "ru": locale;
 
         Lang.set(locale);
-
-        List<FaqItem> items = FaqItem.list(locale);
-        render(items);
+//
+//        List<FaqItem> items = FaqItem.list(locale);
+//        render(items);
+        Page page = Page.find("byKey", "faq").first();
+        if (page != null) {
+            render(page);
+        } else {
+            notFound("faq");
+        }
     }
 
     public static void press(String locale) {
@@ -153,7 +159,7 @@ public class Application extends Controller {
             session.put(SESSION_KEY_LOCALE, locale);
         }
 
-        locale = StringUtils.isEmpty(locale)? "ru": locale;
+        locale = StringUtils.isEmpty(locale) ? "ru" : locale;
 
         Lang.set(locale);
 
@@ -168,7 +174,7 @@ public class Application extends Controller {
             session.put(SESSION_KEY_LOCALE, locale);
         }
 
-        locale = StringUtils.isEmpty(locale)? "ru": locale;
+        locale = StringUtils.isEmpty(locale) ? "ru" : locale;
 
         Lang.set(locale);
 

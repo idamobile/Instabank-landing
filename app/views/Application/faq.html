@@ -1,22 +1,12 @@
 #{extends 'main.html'/}
 
-	<div class="main-container">
-	    <div class="main content">
-			
-			<div class="page">
-				<h1 class="page-title">&{'nav.faq'}</h1>
-				<div class="std">
-                    #{list items: items, as: 'item'}
-                    <div class="faq-item">
-                        <p class="title">${item.question.raw()}</p>
-                        <p class="answer">${item.answer.raw()}</p>
-                        #{if items.comment}
-                            <p class="hint">${item.comment.raw()}</p>
-                        #{/if}
-                    </div>
-                    #{/list}
-				</div>
-			</div>
-			
-	    </div>
-	</div>
+<div class="main content">
+
+    <div class="page">
+        <h1 class="page-title">&{'nav.faq'}</h1>
+
+        <div class="std">
+        ${page.content.raw()}
+        </div>
+    </div>
+</div>
