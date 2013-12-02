@@ -355,6 +355,7 @@ html, body {
 .features {
     text-align: center;
     width: 980px;
+    padding-bottom: 80px;
 }
 
 .features .wrapper {
@@ -385,7 +386,7 @@ html, body {
     color: #000;
     line-height: 1;
     padding-top: 24px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     font-size: 20px;
     font-family: 'PFDinDisplayProThin', Arial;
 }
@@ -443,6 +444,8 @@ html, body {
 
 .card-block ul {
     margin-top: 20px;
+    list-style-type: disc;
+    padding-left: 1em;
 }
 
 .card-block li {
@@ -461,17 +464,17 @@ html, body {
 }
 
 .report {
-	height: 861px;
+	height: 740px;
 	position: relative;
 	color: #232323;
-	padding: 71px 0 0;
+	padding: 0;
 }
 .report .phone {
-	width: 305px;
-	height: 808px;
+	width: 308px;
+	height: 647px;
 	position: absolute;
-	background: transparent url(images/bg/report.png) no-repeat 0 0;
-	left: 76px;
+	background: transparent url(images/screen_activity.png) no-repeat 0 0;
+	left: 70px;
 	top: -27px;
 }
 .report .callout {
@@ -480,8 +483,7 @@ html, body {
     width: 425px;
     line-height: 1.2;
 	margin: 0 0 56px 430px;
-	padding: 108px 0 0 7px;
-	background: transparent url(images/bg/report_note.jpg) no-repeat 0 0;
+	padding: 0px 0 0 7px;
 }
 .report .callout span {
 	font-family: 'PFDinDisplayProMedium', Arial;
@@ -505,9 +507,9 @@ html, body {
 }
 .social {
 	height: 695px;
-	background: transparent url(images/bg/social.jpg) no-repeat 0 0;
-	color: #fff;
-	padding: 44px 0 0 72px;
+    color: #232323;
+    position: relative;
+    padding: 44px 0 0 72px;
 }
 .social .callout {
     font-family: 'PFDinDisplayProThin',Arial;
@@ -520,6 +522,7 @@ html, body {
 }
 .social .feature {
 	margin: 0 0 39px;
+    width: 450px;
 }
 .social .feature .title {
 	font-size: 20px;
@@ -531,33 +534,43 @@ html, body {
 	font-size: 16px;
 	font-family: 'PFDinDisplayProRegular', Arial;
 }
+
+.social .phone {
+    width: 308px;
+    height: 647px;
+    position: absolute;
+    background: transparent url(images/screen_newtransfer.png) no-repeat 0 0;
+    right: 70px;
+    top: -27px;
+}
+
 .security {
 	position: relative;
-	height: 709px;
-	padding: 87px 0 0 67px;
+	height: 540px;
+	padding: 0px 0 0 67px;
 }
 .security .phone {
-	width: 354px;
-	height: 811px;
+	width: 341px;
+	height: 365px;
 	position: absolute;
-	background: transparent url(images/bg/security.png) no-repeat 0 0;
-	right: 22px;
-	top: -29px;
+	background: transparent url(images/cards.png) no-repeat 0 0;
+	left: 70px;
+	top: 10px;
 }
 .security .callout {
-    background: url("images/bg/security_lock.jpg") no-repeat scroll 0 0 transparent;
     font-family: 'PFDinDisplayProThin',Arial;
     font-size: 40px;
     line-height: 1.2;
-    margin: 0 0 38px;
-    padding: 12px 0 10px 101px;
+    margin: 0 0 36px 438px;
+    padding: 12px 0 10px 0px;
     min-height: 117px;
 }
 .security .callout span {
 	font-family: 'PFDinDisplayProMedium', Arial;
 }
 .security .feature {
-	margin: 0 0 39px 8px;
+    margin: 0 0 36px 438px;
+    width: 400px;
 }
 .security .feature .title {
 	font-size: 20px;

@@ -36,40 +36,37 @@ newsletter.main=Мы создали банк для тех, кто ценит к
 
 # Reports section messages
 reports.soon=скоро
-reports.title=<span>Выписка</span> еще никогда не была такой понятной
-reports.bullet_one.title=Уведомления об операциях
-reports.bullet_one.description=Мгновенно получайте уведомления о покупках и переводах по вашей банковской карте.
+reports.title=Мобильный банк с большими возможностями
+reports.bullet_one.title=Переводы друзьям
+reports.bullet_one.description=Отправляйте деньги друзьям по Faceboo без ввода реквизитов. Это так же быстро и просто, как отправить сообщение.
 
-reports.bullet_two.title=Лента событий
-reports.bullet_two.description=Читайте в выписке понятные названия операций. Привязывайте совершенные покупки к своему местоположению с помощью Foursquare. Добавляйте к покупкам комментарии и прикрепляйте фотографии на память.
+reports.bullet_two.title=Денежные запросы
+reports.bullet_two.description=Собирайте деньги на общий подарок другу или напоминайте друзьям, что вы оплатили общий счёт в кафе.
 
-reports.bullet_three.title=Удобные отчёты и поиск
-reports.bullet_three.description=iPhone-приложение Instabank автоматически сортирует ваши траты по категориям и показывает, куда уходят деньги, с помощью простых диаграмм. Находите совершенные действия при помощи запросов, таких как "Театр" или "Starbucks".
+reports.bullet_three.title=Оплата услуг
+reports.bullet_three.description=Совершайте покупки в Интернете или оплачивайте услуги без комиссии с помощью приложения Instabank.
 
 # Social section messages
-social.title=Простые расчеты с друзьями
-social.bullet_one.title=Переводы друзьям
-social.bullet_one.description=Отправляйте деньги друзьям по Facebook без ввода реквизитов.<br/>Это так же быстро и просто, как отправить сообщение.
+social.title=Понятные финансы
+social.bullet_one.title=Уведомления об операциях
+social.bullet_one.description=Мгновенно получайте Push-уведомления о всех действиях по вашей виртуальной или пластиковой карте.
 
-social.bullet_two.title=Денежные запросы
-social.bullet_two.description=Собирайте деньги на общий подарок другу или<br/>напоминайте друзьям, что вы оплатили общий счёт в кафе.
+social.bullet_two.title=Лента событий
+social.bullet_two.description=Выписка в виде наглядной ленты событий. У всех покупок есть категории и понятное описание, а переводы и запросы имеют человеческие лица, чаты и фотографии.
 
-social.bullet_three.title=Переводы людям рядом
-social.bullet_three.description=Отправляйте деньги новым друзьям или знакомым,<br/>физически находящимся рядом, с помощью функции "Найти получателя поблизости".
+social.bullet_three.title=Покупки и переводы в деталях
+social.bullet_three.description=Каждая покупка по карте превращается в историю в деталях с фотографией, вашим комментарием и местоположением на карте.
 
 # Security section messages
-security.title=Несколько слов о<br/><span>безопасности</span>
-security.bullet_one.title=PIN-код
-security.bullet_one.description=Мобильное приложение Instabank в вашем смартфоне защищено<br/> PIN-кодом, как банковские карты. Удобно и надёжно.
+security.title=Выгодная карта Instabank
+security.bullet_one.title=Карта с высоким доходом
+security.bullet_one.description=Расплачивайтесь картой в магазинах и ресторанах и зарабатывайте 10%% годовых ежемесячно на остаток по карте (начисляются на минимальную месячную сумму остатка, больше 10 000 рублей). Это лучше чем депозит - замораживать деньги не нужно!
 
-security.bullet_two.title=Инновационный способ защиты
-security.bullet_two.description=В эпоху социальных сетей девичья фамилия матери -<br/> совсем не секрет. Мы разработали революционную систему защиты,<br/> в которой вашу личность подтверждают ваши друзья.
+security.bullet_two.title=Проценты без ограниечний
+security.bullet_two.description=Лимтиов на максимальную сумму нет - вы заработаете 10%% и с 10 000 рублей, и с 10 миллионов!
 
-security.bullet_three.title=Шифрование
-security.bullet_three.description=Каждый байт информации надёжно защищён сертифицированными<br/> алгоритмами, гарантирующими полную сохранность персональных<br/> данных.
-
-security.bullet_four.title=Вклады застрахованы
-security.bullet_four.description=Все вклады и счета застрахованы системой обязательного<br/> страхования вкладов.
+security.bullet_three.title=Бакноматы
+security.bullet_three.description=Пополняйте счет и снимайте наличные без комиссии в широкой сети банкоматов (ссылка).
 
 # ATMS section messages
 atm.title=<span>Ах да!</span> У Instabank широкая сеть бесплатных банкоматов. Снимайте деньги и пополняйте счет без комиссии.
