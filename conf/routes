@@ -7,7 +7,7 @@ GET     /subscribe                              Application.subscribe
 *       /unsubscribe                            Application.unsubscribe
 GET     /en                                     Application.index_en
 GET     /{<(ru)>locale}                         Application.index
-GET     /                                       Application.index
+*       /                                       Application.index
 GET     /offer                                  Application.offer
 GET     /install                                Application.install
 GET     /press                                  Application.press
