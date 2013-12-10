@@ -63,9 +63,9 @@ security.bullet_one.title=Карта с высоким доходом
 security.bullet_one.description=Расплачивайтесь картой в магазинах и ресторанах и зарабатывайте 10%% годовых ежемесячно на остаток по карте (начисляются на минимальную месячную сумму остатка больше 10 000 рублей).
 
 security.bullet_two.title=Проценты без ограниечний
-security.bullet_two.description=Лимтиов на максимальную сумму нет - вы заработаете 10%% и с 10 000 рублей, и с 10 миллионов!
+security.bullet_two.description=Лимитов на максимальную сумму нет - вы заработаете 10%% и с 10 000 рублей, и с 10 миллионов!
 
-security.bullet_three.title=Бакноматы
+security.bullet_three.title=Банкоматы
 security.bullet_three.description=Пополняйте счет и снимайте наличные без комиссии в широкой сети банкоматов.
 
 # ATMS section messages
