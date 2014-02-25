@@ -181,4 +181,12 @@ public class Application extends Controller {
         render();
     }
 
+	public static void serveStatic(String filename) {
+		File file = new File("public/html/" + filename + ".html");
+		Logger.info("Serving offer from path: " + file.getAbsolutePath());
+
+		response.contentType = "text/html";
+		renderBinary(file);
+	}
+
 }
