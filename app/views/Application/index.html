@@ -1,228 +1,558 @@
-#{extends 'main.html'/}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instabank</title>
+	<meta charset="utf-8">
 
-#{set 'moreScripts'}
-<script type="text/javascript" src="@{'/public/javascripts/scripts.js'}"></script>
-<script type="text/javascript">
-    var extras = '${code}';
-    var subscribe_progress = "&{'subscribing'}";
-</script>
-#{/set}
+	<!--[if lte IE 8]><meta http-equiv="X-UA-Compatible" content="IE=8" /><![endif]-->
 
-<div class="main-container">
-    <div class="main content">
+	<meta name="author" content="Burobin Dmitry, E-mail:koding.burobin@gmail.com">
+	<meta name="copyright" content="Instabank">
 
-        <!-- Leader -->
-        <div class="leader">
-            <img src="@{'/public/css/images/logo_leader.png'}" class="logo" alt="Instabank Logo"/>
+	<meta name="robots" content="index, nofollow">
 
-            <p class="callout">&{'leader.title'}</p>
+	<meta name="title" content="Instabank">
+	<meta name="description" content="Удобный и красивый мобильный банк для пользователей смартфонов и Facebook. Мгновенные переводы друзьям по Facebook. До 10% годовых на остаток на счёте. Понятные операции и красивая выписка. Карта с любым изображением из Instagram.">
+	<meta name="keywords" content="">
 
-            <p class="legend">Мобильное приложение и карта Instabank - красивое решение для покупок и переводов</p>
+	<link rel="stylesheet" href="@{'/public/20140618/css/style.css'}" type="text/css" media="screen">
+	<link rel="stylesheet" href="@{'/public/20140618/css/jquery-ui.css'}" type="text/css" media="screen">
 
-            <div class="subscribe-container">
-                <a class="playlink" href="javascript:void(0);" id="invite">У меня Android</a>
-                <a class="applink" href="https://itunes.apple.com/ru/app/instabank/id595302633"
-                   title="Загрузить приложение для iOS" onclick="iHaveIPhone();">&nbsp;</a>
-            </div>
-        </div>
+	<link href='//fonts.googleapis.com/css?family=Exo+2:200,100,300,400&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
-        <!-- Newsletter -->
-        <div class="newsletter">
-            <div class="fb">
-                <div class="fb-like" data-href="http://www.facebook.com/Instabank" data-send="false" data-width="435"
-                     data-show-faces="true"></div>
-            </div>
-        </div>
+	<link rel="shortcut icon" href="favicon.ico" >
 
-        <div class="features">
-            <h1><a href="https://itunes.apple.com/ru/app/instabank/id595302633">Скачайте приложение</a> и получите
-                бесплатную виртуальную карту Instabank MasterCard</h1>
-            <h2>Где бы вы ни находились, получите доступ к основным возможностям Instabank</h2>
+	<!--    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>-->
+	<script type="text/javascript" src="@{'/public/20140618/js/jquery-1.7.1.min.js'}"></script>
 
-            <div class="clearfix wrapper">
-                <div class="left item">
-                    <img src="@{'/public/images/ic1.png'}" alt="">
-                    <p>Красивый и понятный мобильный банк</p>
-                </div>
-                <div class="left item">
-                    <img src="@{'/public/images/ic2.png'}" alt="">
-                    <p>Переводы и запросы по Facebook</p>
-                </div>
-                <div class="left item">
-                    <img src="@{'/public/images/ic3.png'}" alt="">
-                    <p>Все покупки и переводы в деталях</p>
-                </div>
-                <div class="left item">
-                    <img src="@{'/public/images/ic4.png'}" alt="">
-                    <p>Пластиковая карта MasterCard с высоким доходом</p>
-                </div>
-                <div class="left item">
-                    <img src="@{'/public/images/ic5.png'}" alt="">
-                    <p>Начать можно прямо сейчас!</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Reports -->
-        <div class="report">
-            <p class="callout">&{'reports.title'}</p>
+	<!--	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>-->
+	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-            <div class="feature">
-                <p class="title">&{'reports.bullet_one.title'}</p>
+	<script type="text/javascript">
+		$(document).ready ( function(){
+			var canvas = document.getElementById("counter");
+			var ctx = canvas.getContext("2d");
+			ctx.lineWidth = 8;
+			ctx.imageSmoothingEnabled = true;
 
-                <p class="descr">&{'reports.bullet_one.description'}</p>
-            </div>
-            <div class="feature">
-                <p class="title">&{'reports.bullet_two.title'}</p>
+			function draw(angle) {
+				ctx.clearRect(0, 0, 400, 400);
 
-                <p class="descr">&{'reports.bullet_two.description'}</p>
-            </div>
-            <div class="feature">
-                <p class="title">&{'reports.bullet_three.title'}</p>
+				ctx.beginPath();
+				ctx.strokeStyle = '#E2E2E2';
+				ctx.arc(210, 120, 100, 0, 2*Math.PI);
+				ctx.stroke();
 
-                <p class="descr">&{'reports.bullet_three.description'}</p>
-            </div>
-            <div class="phone"></div>
-        </div>
+				ctx.beginPath();
+				ctx.strokeStyle = '#00B8E5';
+				ctx.arc(210, 120, 100, -Math.PI/2, angle);
+				ctx.stroke();
+			}
 
-        <!-- Social -->
-        <div class="social">
-            <p class="callout">&{'social.title'}</p>
+			draw( -Math.PI/2 + 0.3 );
+		});
+	</script>
 
-            <div class="feature">
-                <p class="title">&{'social.bullet_one.title'}</p>
 
-                <p class="descr">&{'social.bullet_one.description'}</p>
-            </div>
-            <div class="feature">
-                <p class="title">&{'social.bullet_two.title'}</p>
 
-                <p class="descr">&{'social.bullet_two.description'}</p>
-            </div>
-            <div class="feature">
-                <p class="title">&{'social.bullet_three.title'}</p>
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" href="@{'/public/20140618/css/ie6.css'}" />
+	<script type="text/javascript" src="@{'/public/20140618/js/DD_belatedPNG_0.0.8a-min.js'}"></script>
+	<script type="text/javascript">
+		DD_belatedPNG.fix('.png');
+	</script>
+	<![endif]-->
 
-                <p class="descr">&{'social.bullet_three.description'}</p>
-            </div>
-            <div class="phone"></div>
-        </div>
+	<!--[if lt IE 8]>
+	<div style=' clear: both; text-align:center; position: relative;'>
+		<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+			<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+		</a>
+	</div>
+	<![endif]-->
 
-        <!-- Security -->
-        <div class="security">
-            <p class="callout">&{'security.title'}</p>
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="@{'/public/20140618/js/html5.js'}"></script>
+	<link rel="stylesheet" href="@{'/public/20140618/css/ie.css'}" type="text/css" media="screen">
+	<![endif]-->
 
-            <div class="feature">
-                <p class="title">&{'security.bullet_one.title'}</p>
+	<script>
 
-                <p class="descr">&{'security.bullet_one.description'}</p>
-            </div>
-            <div class="feature">
-                <p class="title">&{'security.bullet_two.title'}</p>
+		$(function() {
 
-                <p class="descr">&{'security.bullet_two.description'}</p>
-            </div>
-            <div class="feature">
-                <p class="title">&{'security.bullet_three.title'}</p>
+			$( "#slider-range-max" ).slider({
+				range: "max",
+				min: 20000,
+				max: 2000000,
+				step: 5000,
+				value: 100000,
+				slide: function( event, ui ) {
+					$( "#amount" ).html( withspaces( ui.value ) + " <span>Р</span>" );
+					$( "#summery" ).html( withspaces( ( ui.value * 0.1 ) ) + " <span>Р</span>" );
 
-                <p class="descr">&{'security.bullet_three.description'}</p>
-            </div>
-            <div class="phone"></div>
-        </div>
+					var canvas = document.getElementById("counter");
+					var ctx = canvas.getContext("2d");
+					ctx.lineWidth = 8;
 
-        <div class="wrapper card-container clearfix">
-            <div class="left card-block free">
-                <img src="@{'/public/css/images/card_virtual.png'}"/>
-                <h1>Виртуальная</h1>
-                <h2>карта Instabank</h2>
-                <p>
-                    Скачайте приложение и получите доступ к основным возможностям Instabank не дожидаясь пластиковой
-                    карты
-                </p>
-                <ul>
-                    <li>Красивый мобильный банк</li>
-                    <li>Удобное пополнение с карт других банков</li>
-                    <li>Оплата услуг</li>
-                    <li>Покупки в Интернете</li>
-                    <li>Выписка в виде ленты событий</li>
-                    <li>Push-уведомления</li>
-                </ul>
-                <p>
-                    Баланс виртуальной карты ограничен 15 000 рублей.
-                </p>
-            </div>
-            <div class="right card-block p150">
-                <img src="@{'/public/css/images/card_plastic.png'}"/>
-                <h1>Пластиковая</h1>
-                <h2>карта Instabank</h2>
-                <p>
-                    Карта Instabank с доходом 10% годовых ежемесячно на остаток по карте (начисляется на минимальную
-                    месячную сумму<br/>остатка больше 10 000 рублей)
-                </p>
-                <ul>
-                    <li>Переводы и запросы по facebook</li>
-                    <li>Оплата услуг</li>
-                    <li>Покупки в Интернете</li>
-                    <li>Выписка в виде ленты событий</li>
-                    <li>Бесплатное пополнение и снятие в широкой сети банкоматов</li>
-                </ul>
-                <p>
-                    Баланс пластиковой карты не ограничен.<br/>
-                    Проценты на остаток можно получать и с 10 000 рублей и с 10 миллионов!
-                </p>
-            </div>
-        </div>
 
-    </div>
+					function draw(angle) {
+						ctx.clearRect(0, 0, 400, 400);
+						ctx.beginPath();
+						ctx.strokeStyle = '#E2E2E2';
+						ctx.arc(210, 120, 100, 0, 2*Math.PI);
+						ctx.stroke();
+
+						ctx.beginPath();
+						ctx.strokeStyle = '#00B8E5';
+						ctx.arc(210, 120, 100, -Math.PI/2, angle);
+						ctx.stroke();
+					}
+
+					draw( -Math.PI/2 + ( ui.value / 318000 ) );
+
+				}
+			});
+			$( "#amount" ).html( withspaces( $( "#slider-range-max" ).slider( "value" ) ) + " <span>Р</span>" );
+			$( "#summery" ).html( withspaces( $( "#slider-range-max" ).slider( "value" ) * 0.1 ) + " <span>Р</span>" );
+
+		});
+
+
+
+		function withspaces(n) {
+			n += "";
+			n = new Array(4 - n.length % 3).join("U") + n;
+			return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
+		}
+
+
+
+	</script>
+
+
+
+</head>
+
+<body>
+
+<div class="wrapper">
+<!--For IE less than 9-->
+<center>
+<!--end-->
+<div class="inner-wrapper">
+
+<header>
+	<div id="header">
+		<div class="inner-header">
+
+			<div class="logo-box">
+				<a href="/"><img id="logo" src="@{'/public/20140618/image/logo.png'}" alt="Instabank" title="Instabank" ></a>
+			</div>
+
+			<nav>
+				<div id="menu" >
+					<ul>
+						<li><a href="tariffs">ТАРИФЫ</a></li>
+						<li><a href="https://instabank.ru/press">ПРЕССА О НАС</a></li>
+						<li><a href="https://instabank.ru/faq">ЧАСТЫЕ ВОПРОСЫ</a></li>
+						<li><a href="#footer">КОНТАКТЫ</a></li>
+					</ul>
+				</div>
+			</nav>
+
+		</div>
+	</div>
+</header>
+
+
+<section>
+<div id="content">
+<div class="inner-content">
+
+<div class="middle-box top-photo-box">
+
+	<img class="keyhole" src="@{'/public/20140618/image/keyhole.png'}" alt="Instabank" title="Instabank">
+	<a href="https://itunes.apple.com/ru/app/instabank/id595302633"><img class="appstore-top" src="@{'/public/20140618/image/appstore.png'}" alt="AppStore" title="AppStore" ></a>
+	<a href="https://play.google.com/store/apps/details?id=com.idamobile.instabank.android"><img class="googlemarket-top" src="@{'/public/20140618/image/google-market.png'}" alt="Google Market" title="Google Market" ></a>
+	<div class="top-text-box" >
+		<a name="link"></a>
+		<p class="top-h1" >Банк, каким он должен быть сегодня</p>
+		<p>Мы сделали процесс распоряжения денежными средствами удобным и красивым.</p>
+	</div>
+
 </div>
 
+<div class="middle-box background-w">
 
-#{set 'footerContent'}
+	<div class="inner-middle-box">
 
-<a style="display: block; margin-top: -40px; padding-bottom: 20px;"
-   href="https://itunes.apple.com/ru/app/instabank/id595302633" title="Загрузить приложение для iOS"
-   onclick="iHaveIPhone();">
-    <img src="@{'/public/css/images/btn_appstore.png'}"/>
-</a>
+		<div class="middle-box facebook-box">
+			<center>
+				<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FInstabank&amp;width=850&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:850px; height:80px;" allowTransparency="true"></iframe>
+			</center>
+		</div>
 
-<div class="signup android">
-    <p class="title">&{'footer.title.android'}</p>
+		<div class="middle-box icons-box">
 
-    <div class="form-container">
-        <form action="@{Application.subscribe}" method="post" id="signup-form" name="signup">
-            <div class="input-container">
-                <input type="text" class="input-text" value="" name="name" id="form_name"
-                       placeholder="&{'leader.name.hint'}"/>
-            </div>
-            <div class="input-container">
-                <input type="text" class="input-text" value="" name="email" id="form_email"
-                       placeholder="&{'leader.email.hint'}"/>
-                <input type="hidden" value="" name="code"/>
-            </div>
-            <button type="submit" class="button">
-                <span><span>
-                <span>&{'leader.subscribe.send'}</span>
-                <img class="loader" src="@{'/public/css/images/loader.gif'}"/>
-                </span></span>
-            </button>
-        </form>
-    </div>
-    <div class="result">
-        <p class="msg"></p>
-        <button type="button" class="button">
-            <span><span>&{'footer.form.back'}</span></span>
-        </button>
-    </div>
-    <div class="lines">
-        <div></div>
-    </div>
-    <div class="overlay"></div>
+			<div class="icon-containers">
+				<img class="image-line" src="@{'/public/20140618/image/line.png'}" title="" alt="" >
+				<ul>
+					<li>
+						<img class="credit-card" src="@{'/public/20140618/icons/credit_card.png'}" title="Credit Card" alt="Credit Card" >
+						<p>Дебетовая карта Instabank MasterCard Gold</p>
+					</li>
+					<li>
+						<img class="10-percents" src="@{'/public/20140618/icons/10_percents.png'}" title="10% Off" alt="10% Off" >
+						<p>10% годовых на остаток каждый месяц</p>
+					</li>
+					<li>
+						<img class="money-transfer" src="@{'/public/20140618/icons/money_transfer.png'}" title="Money Transfer" alt="Money Transfer" >
+						<p>Переводы и запросы друзьям без реквизитов</p>
+					</li>
+					<li>
+						<img class="icon-iphone" src="@{'/public/20140618/icons/iphone-gray.png'}" title="Iphone" alt="Iphone" >
+						<p>Красивый и понятный мобильный банк</p>
+					</li>
+					<li>
+						<img class="icon-telephone" src="@{'/public/20140618/icons/telephone.png'}" title="Telephone" alt="Telephone" >
+						<p>Бесплатное пополнение и снятие<br> в широкой сети банкоматов</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="text-under-icons">
+				<p><span>Скачайте приложение</span> и получите доступ к основным возможностям Instabank прямо сейчас!</p>
+			</div>
+
+		</div>
+
+	</div><!-- end inner-middle-box-->
+
+</div><!-- end background-w-->
+
+<div class="middle-box cards-information-box">
+
+	<img class="card-in-info-box" src="@{'/public/20140618/image/card-2.png'}" alt="Credit Card" title="Credit Card" >
+	<div class="text-under-card">
+		<p>Закажите пластиковую карту<br> в приложении и мы привезем ее вам<br> в любую точку Москвы бесплатно!</p>
+	</div>
+
+	<div class="card-types-box">
+
+		<div class="card-type">
+			<p class="card-type-p">Виртуальная карта</p>
+			<p class="card-type-title">Instabank MasterCard</p>
+			<ul>
+				<li>Бесплатное обслуживание</li>
+				<li>Моментальное оформление.<br />Никаких документов не нужно</li>
+				<li>Можно оплачивать услуги без комиссии и совершать покупки<br> в Интернете</li>
+				<li>Удобное пополнение с карт других банков</li>
+			</ul>
+			<div class="card-type-button">
+				<a href="https://instabank.ru/tariffs#virtual">Тариф виртуальной карты</a>
+			</div>
+		</div>
+
+		<div class="card-type">
+			<p class="card-type-p">Дебетовая карта</p>
+			<p class="card-type-title">Instabank MasterCard Gold</p>
+			<ul>
+				<li>0 руб. за первый год обслуживания карты. Начиная со второго года - 150 руб./мес.</li>
+				<li>10% годовых на остаток по счету</li>
+				<li>Широкая сеть банкоматов для бесплатного пополнения и снятия</li>
+				<li>5 бесплатных пополнений с карт других банков</li>
+			</ul>
+			<div class="card-type-button-2">
+				<a href="https://instabank.ru/tariffs#plastic">Тариф пластиковой карты</a>
+			</div>
+		</div>
+
+	</div> <!-- end card-types-box-->
+
+</div><!-- end cards-information-box-->
+
+<div class="middle-box background-w">
+
+	<div class="inner-middle-box">
+
+		<div class="middle-box calculation-box">
+
+			<div class="calculation-left">
+				<p class="box-title">Карта с доходом <br> <span class="">10% на остаток</span></p>
+				<div class="calculation-text-box">
+					<p class="bold" >Карта приносит вам доход</p>
+					<p class="text-p" >Каждый месяц мы начисляем вам 10% годовых на средний остаток больше 20 000 руб.</p>
+				</div>
+				<div class="calculation-text-box">
+					<p class="bold">Проценты без ограничений</p>
+					<p class="text-p" >У нас нет лимитов на максимальную сумму начисления процентов. Вы заработаете 10% и с 20 000 руб, и с 2 млн. руб.</p>
+				</div>
+				<div class="calculation-text-box">
+					<div class="insurance-logo">
+						<img src="@{'/public/20140618/image/vklady.png'}" alt="Вклады застрахованы" title="Вклады застрахованы">
+					</div>
+					<div class="insurance-text">
+						<p class="bold">Ваши деньги застрахованы</p>
+						<p class="text-p" >Наш <a href="http://www.vpb.su/page/o_banke" target="_blank">банк-партнер</a> входит в Систему Страхования Вкладов. Сохранность ваших средств в пределах 700 000 руб. гарантирована государством.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="calculation-right">
+
+				<p class="top-text">При среднемесячном остатке на карте</p>
+				<div id="slider-range-max" type="range" class="price-slide" value=""></div>
+				<center><div type="text" id="amount" class="how-much bold"> <img src="@{'/public/20140618/image/ruble-bold.png'}" alt='Ruble' title='Ruble' width='' height='' ></div></center>
+
+				<div class="left-price">20 000 <span>Р</span></div>
+				<div class="right-price">2 000 000 <span>Р</span></div>
+
+				<div class="calculation-diagrams">
+					<canvas id="counter" height="300" width="400"></canvas>
+					<div id="circle"></div>
+					<p id="top-text" class="top-text">За год я получу</p>
+					<center><div type="text" id="summery" class="summery bold" > <img src="@{'/public/20140618/image/ruble-blue.png'}" alt='Ruble' title='Ruble' alt='' title='' ></div></center>
+				</div>
+
+			</div>
+
+		</div><!-- end calculation-box-->
+
+
+		<div class="middle-box information-box-left-image">
+
+			<div class="information-left-image">
+				<div class="iph-image"><img id="1" class="image sw-img-iphone" src="@{'/public/20140618/image/information-iphone-1.png'}" title="iPhone" alt="iPhone"></div>
+				<div class="and-image hide"></div>
+				<div class="switch">
+					<a class="sw-iphone sw-selected" href="javascript:;">iPhone</a><span class="sw-divider">|</span>
+					<a class="sw-android" href="javascript:;">Android</a>
+				</div>
+			</div>
+
+			<div class="information-right-text">
+
+				<div class="information-text-right">
+					<p class="box-title">Управление картой</p>
+					<div class="information-text-box">
+						<p class="bold" >Простые лимиты</p>
+						<p class="text-p" >Боитесь потратить слишком много? Определите для себя лимит затрат в день или в месяц, и установите его прямо в приложении. Теперь ни вы - и никто другой! - не потратите ни копейки больше лимита!</p>
+					</div>
+					<div class="information-text-box">
+
+						<p class="bold">Два в одном</p>
+						<p class="text-p" >Используйте Instabank как удобную карту для покупок и выгодный депозит одновременно. Каждый месяц вы будете зарабатывать 10% годовых с суммы на карте свыше 20 000 руб.</p>
+					</div>
+
+					<div class="information-text-box">
+						<p class="text-p" > Вы всегда можете &quot;установить все лимиты в ноль&quot;, чтобы заблокировать возможность совершать покупки, переводы и снятие наличных.</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div><!--end information-box-left-image-->
+
+		<div class="middle-box information-box-right-image">
+
+			<div class="information-left-text">
+
+				<div class="information-text-left">
+					<p class="box-title">Простые переводы и запросы друзьям</p>
+					<div class="information-text-box">
+						<p class="bold" >Переводы друзьям</p>
+						<p class="text-p" >Отправляйте деньги друзьям по Facebook без ввода реквизитов. Это так же быстро и просто, как отправить сообщение.</p>
+					</div>
+					<div class="information-text-box">
+						<p class="bold">Денежные запросы</p>
+						<p class="text-p" >Собирайте деньги на общий подарок другу или напоминайте друзьям, что вы оплатили общий счёт в кафе.</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="information-right-image">
+				<div class="iph-image"><img class="image sw-img-iphone" id="2" src="@{'/public/20140618/image/information-iphone-2.png'}" title="iPhone" alt="iPhone"></div>
+				<div class="and-image hide"></div>
+				<div class="switch">
+					<a class="sw-iphone sw-selected" href="javascript:;">iPhone</a><span class="sw-divider">|</span>
+					<a class="sw-android" href="javascript:;">Android</a>
+				</div>
+			</div>
+
+		</div><!--end information-box-right-image-->
+
+
+		<div class="middle-box information-box-left-image">
+
+			<div class="information-left-image">
+				<div class="iph-image"><img class="image sw-img-iphone" id="3" src="@{'/public/20140618/image/information-iphone-3.png'}" title="iPhone" alt="iPhone"></div>
+				<div class="and-image hide"></div>
+				<div class="switch">
+					<a class="sw-iphone sw-selected" href="javascript:;">iPhone</a><span class="sw-divider">|</span>
+					<a class="sw-android" href="javascript:;">Android</a>
+				</div>
+			</div>
+
+			<div class="information-right-text">
+
+				<div class="information-text-right">
+					<p class="box-title">Понятные финансы</p>
+					<div class="information-text-box">
+						<p class="bold" >Лента событий</p>
+						<p class="text-p" >Читайте выписку в виде наглядной ленты событий. У всех покупок есть категории и понятное описание, а переводы и запросы имеют человеческие лица, чаты и фотографии.</p>
+					</div>
+					<div class="information-text-box">
+						<p class="bold">Уведомления об операциях</p>
+						<p class="text-p" >Мгновенно получайте Push-уведомления о всех действиях по вашей виртуальной или пластиковой карте.</p>
+					</div>
+					<div class="information-text-box">
+						<p class="bold">Покупки и переводы в деталях</p>
+						<p class="text-p" >Каждая покупка по карте превращается в историю в деталях с фотографией, вашим комментарием и местоположением на карте.</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div><!--end information-box-left-image-->
+
+
+		<div class="middle-box information-box-right-image">
+
+			<div class="information-left-text">
+
+				<div class="information-text-left">
+					<p class="box-title">Наглядная аналитика</p>
+					<div class="information-text-box">
+						<p class="bold" >Категории</p>
+						<p class="text-p" >Все ваши расходы по карте автоматически распределяются по категориям, которые можно легко настраивать в ручную. </p>
+					</div>
+					<div class="information-text-box">
+						<p class="bold">Аналитика трат (Скоро)</p>
+						<p class="text-p" >Простые и наглядные графики расходов помогут вам следить куда уходят деньги. </p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="information-right-image">
+				<div class="iph-image"><img class="image sw-img-iphone" id="4" src="@{'/public/20140618/image/information-iphone-4.png'}" title="iPhone" alt="iPhone"></div>
+				<div class="and-image hide"></div>
+				<div class="switch">
+					<a class="sw-iphone sw-selected" href="javascript:;">iPhone</a><span class="sw-divider">|</span>
+					<a class="sw-android" href="javascript:;">Android</a>
+				</div>
+			</div>
+
+		</div><!--end information-box-right-image-->
+
+
+	</div><!-- end inner-middle-box-->
+
+</div><!-- end background-w-->
+
+
+<div class="middle-box end-information-box">
+
+	<div class="end-information-text-top-1" >Скачайте приложение и закажите в нем карту.</div>
+	<div class="end-information-text-top-2" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Это просто и удобно.</div>
+	<img class="credit-card-img" src="@{'/public/20140618/image/card.png'}" alt="Credit Card" title="Credit Card" >
+	<div class="end-information-text" >Первый год обслуживания карты - бесплатно!</div>
+	<a href="https://itunes.apple.com/ru/app/instabank/id595302633"><img class="appstore-footer" src="@{'/public/20140618/image/appstore.png'}" alt="AppStore" title="AppStore" ></a>
+	<a href="https://play.google.com/store/apps/details?id=com.idamobile.instabank.android"><img class="googlemarket-footer" src="@{'/public/20140618/image/google-market.png'}" alt="Google Market" title="Google Market" ></a>
+
+</div><!-- end end-information-box-->
+
+</div><!-- end inner-content-->
+</div><!-- end content-->
+</section>
+
+
+
+<footer>
+	<div id="footer">
+		<div class="inner-footer">
+
+			<center>
+
+				<div class="middle-box bottom-nav-box">
+
+					<nav>
+						<div id="footer-menu" >
+							<ul>
+								<li><a href="tariffs">Тарифы</a></li>
+								<li><a href="http://www.vpb.su/page/instabank_docs">Оферта</a></li>
+								<li><a href="https://instabank.ru/press">Пресса о нас</a></li>
+								<li class="last" ><a href="https://instabank.ru/faq">Частые вопросы</a></li>
+							</ul>
+						</div>
+					</nav>
+
+				</div>
+
+				<div class="middle-box follow-us-box">
+
+					<p class="box-title-footer"><span class="">Следите за нами!</span></p>
+					<div class="social-icons-box">
+						<div class="icon-box">
+							<a href="https://www.facebook.com/Instabank"><img src="@{'/public/20140618/icons/facebook.png'}" alt="Facebook" title="Facebook">
+								<p>Facebook</p></a>
+						</div>
+						<div class="icon-box">
+							<a href="http://www.youtube.com/instabankru"><img src="@{'/public/20140618/icons/you-tube.png'}" alt="YouTube" title="YouTube">
+								<p>YouTube</p></a>
+						</div>
+						<div class="icon-box">
+							<a href="http://www.twitter.com/instabankru"><img src="@{'/public/20140618/icons/twitter.png'}" alt="Twitter" title="Twitter">
+								<p>Twitter</p></a>
+						</div>
+						<div class="icon-box">
+							<a href="http://www.instagram.com/instabankru"><img src="@{'/public/20140618/icons/instagram.png'}" alt="Instagram" title="Instagram">
+								<p>Instagram</p></a>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="middle-box contact-box">
+
+					<p class="box-title-footer"><span class="">Контакты</span></p>
+					<p class="contact-telephone"><span class="">+7 (499) 678-20-30</span></p>
+					<p class="contact-email"><a href="mailto:contact@instabank.ru">contact@instabank.ru</a></p>
+
+				</div>
+
+
+				<div class="middle-box partners-box">
+
+					<img class="mc-image" src="@{'/public/20140618/image/mc.png'}" title="MasterCard" alt="MasterCard">
+					<img class="ins-image" src="@{'/public/20140618/image/vklady.png'}" title="Вклады застрахованы" alt="Вклады застрахованы">
+
+				</div>
+
+
+				<div class="middle-box copyright-box">
+
+					<p>Банковские услуги предоставляются АКБ "ВПБ" ЗАО, Лицензия ЦБРФ №3065</p>
+
+				</div>
+
+
+			</center>
+
+		</div>
+	</div>
+</footer>
+
+</div></center>
+
 </div>
 
-<script>
-    function iHaveIPhone() {
-        _gaq.push(['_trackPageview', '/itunes']);
-        return true;
-    }
-</script>
+<script type="text/javascript" src="@{'/public/20140618/js/scripts.js'}"></script>
 
-#{/set}
+</body>
+</html>
+

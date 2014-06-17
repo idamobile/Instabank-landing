@@ -1,0 +1,38 @@
+img {
+	border: 0;
+}
+.icon-containers ul li {
+	width: 170px;
+	float: left;
+}
+p, ul {
+	text-align: left;	
+}
+
+.calculation-right {
+	width: 49%;
+}
+.icon-containers {
+	height: 232px;
+}
+
+.inner-header .logo-box {
+	width: 460px;
+}
+#menu {
+	width: 520px;
+}
+
+.card-type {
+	text-align: left;
+}
+
+		
+#footer-menu ul li, .icon-box {
+	zoom: 1;
+	*display: inline;			
+}
+					
+.copyright-box p, .contact-telephone, .contact-email, .box-title-footer, #footer-menu ul, .bottom-nav-box, .text-under-icons p, .inner-content, .top-text {
+	text-align: center;
+}

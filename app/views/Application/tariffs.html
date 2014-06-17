@@ -1,493 +1,841 @@
-#{extends 'main.html'/}
-#{set 'moreStyles'}
-<style>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instabank</title>
+	<meta charset="utf-8">
 
-    .tariffs {
-        padding: 94px 60px;
-    }
+	<!--[if lte IE 8]><meta http-equiv="X-UA-Compatible" content="IE=8" /><![endif]-->
 
-    .tariffs h1 {
-        font: 13px/1.4 'PFDinDisplayProMedium', Arial;
-        font-size: 40px;
-    }
+	<meta name="author" content="Burobin Dmitry, E-mail:koding.burobin@gmail.com">
+	<meta name="copyright" content="Burobin Dmitry">
 
-    .tariffs .switch {
-        font-family: 'PFDinDisplayProBold';
-        font-size: 20px;
-        line-height: 60px;
-        color: #2eb0da;
-    }
+	<meta name="robots" content="index, nofollow">
 
-    a.switch.active {
-        color: #232323;
-    }
+	<meta name="title" content="Instabank">
+	<meta name="description" content="Удобный и красивый мобильный банк для пользователей смартфонов и Facebook. Мгновенные переводы друзьям по Facebook. До 10% годовых на остаток на счёте. Понятные операции и красивая выписка. Карта с любым изображением из Instagram.">
+	<meta name="keywords" content="">
 
-    .tariffs li {
-        clear: both;
-        overflow: auto;
-        border-top: 1px solid #e2e2e2;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        font-family: 'PFDinDisplayProRegular';
-        font-size: 16px;
-    }
+	<link rel="stylesheet" href="@{'/public/20140618/css/style.css'}" type="text/css" media="screen">
+	<link rel="stylesheet" href="@{'/public/20140618/css/jquery-ui.css'}" type="text/css" media="screen">
 
-    .tariffs h2 {
-        font-family: 'PFDinDisplayProRegular';
-        font-size: 30px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
+	<link href='//fonts.googleapis.com/css?family=Exo+2:200,100,300,400&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
-    .tariffs li div:first-child {
-        float: left;
-        width: 570px;
-    }
+	<link rel="shortcut icon" href="favicon.ico" >
 
-    .tariffs li div:last-child {
-        float: right;
-        width: 270px;
-        color: #2eb0da;
-		text-transform: capitalize;
-    }
-
-    .tariffs span a {
-        vertical-align: super;
-        font-size: 50%;
-    }
-
-    .tariffs p {
-        font-family: 'PFDinDisplayProRegular';
-        font-size: 16px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        color: #535353;
-    }
-
-    .tariffs ol li {
-        border: none;
-        padding: 5px 10px;
-        font-size: 16px;
-        color: #535353;
-    }
-
-    .notes h2 {
-        font-size: 14px;
-        color: #535353;
-    }
-
-    .notes li {
-        border: none;
-        padding: 0px 10px;
-        font-size: 10px;
-        color: #535353;
-    }
-
-    .notes li:before {
-        content: '* ';
-    }
+	<script type="text/javascript" src="//code.jquery.com/jquery-latest.js"></script>
 
 
-</style>
-#{/set}
 
-#{set 'moreScripts'}
-<script>
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" type="text/css" href="@{'/public/20140618/css/ie6.css'}" />
+	<script type="text/javascript" src="@{'/public/20140618/js/DD_belatedPNG_0.0.8a-min.js'}"></script>
+	<script type="text/javascript">
+		DD_belatedPNG.fix('.png');
+	</script>
+	<![endif]-->
 
-    function showTab(tabId) {
-        if ('virtual' == tabId) {
-            $('#plastic').hide();
-            $('#virtual').show();
-            $('a[href="#virtual"]').addClass('active');
-            $('a[href="#plastic"]').removeClass('active');
-        } else {
-            $('#plastic').show();
-            $('#virtual').hide();
-            $('a[href="#plastic"]').addClass('active');
-            $('a[href="#virtual"]').removeClass('active');
-        }
-        return false;
-    }
+	<!--[if lt IE 8]>
+	<div style=' clear: both; text-align:center; position: relative;'>
+		<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+			<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+		</a>
+	</div>
+	<![endif]-->
 
-    $(function () {
-        $('a[href="#virtual"]').click(function () {
-            return showTab('virtual');
-        });
-        $('a[href="#plastic"]').click(function () {
-            return showTab('plastic');
-        });
-        showTab('virtual');
-    });
-</script>
-#{/set}
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="@{'/public/20140618/js/html5.js'}"></script>
+	<link rel="stylesheet" href="@{'/public/20140618/css/ie.css'}" type="text/css" media="screen">
+	<![endif]-->
+
+</head>
+
+<body>
+
+<div class="wrapper">
+<!--For IE less than 9-->
+<center>
+<!--end-->
+<div class="inner-wrapper">
+
+<header>
+	<div id="header">
+		<div class="inner-header">
+
+			<div class="logo-box">
+				<a href="/"><img id="logo" src="@{'/public/20140618/image/logo.png'}" alt="Instabank" title="Instabank" ></a>
+			</div>
+
+			<nav>
+				<div id="menu" >
+					<ul>
+						<li><a href="tariffs.html">ТАРИФЫ</a></li>
+						<li><a href="https://instabank.ru/press">ПРЕССА О НАС</a></li>
+						<li><a href="https://instabank.ru/faq">ЧАСТЫЕ ВОПРОСЫ</a></li>
+						<li><a href="#footer">КОНТАКТЫ</a></li>
+					</ul>
+				</div>
+			</nav>
+
+		</div>
+	</div>
+</header>
 
 
-<div class="main content tariffs" id="tabs">
-<h1>Тарифы 2013</h1>
+<section>
+<div id="content">
+<div class="inner-content">
 
-<div>
-    <a class="switch" href="#virtual">Для виртуальной карты</a> /
-    <a class="switch" href="#plastic">Для пластиковой карты</a>
+<div class="middle-box top-tarifs-box">
+
+	<div class="tarifs-switch">
+		<div class="debit-card-box switched-tarif">
+			<a href="#plastic" class="debit-card-a">Тариф дебетовой карты</a>
+		</div>
+		<div class="credit-card-box">
+			<a href="#virtual" class="virtual-card-a">Тариф виртуальной карты</a>
+		</div>
+	</div>
+
 </div>
-<div id="virtual">
 
-    <h2>MasterCard Virtual</h2>
-    <ul>
-        <li>
-            <div>Валюта Счета</div>
-            <div>Рубли РФ</div>
-        </li>
-        <li>
-            <div>Оформление и обслуживание карты</div>
-            <div>бесплатно</div>
-        </li>
-        <li>
-            <div>Блокировка и перевыпуск карты в режиме реального времени (не более одного раза в месяц из приложения
-                Instabank)
-            </div>
-            <div>бесплатно</div>
-        </li>
-    </ul>
+<div id="plastic" class="middle-box background-w credit-box-info">
 
-    <h2>Пополнение</h2>
-    <ul>
-        <li>
-            <div>Переводом с карты другого банка из приложения Instabank</div>
-            <div>1.95%, но не менее 50 руб.</div>
-        </li>
-    </ul>
+<div class="top-tarifs-info">
 
-    <h2>Платежи</h2>
-    <ul>
-        <li>
-            <div>Оплата услуг</div>
-            <div>бесплатно</div>
-        </li>
-    </ul>
-
-    <h2>Выписки и информирование</h2>
-    <ul>
-        <li>
-            <div>Получение Push-уведомлений о совершенных операциях</div>
-            <div>бесплатно</div>
-        </li>
-        <li>
-            <div>Предоставление копии платежных документов по карте (при обращении в отделение банка)</div>
-            <div>бесплатно</div>
-        </li>
-    </ul>
-
-    <h2>Прочее</h2>
-    <ul>
-        <li>
-            <div>Лимиты по совершению операций по карте</div>
-            <div>Не более 15 000 руб. за одну операцию и не более 40 000 руб. в месяц</div>
-        </li>
-        <li>
-            <div>Комиссия при безналичной оплате товаров и услуг</div>
-            <div>Не взымается</div>
-        </li>
-        <li>
-            <div>Конвертация денежных средств по карте</div>
-            <div>Конвертация осуществляется по курсу Банка России на день
-                списания суммы операции со счета карты
-            </div>
-        </li>
-        <li>
-            <div>Ежемесячное/ежеквартальное начисление процентов на остаток по карте</div>
-            <div>Не начисляются</div>
-        </li>
-        <li>
-            <div>
-                Проценты по неразрешенному овердрафту
-                <span><a href="#virtual-one">1</a></span>
-            </div>
-            <div>0% годовых от суммы перерасхода (рубли РФ)</div>
-        </li>
-        <li>
-            <div>Расходы банка, понесенные в связи с рассмотрением претензии по операции клиента, признанной
-                впоследствии необоснованной
-            </div>
-            <div>По фактическим затратам банка</div>
-        </li>
-    </ul>
-
-    <h2>Пояснения к тарифам</h2>
-    <ol>
-        <li id="virtual-one">
-            1. Неразрешенный овердрафт - это превышение суммы расходной операции, совершенной по карте, над
-            суммой платежного лимита карты.
-        </li>
-    </ol>
+	<div class="top-tarifs-title">
+		Тариф Instabank MasterCard Gold / Standard
+	</div>
 
 
 </div>
-<div id="plastic">
 
-<div class="notes">
-    <h2>Термины и сокращения:</h2>
-    <ul>
-        <li>ПВН - пункт выдачи наличных</li>
-        <li>Банк - АКБ "ВПБ" (ЗАО) - Акционерный Коммерческий Банк "Военно Промышенный Банк" (Закрытое Акционерное
-            Общество)
-        </li>
-        <li>НКО "ОРС" (ОАО) - Небанковская Кредитная Организация «Объединенная Расчетная Система» (Открытое
-            Акционерное Общество)
-        </li>
-    </ul>
+<div class="inner-middle-box">
+
+<div class="terif-box bottom-divider">
+
+	<div class="tarif-left-side">
+		Карта и Счет
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first right-divider">
+			<div class="left-title">
+				Валюта Счета
+			</div>
+			<div class="right-tarif-price">
+				Рубли РФ
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Тип карты
+			</div>
+			<div class="right-tarif-price">
+				Дебетовая MasterCard <br> Gold / Standard
+			</div>
+		</div>
+		<div class="right-side-info">
+			<div class="left-title">
+				Оформление карты Instabank<br>и открытие Счета
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+<div class="terif-box bottom-divider">
+
+	<div class="tarif-left-side">
+		Обслуживание<br>Счета Instabank<sup>1</sup>
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first right-divider">
+			<div class="left-title">
+				В течении первого года
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+		<div class="right-side-info">
+			<div class="left-title">
+				Второй и последующие годы
+			</div>
+			<div class="right-tarif-price">
+				150 руб. в месяц
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+<div class="terif-box bottom-divider">
+
+	<div class="tarif-left-side">
+		Проценты, начисляемые<br>на средний остаток по<br>счету в течение<br>календарного месяца<sup>2</sup>
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first">
+			<div class="left-title">
+				Свыше 20 000 руб.
+			</div>
+			<div class="right-tarif-price">
+				10% годовых
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+<div class="terif-box bottom-divider">
+
+	<div class="tarif-left-side">
+		Платежи и переводы
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first right-divider">
+			<div class="left-title">
+				Денежные переводы между<br>клиентами Istabank
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Переводы Клиента в другие<br>банки, осуществляемые по<br>реквизитам получателя
+			</div>
+			<div class="right-tarif-price">
+
+				<div class="padding-bottom-10 right-divider">20 рублей за одну операцию</div>
+				<div class="padding-10-0"><span class="usual-text">Лимит на переводы - не более<br>300 000 рублей в месяц</span></div>
+
+			</div>
+		</div>
+		<div class="right-side-info">
+			<div class="left-title">
+				Оплата услуг за исключением<br>оплаты электронных кошельков<br>и Московского паркинга
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+
+<div class="terif-box bottom-divider">
+
+	<div class="tarif-left-side">
+		Пополнение Счета
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first right-divider">
+			<div class="left-title">
+				Посредством перевода денежных<br>средств с карт российских банков<br>(C2C)
+			</div>
+			<div class="right-tarif-price">
+				<div class="padding-bottom-10 right-divider">Бесплатно<span class="usual-text"> - первые 5 операций в месяц (30 календарных дней с момента первого пополнения)
+</span></div>
+				<div class="padding-10-0 right-divider">6-ая и последующие операции -<br>1,9% от суммы, мин. 50 руб.</div>
+				<div class="padding-10-0"><span class="usual-text">Лимиты на пополнение: 300 тыс.<br>руб. в месяц, 3 операции в сутки,<br>25 тыс. руб. за одну операцию,<br>54 тыс. руб. в сутки</span></div>
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Наличными в банкоматах и<br>платежных терминалах АКБ &quot;ВПБ&quot;<br>ЗАО, в банкоматах Банка Москвы<br>и банкоматах платежной системы<br>&quot;OPC&quot; с функцией Cash In
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				В банкоматах сторонних банков
+			</div>
+			<div class="right-tarif-price">
+				2% от суммы, мин. 100 рублей
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Валютой, отличной от валюты<br>Счета в сети банкоматов ВПБ,<br>Банка Москвы и сети OPC
+			</div>
+			<div class="right-tarif-price">
+				1% от суммы
+			</div>
+		</div>
+		<div class="right-side-info">
+			<div class="left-title">
+				Валютой, отличной от валюты<br>Счета в банкоматах сторонних,<br>банков
+			</div>
+			<div class="right-tarif-price">
+				2% от суммы, мин. 100 рублей
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+<div class="terif-box bottom-divider">
+
+	<div class="tarif-left-side">
+		Снятие наличных<br>денежных средств
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first right-divider">
+			<div class="left-title">
+				В банкоматах Банка Москвы<br>(ОАО), АКБ &quot;ВПБ&quot; ЗАО,<br>банкоматах банков участников<br>платежной системы &quot;OPC&quot;
+			</div>
+			<div class="right-tarif-price">
+				<div class="padding-bottom-10 right-divider">Бесплатно<span class="usual-text"> до 300 000 рублей<br>в месяц.</span></div>
+				<div class="padding-10-0">Свыше 300 000 рублей - 2% от<br>суммы, мин. 100 рублей <span class="usual-text">(без учета<br>снятия иностранной валюты)</span></div>
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				В банкоматах сторонних банков,<br>в том числе OPC
+			</div>
+			<div class="right-tarif-price">
+				2% от суммы, но не менее 100 рублей
+			</div>
+		</div>
+		<div class="right-side-info">
+			<div class="left-title">
+				В иностранной валюте
+			</div>
+			<div class="right-tarif-price">
+				1% от суммы, но не менее 100 рублей
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+
+<div class="terif-box bottom-divider">
+
+	<div class="tarif-left-side">
+		Выписки и<br>информирование
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first right-divider">
+			<div class="left-title">
+				Получение Push-уведомлений<br>о проведенных операциях
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Запрос баланса по Карте в<br>банкоматах других банков
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Предоставление Банком копии<br>платежных документов по Карте,<br>заказ выписки по Счету в Банке,<br>предоставление мини-выписки<br>по Счету в банкомате Банка
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+		<div class="right-side-info">
+			<div class="left-title">
+				Расходы Банка, понесенные в<br>связи с рассмотрением претензии<br>по операции клиента, признанной<br>впоследствии необоснованной
+			</div>
+			<div class="right-tarif-price">
+				По фактическим затратам банка
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+
+<div class="terif-box bottom-divider">
+
+	<div class="tarif-left-side">
+		Блокировка и<br>перевыпуск карты
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first right-divider">
+			<div class="left-title">
+				Блокировка карты Instabank в<br>режиме реального времени при<br>утере/краже карты
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Возобновление расчетов по<br>Счету в отделении банка по<br>заявлению Клиента (без<br>оформления новой Карты)
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Блокировка карты Instabank<br>с внесением в стоп-лист (на две<br>недели)
+			</div>
+			<div class="right-tarif-price">
+				По фактическим затратам банка
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Комиссия за изъятие карты<br>Instabank сторонним банком<br>или торгово-сервисным<br>предприятием
+			</div>
+			<div class="right-tarif-price">
+				По фактическим затратам банка
+			</div>
+		</div>
+		<div class="right-side-info">
+			<div class="left-title">
+				Перевыпуск карты Instabank с<br>тем же сроком действия и<br>возобновление расчетов по Счету<br>в случае утраты, кражи, порчи<br> карты Instabank
+			</div>
+			<div class="right-tarif-price">
+				<div class="padding-bottom-10 right-divider">350 руб.</div>
+				<div class="padding-10-0"><span class="usual-text">Карта категории MasterCard<br>Standard перевыпускается только<br>как карта категории MasterCard<br>Gold. Обслуживание<br>перевыпущенной карты<br>осуществляется в рамках тарифа<br>по карте MasterCard Gold.</span></div>
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+
+<div class="terif-box">
+
+	<div class="tarif-left-side">
+		Прочее
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first right-divider">
+			<div class="left-title">
+				Конвертация денежных средств<br>при проведении операций по<br>карте совершенных в<br>иностранной валюте
+			</div>
+			<div class="right-tarif-price">
+				Конвертация осуществляется<br>по курсу Банка России на день<br>списания суммы операции со<br>Счета
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Смена PIN-кода
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+		<div class="right-side-info">
+			<div class="left-title">
+				Проценты за превышение<br>Доступного лимита<br>(неразрешенный овердрафт)
+			</div>
+			<div class="right-tarif-price">
+				50% годовых от суммы<br>перерасхода (рубли РФ)
+			</div>
+		</div>
+		<!--
+													<div class="right-side-info">
+														<div class="left-title">
+															Комиссия, взымаемая в случае<br>отсутствия расчетных операций<br>по Счету с использованием<br>Карты после закрытия счета<sup>3</sup>
+														</div>
+														<div class="right-tarif-price">
+															В пределах доступного<br>остатка по Счету, но не<br>более 50 руб. в месяц
+														</div>
+													</div>
+		-->
+
+	</div>
+
+</div><!--end tarif-box-->
+
+<div class="middle-box additional-info-box">
+
+	<div class="additional-title">
+		Пояснения к тарифам
+	</div>
+	<div class="additional-text">
+
+		<ol>
+			<li>Комиссия взимается ежемесячно, при наличии на Счете остатка денежных средств, достаточного для списания комиссии.
+				Комиссия взимается в дату, соответствующую дате оформления Карты, начиная с месяца, соответствующего месяцу
+				оформления Карты. Списание комиссии в календарном месяце, в котором нет числа, соответствующего дате оформления
+				Карты, осуществляется в последний день такого календарного месяца. При отсутствии на Счете остатка денежных
+				средств, достаточного для списания комиссии в текущем месяце, комиссия взимается по факту поступления достаточных
+				для списания комиссии денежных средств на Счете.</li>
+			<li>Начисление и выплата процентов производится каждый месяц на средний остаток по счету. Начисление процентов
+				производится в последний рабочий день месяца, выплата начисленных процентов производится не позднее второго
+				рабочего дня следующего календарного месяца.</li>
+			<!--
+															<li>Комиссия взимается по истечении 45-дневного срока с даты закрытия/даты окончания срока действия Карты в случае
+			отсутствия расчетных операций по Счету в течение одного и более календарных месяцев с даты <br>закрытия/даты
+			окончания срока действия последней выпущенной к Счету Карты. Списание настоящей комиссии не рассматривается в
+			качестве операции по Счету (в целях списания настоящей комиссии).</li>
+															<li style="list-style-type:none;">Если иное не указано в договоре и/или настоящих Тарифах, комиссионное вознаграждение взимается по мере
+			предоставления услуг/ отражения совершенных операций по Счету.</li>
+			-->
+		</ol>
+
+		<p>
+			При совершении операций по Счету без использования Карты, а также при закрытии карточного счета, в случае снятия
+			остатка денежных средств наличными, либо безналичного перечисления денежного остатка комиссионное вознаграждение
+			за соответствующую операцию взимается в соответствии с действующими Тарифами комиссионного вознаграждения АКБ
+			&laquo;ВПБ&raquo; (ЗАО) за услуги по расчетному и кассовому обслуживанию клиентов физических лиц.
+		</p>
+
+		<p>
+			Данная информация размещена исключительно в рекламных и информационных целях и не является публичной офертой. С
+			полным описанием тарифов на банковские услуги АКБ &quot;ВПБ&quot; ЗАО в рамках программы Instabank можно ознакомиться <a href="http://www.vpb.su/page/instabank_docs">здесь</a>.
+			Общая документация и руководство по использованию <a href="http://www.vpb.su/page/instabank_docs">здесь</a>.
+		</p>
+
+		<div class="top-tarifs-desc">
+			<p>Термины и сокращения:</p>
+			<ul>
+				<li>ПВН - пункт выдачи наличных в отделениях банка</li>
+				<li>АКБ &quot;ВПБ&quot; (ЗАО) - Акционерный Коммерческий Банк &quot;Военно Промышленный Банк&quot;<br>(Закрытое Акционерное Общество)</li>
+				<li>НКО &quot;ОРС&quot; (ОАО) - Небанковская Кредитная Организация<br>&laquo;Объединенная Расчетная Система&raquo; (Открытое Акционерное Общество)</li>
+			</ul>
+		</div>
+
+	</div>
+
 </div>
 
-<h2>Карта и счет</h2>
-<ul>
-    <li>
-        <div>Валюта Счета</div>
-        <div>Рубли РФ</div>
-    </li>
-    <li>
-        <div>Тип Карты</div>
-        <div>MasterCard Standard</div>
-    </li>
-    <li>
-        <div>Оформление карты Instabank и открытие Счета</div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>
-            Комиссия за обслуживание Счета Instabank
-            <span><a href="#plastic-one">1</a></span>
-        </div>
-        <div>150 руб. в месяц</div>
-    </li>
-</ul>
+</div><!-- end inner-middle-box-->
 
-<h2>
-    Проценты, начисляемые на минимальный остаток по счету, в течение календарного месяца
-    <span><a href="#plastic-two">2</a></span>
-</h2>
-<ul>
-    <li>
-        <div>От 0 до 10 000 руб.</div>
-        <div>2%</div>
-    </li>
-    <li>
-        <div>Cвыше 10 000 руб.</div>
-        <div>10%</div>
-    </li>
-    <li>
-        <div>При условии нахождения на Счете суммы свыше 100 000 рублей в течение 11 календарных месяцев
-            подряд
-        </div>
-        <div>12% (за 12-й месяц)</div>
-    </li>
-</ul>
+</div><!-- end background-w-->
 
-<h2>Платежи и переводы</h2>
-<ul>
-    <li>
-        <div>Денежные переводы по Facebook между Клиентами Instabank</div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>Оплата услуг</div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>
-            Платежи и переводы Клиента в другие банки, осуществляемые по реквизитам получателя
-            <span><a href="#plastic-three">3</a></span>
-        </div>
-        <div>20 руб. за каждую операцию</div>
-    </li>
-</ul>
+<div id="virtual" class="middle-box background-w virtual-box-info">
 
-<h2>Снятие наличных</h2>
+<div class="top-tarifs-info-virtual">
 
-<h3>В рублях:</h3>
-<ul>
-    <li>
-        <div>В банкоматах ОАО "Банк Москвы" и ВТБ24 (ЗАО)</div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>В банкоматах, ПВН и Платежных терминалах АКБ «ВПБ» ЗАО</div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>В ПВН ОАО "Банк Москвы"</div>
-        <div>0.5%</div>
-    </li>
-    <li>
-        <div>
-            В банкоматах и ПВН банков-участников НКО «ОРС» (ОАО)
-            <span><a href="#plastic-four">4</a></span>
-        </div>
-        <div>0.5%</div>
-    </li>
-    <li>
-        <div>
-            В банкоматах и ПВН других банков
-            <span><a href="#plastic-five">5</a></span>
-        </div>
-        <div>1% от суммы но не менее 100 руб.</div>
-    </li>
-</ul>
-
-<h3>В иностранной валюте:</h3>
-<ul>
-    <li>
-        <div>
-			В банкоматах и ПВН ОАО "Банк Москвы", АКБ "ВПБ" ЗАО и банков участников НКО "ОРС" (ОАО)
-            <span><a href="#plastic-four">4</a></span>
-        </div>
-        <div>1% от суммы но не менее 100 руб.</div>
-    </li>
-</ul>
-
-<h2>Пополнение</h2>
-
-<h3>В рублях:</h3>
-<ul>
-    <li>
-        <div>В банкоматах с функцией Cash In ОАО "Банк Москвы"</div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>
-            В банкоматах, ПВН с функцией Cash In и Платежных терминалах АКБ "ВПБ" ЗАО
-            <span><a href="#plastic-six">6</a></span>
-        </div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>В ПВН ОАО "Банк Москвы"</div>
-        <div>0.5%</div>
-    </li>
-    <li>
-        <div>
-            В банкоматах с функцией Cash In банков-участников НКО "ОРС" (ОАО)
-            <span><a href="#plastic-four">4</a></span>
-        </div>
-        <div>0.5%</div>
-    </li>
-    <li>
-        <div>Внесение наличной иностранной валюты</div>
-        <div>0.5%</div>
-    </li>
-</ul>
-
-<h2>Выписки и информирование</h2>
-<ul>
-    <li>
-        <div>Получение Push-уведомлений об авторизациях и состоянии Счета</div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>Запрос баланса по Карте в банкоматах других банков</div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>Предоставление Банком копии платежных документов по Карте,
-            заказ выписки по Счету в Банке, предоставление мини-выписки по Счету в банкомате Банка
-        </div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>Расходы Банка, понесенные в связи с рассмотрением претензии по
-            операции Клиента, признанной впоследствии необоснованной
-        </div>
-        <div>бесплатно</div>
-    </li>
-</ul>
-
-<h2>Блокировка и перевыпуск карты</h2>
-<ul>
-    <li>
-        <div>Блокировка Карты в режиме реального времени при утере/краже Карты</div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>Блокировка Карты с внесением в стоп-лист (на две недели)</div>
-        <div>По фактическим затратам Банка</div>
-    </li>
-    <li>
-        <div>Перевыпуск Карты с тем же сроком действия и возобновление расчетов по Счету в случае утраты,
-            кражи, порчи Карты
-        </div>
-        <div>250 руб.</div>
-    </li>
-    <li>
-        <div>Возобновление расчетов по Счету по заявлению Клиента (без оформления новой Карты)</div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>Комиссия за изъятие Карты сторонним банком или торгово-сервисным предприятием</div>
-        <div>По фактическим затратам Банка</div>
-    </li>
-</ul>
-
-<h2>Прочее</h2>
-<ul>
-    <li>
-        <div>Изменение ПИН-кода с использованием банкомата</div>
-        <div>бесплатно</div>
-    </li>
-    <li>
-        <div>Конвертация денежных средств по Карте</div>
-        <div>Конвертация осуществляется по курсу
-            Банка России на день списания суммы
-            операции со Счета
-        </div>
-    </li>
-    <li>
-        <div>Проценты за превышение Доступного лимита (неразрешенный овердрафт)</div>
-        <div>50% годовых от суммы перерасхода (рубли РФ)</div>
-    </li>
-</ul>
-
-<h2>Пояснения к тарифам</h2>
-<ol>
-    <li id="plastic-one">
-        1. Комиссия взимается начиная с месяца, в котором была совершена первая расчетная операция по Счету.
-        Комиссия не взимается при проведении первой расчетной операции по Счету в случае переоформления Карты
-        при утере, краже, порче.
-    </li>
-    <li id="plastic-two">
-        2. Начисление и выплата процентов производится ежемесячно. Начисление процентов производится в последний
-        рабочий день месяца, а выплата начисленных процентов производится не позднее второго рабочего дня
-        следующего календарного месяца. Проценты за неполный календарный месяц не начисляются, за исключением
-        месяца, в котором произошло первое поступление средств на Счет, когда проценты по Счету начисляются на
-        минимальную сумму остатка, с даты открытия Счета по последний календарный день месяца, в котором был
-        открыт Счет.
-    </li>
-    <li id="plastic-three">
-        3. Лимит на совершение операций по переводу денежных средств в другие банки по реквизитам получателя - 300
-        000 рублей в месяц.
-    </li>
-    <li id="plastic-four">
-        4. Актуальный список банкоматов банков-участников НКО «ОРС» (ОАО) доступен по адресу:
-        <a href="http://www.ors.ru/cashpoints">www.ors.ru/cashpoints</a>
-    </li>
-    <li id="plastic-five">
-        5. Дополнительно может взиматься комиссия банком-владельцем банкомата или пункта выдачи наличных.
-    </li>
-    <li id="plastic-six">
-        6. Внесение наличных денежных средств через Платежные терминалы АКБ "ВПБ" (ЗАО) осуществляется только в валюте
-        РФ.
-    </li>
-</ol>
-
-<p>
-    При совершении операций по Счету без использования карты в офисах АКБ «ВПБ» (ЗАО), в т.ч. безналичное
-    перечисление денежного остатка по счету и снятие остатка денежных средств наличными, взимается комиссия в
-    соответствии с действующими "Тарифами комиссионного вознаграждения АКБ «ВПБ» (ЗАО) за расчетно-кассовое
-    обслуживание физических лиц в АКБ «ВПБ» (ЗАО)".
-</p>
-
+	<div class="top-tarifs-title">
+		Тариф Instabank MasterCard Virtual
+	</div>
 
 </div>
-<p>
-    Данная информация размещена исключительно в рекламных и информационных целях и не является публичной офертой.
-    C полным описанием тарифов на банковские услуги в рамках программы Instabank можно ознакомиться
-    <a href="http://www.vpb.su/page/instabank_docs">здесь</a>.
-</p>
+
+<div class="inner-middle-box">
+
+<div class="terif-box bottom-divider">
+
+	<div class="tarif-left-side">
+		Предоплаченные<br>банковские карты
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first right-divider">
+			<div class="left-title">
+				Валюта Счета
+			</div>
+			<div class="right-tarif-price">
+				Рубли РФ
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Оформление и обслуживание
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+		<div class="right-side-info">
+			<div class="left-title">
+				Блокировка и перевыпуск<br>Карты в режиме реального<br>времени (не более одного<br>раза в месяц)
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+<div class="terif-box bottom-divider">
+
+	<div class="tarif-left-side">
+		Пополнение счета
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first">
+			<div class="left-title">
+				Посредством перевода<br>денежных средств с карт<br>российских банков (C2C)
+			</div>
+			<div class="right-tarif-price">
+				<!--                                                    <div class="padding-bottom-10 right-divider">Бесплатно - первое пополнение<br>в месяц <span class="usual-text">(лимит на первое<br>пополнение в месяц - 3000 рублей<br>за операцию)</span></div>-->
+				<div class="padding-bottom-10 right-divider">1 пополнение в 30 календарных дней. Лимит 3000 рублей за операцию</div>
+				<div class="padding-10-0 right-divider">Второе и последующие<br>пополнения в месяц - 1,9% от<br>суммы, мин. 50 рублей за операцию</div>
+				<div class="padding-10-0"><span class="usual-text">Лимиты на пополнение: 3 операций<br>в сутки, 15 000 за операцию,<br>40 ООО руб. в месяц</span></div>
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+<div class="terif-box bottom-divider">
+
+	<div class="tarif-left-side">
+		Платежи
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first right-divider">
+			<div class="left-title">
+				Оплата услуг
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+		<div class="right-side-info">
+			<div class="left-title">
+				Оплата Московского Паркинга
+			</div>
+			<div class="right-tarif-price">
+				1% от суммы платежа
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+<div class="terif-box bottom-divider">
+
+	<div class="tarif-left-side">
+		Выписки и<br>информирование
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first right-divider">
+			<div class="left-title">
+				Получение Push-уведомлений<br>о совершенных операциях
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+		<div class="right-side-info">
+			<div class="left-title">
+				Предоставление копии<br>платежных документов по<br>Карте (при обращении в<br>отделение банка)
+			</div>
+			<div class="right-tarif-price">
+				Бесплатно
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+
+<div class="terif-box">
+
+	<div class="tarif-left-side">
+		Прочее
+	</div>
+	<div class="tarif-right-side">
+
+		<div class="right-side-info-first right-divider">
+			<div class="left-title">
+				Лимиты по соверешнию<br>операций по карте
+			</div>
+			<div class="right-tarif-price">
+				15 ООО руб. за операцию/40 000<br>руб. в месяц
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Комиссия при безналичной<br>оплате товаров и услуг
+			</div>
+			<div class="right-tarif-price">
+				Не взимается
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Конвертация денежных средств<br>при проведении операций по<br>карте совершенных в<br>иностранной валюте
+			</div>
+			<div class="right-tarif-price">
+				Конвертация осуществляется<br>по курсу Банка России на день<br>списания суммы операции со Счета
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Ежемесячное/ежеквартальное<br>начисление процентов на<br>остаток по Карте
+			</div>
+			<div class="right-tarif-price">
+				Не начисляются
+			</div>
+		</div>
+		<div class="right-side-info right-divider">
+			<div class="left-title">
+				Проценты по неразрешенному<br>овердрафту
+			</div>
+			<div class="right-tarif-price">
+				0% годовых от суммы<br>перерасхода (рубли РФ)
+			</div>
+		</div>
+		<div class="right-side-info">
+			<div class="left-title">
+				Расходы Банка, понесенные в<br>связи с рассмотрением<br>претензии по операции клиента,<br>признанной впоследствии<br>необоснованной
+			</div>
+			<div class="right-tarif-price">
+				По фактическим затратам<br>Банка
+			</div>
+		</div>
+
+	</div>
+
+</div><!--end tarif-box-->
+
+
+<div class="middle-box additional-info-box">
+
+	<div class="additional-title">
+		Пояснения к тарифам
+	</div>
+	<div class="additional-text">
+
+
+		<p>
+			Данная информация размещена исключительно в рекламных и информационных целях и не является публичной офертой. С полным описанием тарифов на банковские услуги АКБ "ВПБ" ЗАО в рамках программы Instabank можно ознакомиться <a href="http://www.vpb.su/page/instabank_docs">здесь</a>. Общая документация и руководство по использованию <a href="http://www.vpb.su/page/instabank_docs">здесь</a>.
+		</p>
+
+
+	</div>
+
 </div>
+
+
+</div><!-- end inner-middle-box-->
+
+</div><!-- end background-w-->
+
+
+
+</div><!-- end inner-content-->
+</div><!-- end content-->
+</section>
+
+
+
+<footer>
+	<div id="footer">
+		<div class="inner-footer">
+
+			<center>
+
+				<div class="middle-box bottom-nav-box">
+
+					<nav>
+						<div id="footer-menu" >
+							<ul>
+								<li><a href="#">Тарифы</a></li>
+								<li><a href="http://www.vpb.su/page/instabank_docs">Оферта</a></li>
+								<li><a href="https://instabank.ru/press">Пресса о нас</a></li>
+								<li class="last" ><a href="https://instabank.ru/faq">Частые вопросы</a></li>
+							</ul>
+						</div>
+					</nav>
+
+				</div>
+
+				<div class="middle-box follow-us-box">
+
+					<p class="box-title-footer"><span class="">Следите за нами!</span></p>
+					<div class="social-icons-box">
+						<div class="icon-box">
+							<a href="https://www.facebook.com/Instabank"><img src="@{'/public/20140618/icons/facebook.png'}" alt="Facebook" title="Facebook">
+								<p>Facebook</p></a>
+						</div>
+						<div class="icon-box">
+							<a href="http://www.youtube.com/instabankru"><img src="@{'/public/20140618/icons/you-tube.png'}" alt="YouTube" title="YouTube">
+								<p>YouTube</p></a>
+						</div>
+						<div class="icon-box">
+							<a href="http://www.twitter.com/instabankru"><img src="@{'/public/20140618/icons/twitter.png'}" alt="Twitter" title="Twitter">
+								<p>Twitter</p></a>
+						</div>
+						<div class="icon-box">
+							<a href="http://www.instagram.com/instabankru"><img src="@{'/public/20140618/icons/instagram.png'}" alt="Instagram" title="Instagram">
+								<p>Instagram</p></a>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="middle-box contact-box">
+
+					<p class="box-title-footer"><span class="">Контакты</span></p>
+					<p class="contact-telephone"><span class="">+7 (499) 678-20-30</span></p>
+					<p class="contact-email"><a href="mailto:contact@instabank.ru">contact@instabank.ru</a></p>
+
+				</div>
+
+
+				<div class="middle-box copyright-box">
+
+					<p>Банковские услуги предоставляются АКБ "ВПБ" ЗАО, Лицензия ЦБРФ №3065</p>
+
+				</div>
+
+
+			</center>
+
+		</div>
+	</div>
+</footer>
+
+</div></center>
+
+</div>
+
+<script type="text/javascript" src="@{'/public/20140618/js/scripts.js'}"></script>
+
+</body>
+</html>
+

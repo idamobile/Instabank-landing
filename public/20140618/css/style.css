@@ -1,0 +1,951 @@
+/*Default styles*/
+
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block;}
+mark, rp, rt, ruby, summary, time {display:inline;}
+
+html {
+	width:100%; 
+	height:100%;
+}
+body {
+	background: #f5f5f5;
+	margin: 0px;
+	padding: 0px;
+}
+
+a { 
+	text-decoration: none;
+	outline: none; 
+}
+
+ul, p {
+	padding: 0;
+	margin: 0;
+}
+	ul li {
+		list-style-type: none;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+	font-size: normal;
+}
+.bold {
+	font-family: PFDinDisplayPro-Bold;
+}
+.floatleft {
+	float: left;
+}
+.hide {
+	display: none;
+}
+/*end*/
+
+.wrapper {
+	height: 100%;
+	width:100%;
+}
+	.inner-wrapper {
+		margin: 0 auto;
+		width: 980px;
+		height: 100%;
+		text-align: left;
+	}
+
+
+/*Header*/
+
+header {
+}
+	#header {
+		width: 100%;
+		height: 92px;
+	}
+		.inner-header {
+			margin: 0 auto;
+			width: 980px;
+			height: 92px;
+		}
+		.inner-header .logo-box {
+			width: 480px;
+			height: 92px;
+			float: left;
+		}
+			.inner-header .logo-box img {
+				margin-top: 32px;
+				margin-left: 27px;
+			}
+		.inner-header .top-menu-box {
+			float: left;
+			width: 70%;
+			height: 130px;
+		}
+		
+
+/*end*/
+
+
+/*Menu*/
+	
+#menu {
+	overflow: hidden;
+	padding: 0;
+	margin-top: 46px;
+	float: left;
+	width: 500px;
+	text-align: right; 
+}
+	#menu ul {
+		padding: 0;
+		margin: 0;
+	}
+	#menu ul li {
+		overflow: hidden;
+		float: left;
+		margin: 0 10px 0 10px;	
+	}
+	#menu ul li a {
+/*
+		font-family: 'Exo 2', sans-serif;
+*/
+		font-family: PFDinDisplayPro-Regular;
+		font-size: 12pt;
+/*
+		font-weight: 300;
+*/
+		color: #223b63;
+		padding-bottom: 17px;
+	}
+		#menu ul li a:hover {
+			color: #5e9bff;
+		}
+	
+/*end*/
+
+
+/*middle section*/
+
+section {
+	
+}
+	#content {
+		width: 100%;
+		overflow: auto;
+		clear: both;
+	}
+		.inner-content {
+			margin: 0 auto;
+			width: 980px;
+		}	
+		.middle-box {
+			clear: both;
+		}	
+		.background-w {
+			background: #FFFFFF;
+			overflow: hidden;
+			width: 980px;
+		}
+			.inner-middle-box {
+				width: 853px;
+				margin: 0 auto;
+			}
+		.top-photo-box {
+			height: 508px;
+			position: relative;
+			background: url(../image/main-photo.jpg) no-repeat;
+		}
+			.top-photo-box .keyhole, .top-photo-box .appstore-top, .top-photo-box .googlemarket-top, .top-photo-box .top-text-box {
+				position: absolute;
+			}
+			.top-photo-box .keyhole {
+				left: 59px;
+				top: 98px;
+			}
+			.top-photo-box .appstore-top {
+				left: 59px;
+				top: 400px;
+			}
+			.top-photo-box .googlemarket-top {
+				left: 253px;
+				top: 400px;
+			}
+			.top-photo-box .top-text-box {
+				left: 59px;
+				top: 230px;
+				height: 130px;
+				width: 340px;
+			}
+				.top-photo-box .top-text-box .top-h1 {
+/*
+					font-family: 'Exo 2', sans-serif;
+*/
+					margin: 0;
+					padding: 0;
+					font-family: PFDinDisplayPro-Thin;
+					font-size: 26pt;
+					font-weight: 200;
+					line-height: 35px;
+					color: #FFFFFF;
+				}
+				.top-photo-box .top-text-box p {
+					margin-top: 20px;
+					font-family: PFDinDisplayPro-Regular;
+/*
+					font-family: 'Exo 2',sans-serif;
+*/
+					font-size: 12pt;
+/*
+					font-weight: 400;
+*/
+					line-height: 20px;
+					color: #FFFFFF;
+				}
+				
+			.facebook-box {
+				height: 50px;
+				margin: 50px 0 0 0;
+			}
+			
+			.icons-box {
+				height: 420px;
+			}
+				.icon-containers {
+					height: 202px;
+					padding-top: 50px;
+					z-index: 9999999999;
+					background: #FFFFFF;
+					position: relative;
+				}
+				.image-line {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+					.icon-containers ul {
+						overflow: hidden;
+					}
+						.icon-containers ul li {
+							width: 20%;
+							float: left;
+						}
+							.icon-containers ul li img {
+								width: 170px;
+								height: 80px;
+							}
+							.icon-containers ul li p {
+/*
+								font-family: 'Exo 2', sans-serif;
+*/
+								font-family: PFDinDisplayPro-Regular;
+								font-size: 12pt;
+								font-weight: 400;
+								line-height: 20px;
+								color: #232323;
+								text-align: center;
+								padding: 0 5px;
+							}
+				
+				.text-under-icons {
+					height: 178px;
+/*
+					font-family: 'Exo 2', sans-serif;
+*/
+					font-family: PFDinDisplayPro-Thin;
+					font-size: 26pt;
+					font-weight: 200;
+					line-height: 35px;
+					color: #232323;
+					text-align: center;
+					padding-top: 30px;
+					overflow: hidden;
+				}
+					.text-under-icons span a {
+						color: #14b7e9;
+					}
+					.text-under-icons span a:hover {
+						text-decoration: underline;
+					}
+		
+		.cards-information-box {
+			height: 493px;
+			background: url(../image/cards-information-bg.jpg) no-repeat;
+			position: relative;
+		}
+			.card-in-info-box {
+				position: absolute;
+				top: 70px;
+				left: 50px;
+				
+			}
+			.text-under-card {
+				position: absolute;
+				top: 280px;
+				left: 59px;
+				width: 260px;
+			}
+				.text-under-card p {
+					color: #FFFFFF;
+/*
+					font-family: 'Exo 2', sans-serif;
+*/
+					font-family: PFDinDisplayPro-Regular;
+					font-size: 12pt;
+					font-weight: 400;
+					line-height: 20px;
+				}
+			.card-types-box {
+				position: absolute;
+				top: 67px;
+				left: 365px;
+				width: 550px;
+				color: #FFFFFF;
+/*
+				font-family: 'Exo 2', sans-serif;
+*/
+				font-family: PFDinDisplayPro-Regular;
+				font-size: 12pt;
+				font-weight: 400;
+				line-height: 20px;
+			}
+				.card-type {
+					width: 275px;
+					float: left;
+					color: #FFFFFF;
+				}
+					.card-type-p {
+						font-family: PFDinDisplayPro-Medium;
+						font-size: 16pt;
+/*
+						font-weight: 700;
+*/
+					}
+					.card-type-title {
+						font-family: PFDinDisplayPro-Thin;
+						margin-top: 4px;
+						font-size: 18pt;
+/*
+						font-weight: 200;
+*/
+						line-height: 35px;
+					}
+					.card-type ul {
+						padding: 15px;
+						height: 230px;
+					}
+						.card-type ul li {
+							list-style-image: url('../icons/li-disc.png');
+							margin: 10px 0;
+						}
+					.card-type-button {
+						background: url(../image/card-type-button-bg.png) no-repeat;
+						width: 208px;
+						height: 41px;
+						position: relative;
+						margin-top: 35px;
+					}
+						.card-type-button a, .card-type-button-2 a {
+							color: #232323;
+							position: absolute;
+							top: 11px;	
+							left: 12px;
+							width: 208px;
+						}
+							.card-type-button a:hover, .card-type-button-2 a:hover {
+								color: #5e9bff;
+							}
+							
+					.card-type-button-2 {
+						background: url(../image/card-type-button-bg.png) no-repeat;
+						width: 208px;
+						height: 41px;
+						position: relative;
+						margin-top: 35px;
+					}
+							
+							
+			.calculation-box {
+				height: 550px;
+				padding-top: 90px;
+			}
+				.calculation-left {
+					float: left;
+					width: 50%;
+/*
+					font-family: 'Exo 2', sans-serif;
+*/
+					
+/*
+					font-weight: 400;
+*/
+					line-height: 20px;
+					color: #232323;
+				}
+					.box-title {
+						font-family: PFDinDisplayPro-Thin;
+						font-size: 26pt;
+						font-weight: 200;
+						line-height: 35px;
+						margin-bottom: 60px;
+					}
+						.box-title span {
+							font-family: PFDinDisplayPro-Medium;
+						}
+					.calculation-text-box {
+						margin-bottom: 50px;
+					}
+						.calculation-text-box .bold {
+							font-size: 16pt;
+							margin-bottom: 10px;
+						}
+						.calculation-text-box .text-p {
+							font-family: PFDinDisplayPro-Regular;
+							font-size: 12pt;
+						}
+						
+				.calculation-right {
+					float: left;
+					width: 50%;
+					line-height: 20px;
+					color: #232323;
+					text-align: center;
+					position: relative;
+				}
+					.top-text {
+						font-family: PFDinDisplayPro-Regular;
+						font-size: 12pt;
+					}
+					.how-much {
+						font-family: PFDinDisplayPro-Bold;
+						font-size: 26pt;
+						line-height: 35px;
+						text-align: center;
+						width: 100%;
+						border: 0;
+						margin-top: 15px;
+					}
+						.how-much span {
+							font-family: RoubleSN;
+						}
+					.left-price, .right-price {
+						font-family: PFDinDisplayPro-Regular;
+						position: absolute;
+						top: 60px;
+						color: #868686;
+						font-size: 9pt;
+					}
+						.left-price span, .right-price span {
+							font-family: RoubleSN;
+						}
+					.left-price {
+						left: 25px;
+					}
+					.right-price {
+						left: 340px;
+					}
+					.calculation-diagram {
+						background: url(../image/summery-circle.png) no-repeat;
+						background-position: center;
+						height: 224px;
+						margin-top: 40px;
+						position: relative;
+					}
+						.calculation-diagram p, .calculation-diagram .summery, #summery, #top-text {
+							position: absolute;
+						}
+						.calculation-diagram p.top-text, #top-text {
+							top: 190px;
+							left: 160px;
+						}
+						#summery {
+							font-family: PFDinDisplayPro-Bold;
+							color: #14b7e9;
+							font-size: 26pt;
+							line-height: 35px;
+							top: 210px;
+							left: 0px;
+							width: 100%;
+							border: 0;
+							background: transparent;
+						}
+							#summery span {
+								font-family: RoubleSN;
+							}
+						
+						
+			.information-box-left-image, .information-box-right-image {
+				height: 700px;
+				font-family: PFDinDisplayPro-Regular;
+				font-size: 12pt;
+				line-height: 20px;
+				color: #232323;
+				
+			}
+				.information-left-image {
+					float: left;
+					width: 40%;
+					text-align: center;
+					overflow: hidden;
+				}
+                    .information-left-image img, .information-right-image img {
+                        cursor: pointer;
+                    }
+				.information-right-image {
+					float: left;
+					width: 40%;
+					text-align: center;
+				}
+					.box-title {
+						font-size: 26pt;
+					}
+					.switch {
+						color: #14b7e9;
+						text-align: center;
+						margin-top: 20px;
+					}
+						.sw-iphone {
+							color: #14b7e9;
+						}
+						.sw-android {
+							color: #14b7e9;
+						}
+						.sw-selected {	
+							color: #232323 !important;
+						}
+						.sw-divider {
+							color: #e4e4e4;
+						}
+						.switch a {
+							margin: 0 10px;
+						}
+						.switch a:hover {
+							color: #232323;
+						}
+				.information-right-text {
+					float: left;
+					width: 60%;
+					position: relative;
+				}
+				.information-left-text {
+					float: left;
+					width: 60%;
+					position: relative;
+				}
+					.information-text-right {
+						margin-top: 180px;
+						margin-left: 30px;
+					}
+					.information-text-left {
+						margin-top: 180px;
+						margin-right: 50px;
+					}
+						.information-text-box {
+							margin-bottom: 40px;
+						}
+							.information-text-box .bold {
+								font-size: 16pt;
+								margin-bottom: 10px;
+							}
+							.information-text-box .text-p {
+								font-size: 12pt;
+							}
+							
+							
+			.end-information-box {
+				height: 405px;
+				background: url(../image/end-information-bg.jpg) no-repeat;
+				position: relative;
+			}
+				.credit-card-img {
+					position: absolute;
+					top:110px;
+					left: 390px;
+				}
+				.end-information-text, .appstore-footer, .googlemarket-footer, .end-information-text-top-1, .end-information-text-top-2 {
+					position: absolute;
+				}
+				.end-information-text, .end-information-text-top-1, .end-information-text-top-2 {
+					font-family: PFDinDisplayPro-Thin;
+					font-size: 26pt;
+					line-height: 35px;
+					color: #FFFFFF;
+				}
+				.end-information-text {
+					top: 260px;
+					left: 170px;
+				}
+				.end-information-text-top-1 {
+					top: 20px;
+					left: 170px;
+				}
+				.end-information-text-top-2 {
+					top: 60px;
+					left: 295px;
+				}
+				.appstore-footer {
+					top: 320px;
+					left: 285px;
+				}
+				.googlemarket-footer {
+					top: 320px;
+					left: 520px;
+				}
+
+		
+/*end*/
+
+
+
+
+
+
+/*Footer*/
+	
+footer { 
+}
+	#footer {
+		width: 100%;
+		overflow: hidden;
+		clear: both;
+	}
+		.inner-footer {
+			margin: 0 auto;
+			width: 980px;
+			color: #232323;
+/*
+			font-family: 'Exo 2', sans-serif;
+*/
+			font-family: PFDinDisplayPro-Regular;
+/*
+			font-weight: 400;
+*/
+			font-size: 12pt;
+			line-height: 20px;
+		}
+		.bottom-nav-box {
+			height: 40px;
+			width: 980px;
+			margin-top: 40px;
+		}
+			#footer-menu {
+
+			}
+				#footer-menu ul {
+					overflow: hidden;
+				}
+					#footer-menu ul li {
+						display: inline-block;
+						padding: 0 10px;
+						border-right: 1px solid #c7c7c7;				
+					}
+					#footer-menu ul li.last {
+						border: 0 !important;				
+					}
+						#footer-menu ul li a {
+							font-weight: 700;
+							color: #2eb0da;
+							font-size: 13pt;				
+						}
+						#footer-menu ul li a:hover {
+							color: #232323;				
+						}
+		
+		.follow-us-box {
+			height: 160px;
+			margin-top: 20px;
+			color: #232323;
+/*
+			font-family: 'Exo 2', sans-serif;
+*/
+			font-family: PFDinDisplayPro-Regular;
+/*
+			font-weight: 400;
+*/
+			font-size: 12pt;
+		}
+			.box-title-footer {
+				font-family: PFDinDisplayPro-Medium;
+				font-size: 28pt;
+				line-height: 35px;
+				margin-bottom: 30px;
+			}
+			.social-icons-box {
+			
+			}
+				.icon-box {
+					display: inline-block;
+					margin: 0 10px;
+				}
+					.icon-box p {
+						margin-top: 5px;
+					}
+					.icon-box a {
+						color: #232323;
+					}
+					.icon-box a:hover {
+						color: #2eb0da;
+					}
+					
+		.contact-box {
+			height: 200px;
+			margin-top: 20px;
+		}
+        .partners-box {
+            height: 200px;
+            margin-top: 0px;
+        }
+			.contact-telephone {
+				font-family: PFDinDisplayPro-Medium;
+				font-size: 16pt;
+				line-height: 35px;
+			}
+			.contact-email a{
+				font-family: PFDinDisplayPro-Medium;
+				color: #2eb0da;
+/*
+				font-weight: 700;
+*/
+				font-size: 14pt;
+			}
+			
+		.copyright-box {
+			height: 30px;
+		}
+			.copyright-box p {
+				color: #232323;
+/*
+				font-family: 'Exo 2', sans-serif;
+*/
+				font-family: PFDinDisplayPro-Regular;
+/*
+				font-weight: 400;
+*/
+				font-size: 10pt;
+			}
+				
+/*end*/
+
+
+@font-face{
+    font-family: Rouble;
+    src: url("../fonts/rouble.ttf"); 
+}
+
+@font-face{
+    font-family: RoubleSN;
+    src: url("../fonts/RUBSN.otf") format("opentype"); 
+}
+
+@font-face{
+    font-family: PFDinDisplayPro-Thin;
+    src: url("../fonts/PFDinDisplayPro-Thin.ttf"); 
+}
+
+@font-face{
+    font-family: PFDinDisplayPro-Light;
+    src: url("../fonts/PFDinDisplayPro-Light.ttf"); 
+}
+
+@font-face{
+    font-family: PFDinDisplayPro-Medium;
+    src: url("../fonts/PFDinDisplayPro-Medium.ttf"); 
+}
+
+@font-face{
+    font-family: PFDinDisplayPro-Regular;
+    src: url("../fonts/PFDinDisplayPro-Regular.ttf"); 
+}
+
+@font-face{
+    font-family: PFDinDisplayPro-Bold;
+    src: url("../fonts/PFDinDisplayPro-Bold.ttf"); 
+}
+
+
+.top-tarifs-box {
+    height: 60px;
+}
+
+    .tarifs-switch {
+        height: 60px;
+        overflow: hidden;
+    }
+        .tarifs-switch a {
+            font-family: PFDinDisplayPro-Medium;
+            font-size: 16pt;
+            color: #000000;
+        }
+
+    .debit-card-box, .credit-card-box {
+        float: left;
+        width: 50%;
+        height: 60px;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .switched-tarif {
+        background: url(../image/tarif-switch-bg.png) no-repeat;
+        
+    }
+        .switched-tarif a {
+            color: #FFFFFF !important;
+        }
+
+    .top-tarifs-info {
+        background: url(../image/top-bg-tarifs.png) no-repeat;
+        height: 158px;
+        position: relative;
+    }
+    .top-tarifs-info-virtual {
+        background: url(../image/top-bg-tarifs-left.png) no-repeat;
+        height: 158px;
+        position: relative;
+    }
+        .top-tarifs-title {
+            font-family: PFDinDisplayPro-Thin;
+            font-size: 26pt;
+            font-weight: 200;
+            line-height: 35px;
+            color: #FFFFFF;
+            position: absolute;
+            left: 50px;
+            top: 70px;
+        }
+        .top-tarifs-desc {
+            
+        }
+            .top-tarifs-desc p {
+                font-family: PFDinDisplayPro-Medium;
+/*
+                font-size: 16pt;
+                margin-bottom: 20px;
+*/
+            }
+            .top-tarifs-desc ul {
+/*                margin-left: 17px;*/
+            }
+                .top-tarifs-desc ul li {
+                    list-style-image: url('../icons/li-disc.png');
+                    margin: 10px 0;
+/*
+                    font-family: PFDinDisplayPro-Light;
+                    font-size: 16pt;
+*/
+                }
+
+
+.terif-box {
+    padding: 40px 0;
+    overflow: auto;
+}
+
+    .tarif-left-side {
+        width: 253px;
+        float: left;
+        font-family: PFDinDisplayPro-Medium;
+        font-size: 15pt;
+        color: #000000;
+    }
+        sup {
+            font-size: 8pt;
+        }
+
+    .tarif-right-side {
+        width: 600px;
+        float: left;
+    }   
+        .right-side-info, .right-side-info-first {
+            overflow: auto;
+        }
+        .right-side-info {
+            padding: 10px 0;
+        }
+        .right-side-info-first  {
+            padding-bottom: 10px;
+        }
+            .left-title, .right-tarif-price {
+                float: left;
+                font-size: 15pt;
+                width: 50%;
+            }
+            .left-title {
+                font-family: PFDinDisplayPro-Light;
+                color: #000000;
+            }
+            .right-tarif-price {
+                font-family: PFDinDisplayPro-Regular;
+                font-style: italic;
+                color: #0fa0cd;
+            }
+            .usual-text {
+                font-family: PFDinDisplayPro-Light;
+                font-style: normal;
+                color: #000000;
+            }
+            .padding-bottom-10 {
+                padding-bottom: 10px;
+            }
+            .padding-10-0 {
+                padding: 10px 0;
+            }
+
+.bottom-divider {
+    border-bottom: 1px solid #4c4c4c;
+}
+.right-divider {
+    border-bottom: 1px solid #d7d7d7;
+}
+
+
+
+.additional-info-box {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.additional-title {
+    font-family: PFDinDisplayPro-Thin;
+    font-size: 26pt;
+    font-weight: 200;
+    line-height: 35px;
+    color: #000000;
+}
+
+.additional-text  {
+    font-size: 12pt;
+    font-family: PFDinDisplayPro-Regular;
+}
+    .additional-text ol li {
+        margin: 10px 0;
+    }
+    .additional-text p {
+        margin: 10px 0;
+    }
+    .additional-text a {
+        color: #0fa0cd;
+    }
+
+
+.insurance-logo, .insurance-text {
+    float:left; 
+}
+.insurance-logo {
+    width: 115px;
+}
+.insurance-text {
+    width: 290px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+    .insurance-text a {
+        color: #0fa0cd;    
+    }
+
+.ins-image {
+    margin-left: 50px;
+}
+
+.mc-image {
+    margin-bottom: 20px;
+}
