@@ -12,10 +12,7 @@ import play.mvc.Controller;
 import service.Mails;
 
 import java.io.File;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class Application extends Controller {
 
@@ -51,7 +48,9 @@ public class Application extends Controller {
 
         String code = UUID.randomUUID().toString();
         session.put(SESSION_KEY_CODE, code);
-        render(code);
+
+		String query = request.get().querystring;
+		render(code, query);
     }
 
     public static void index_en() {

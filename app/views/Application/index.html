@@ -140,6 +140,7 @@
 <div class="inner-wrapper">
 
 <header>
+
 	<div id="header">
 		<div class="inner-header">
 
@@ -170,8 +171,10 @@
 <div class="middle-box top-photo-box">
 
 	<img class="keyhole" src="@{'/public/20140618/image/keyhole.png'}" alt="Instabank" title="Instabank">
-	<a href="https://itunes.apple.com/ru/app/instabank/id595302633"><img class="appstore-top" src="@{'/public/20140618/image/appstore.png'}" alt="AppStore" title="AppStore" ></a>
-	<a href="https://play.google.com/store/apps/details?id=com.idamobile.instabank.android"><img class="googlemarket-top" src="@{'/public/20140618/image/google-market.png'}" alt="Google Market" title="Google Market" ></a>
+
+	<a id="ios-url-top" href="https://itunes.apple.com/ru/app/instabank/id595302633"><img class="appstore-top" src="@{'/public/20140618/image/appstore.png'}" alt="AppStore" title="AppStore" ></a>
+	<a id="android-url-top" href="https://play.google.com/store/apps/details?id=com.idamobile.instabank.android&${query}"><img class="googlemarket-top" src="@{'/public/20140618/image/google-market.png'}" alt="Google Market" title="Google Market" ></a>
+
 	<div class="top-text-box" >
 		<a name="link"></a>
 		<p class="top-h1" >Банк, каким он должен быть сегодня</p>
@@ -456,8 +459,8 @@
 	<div class="end-information-text-top-2" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Это просто и удобно.</div>
 	<img class="credit-card-img" src="@{'/public/20140618/image/card.png'}" alt="Credit Card" title="Credit Card" >
 	<div class="end-information-text" >Первый год обслуживания карты - бесплатно!</div>
-	<a href="https://itunes.apple.com/ru/app/instabank/id595302633"><img class="appstore-footer" src="@{'/public/20140618/image/appstore.png'}" alt="AppStore" title="AppStore" ></a>
-	<a href="https://play.google.com/store/apps/details?id=com.idamobile.instabank.android"><img class="googlemarket-footer" src="@{'/public/20140618/image/google-market.png'}" alt="Google Market" title="Google Market" ></a>
+	<a id="ios-url-bottom" href="https://itunes.apple.com/ru/app/instabank/id595302633"><img class="appstore-footer" src="@{'/public/20140618/image/appstore.png'}" alt="AppStore" title="AppStore" ></a>
+	<a id="android-url-bottom" href="https://play.google.com/store/apps/details?id=com.idamobile.instabank.android&${query}"><img class="googlemarket-footer" src="@{'/public/20140618/image/google-market.png'}" alt="Google Market" title="Google Market" ></a>
 
 </div><!-- end end-information-box-->
 
@@ -549,6 +552,41 @@
 </div>
 
 <script type="text/javascript" src="@{'/public/20140618/js/scripts.js'}"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-39053086-1']);
+	_gaq.push(['_setDomainName', 'instabank.ru']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+
+
+		$("#ios-url-top").click(function() {
+			_gaq.push(['_trackEvent', 'ios_url', 'click']);
+		});
+		$("#android-url-top").click(function() {
+			_gaq.push(['_trackEvent', 'android_url', 'click']);
+		});
+
+		$("#ios-url-bottom").click(function() {
+			_gaq.push(['_trackEvent', 'ios_url', 'click']);
+		});
+		$("#android-url-bottom").click(function() {
+			_gaq.push(['_trackEvent', 'android_url', 'click']);
+		});
+
+
+
+	})();
+
+</script>
 
 </body>
 </html>
