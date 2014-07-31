@@ -588,6 +588,44 @@
 
 </script>
 
+<!-- GetIntent.com tracking pixel -->
+<script type="text/javascript">
+	if (typeof __GetI === "undefined") {
+		__GetI = [];
+	}
+
+	function generateUUID(){
+		var d = new Date().getTime();
+		var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+			var r = (d + Math.random()*16)%16 | 0;
+			d = Math.floor(d/16);
+			return (c=='x' ? r : (r&0x7|0x8)).toString(16);
+		});
+		return uuid;
+	};
+
+	(function () {
+		var p = {
+			type: "VIEW",
+			/* config START */
+			user_id: generateUUID(),
+			site_id: "204",
+			product_id: "instabank",
+			product_price: "0.0",
+			category_id: "bank",
+			pixel_id: "index.html"
+			/* config END */
+		};
+		__GetI.push(p);
+		var domain = (typeof __GetI_domain) == "undefined" ? "px.adhigh.net" : __GetI_domain;
+		var src = ('https:' == document.location.protocol ? 'https://' : 'http://') + domain + '/p.js';
+		var script = document.createElement( 'script' );
+		script.type = 'text/javascript';
+		script.src = src;
+		document.body.appendChild(script);
+	})();
+</script>
+
 </body>
 </html>
 
