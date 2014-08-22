@@ -3,6 +3,10 @@ package controllers;
 import models.Page;
 import models.Review;
 import models.Subscriber;
+import net.sf.uadetector.OperatingSystemFamily;
+import net.sf.uadetector.ReadableUserAgent;
+import net.sf.uadetector.UserAgentStringParser;
+import net.sf.uadetector.service.UADetectorServiceFactory;
 import org.apache.commons.lang.StringUtils;
 import play.Logger;
 import play.Play;
@@ -12,7 +16,12 @@ import play.mvc.Controller;
 import service.Mails;
 
 import java.io.File;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+import static net.sf.uadetector.OperatingSystemFamily.*;
 
 public class Application extends Controller {
 
@@ -127,7 +136,20 @@ public class Application extends Controller {
     }
 
     public static void install() {
-        redirect(Play.configuration.getProperty("instabank.appstore.url"), true);
+        String userAgent = "" + request.headers.get("user-agent");
+        UserAgentStringParser parser = UADetectorServiceFactory.getResourceModuleParser();
+        ReadableUserAgent agent = parser.parse(userAgent);
+        OperatingSystemFamily osFamily = agent.getOperatingSystem().getFamily();
+        if (ANDROID.equals(osFamily)) {
+            Logger.info("install(): android");
+            redirect(Play.configuration.getProperty("instabank.playmarket.url"), true);
+        } else if (IOS.equals(osFamily)) {
+            Logger.info("install(): ios");
+            redirect(Play.configuration.getProperty("instabank.appstore.url"), true);
+        } else {
+            Logger.info("install(): unknown: " + agent);
+            index(null);
+        }
     }
 
     public static void faq(String locale) {

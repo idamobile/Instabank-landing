@@ -3,3 +3,4 @@
 require:
     - play -> crud
     - play -> secure
+    - net.sf.uadetector -> uadetector-resources 2014.04
